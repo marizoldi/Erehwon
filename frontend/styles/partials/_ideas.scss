@@ -35,7 +35,11 @@
 			margin: $margin-value;
 			display: block;
 			padding: $padding-value;
-
 		}
+		.tag-input {
+			border: none;
+		}
+
 	}
+
 }
