@@ -3,6 +3,8 @@
 @import "partials/logo";
 @import "partials/footer";
 @import "partials/map";
+@import "partials/ideas";
+@import "partials/tags";
 
 html,
 body {
@@ -10,7 +12,6 @@ body {
    padding:0;
    height:100%;
    background-color: $background-pale-color;
-
 }
 
 .content {
