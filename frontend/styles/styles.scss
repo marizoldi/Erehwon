@@ -101,3 +101,12 @@ button {
 	height: 0px;
 	width: 100%;
 }
+.overlay{
+  position: absolute;
+  top: 85px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 85px - 80px);
+  z-index: 10;
+  background-color: rgba(0,0,0,0.8); /*dim the background*/
+}
