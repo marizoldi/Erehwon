@@ -10,15 +10,16 @@ Developers
 Front-end:
 * [Liliana Castillo](https://github.com/lili2311)
 * [Karen Lee](https://github.com/neraks)
+
 Graphic Designer:
 * [Marta Monge](https://github.com/emmecomemarta)
 
 UX Design:
 * [Mariza Dima](https://github.com/marizoldi)
 
-We continue its development on a voluntarily basis and seeking new collaborations. In the next steps we are adding backend and looking at privacy-by-design. If you wish to contribute to the development and have any questions please contact [Mariza Dima](https://github.com/marizoldi). 
+We continue its development on a voluntarily basis and seeking new collaborations. In the next steps we are adding backend and looking at privacy-by-design. If you wish to contribute to the development and have any questions please contact [Mariza Dima](https://github.com/marizoldi).
 
-![Wireframe](https://cloud.githubusercontent.com/assets/16060989/12142331/29bb32ec-b46f-11e5-88fc-b15418be627c.png)
+![Wireframe](http://www.osso.pt/wp-content/uploads/2016/02/heroimage-02.jpg)
 
 # Setup
 
