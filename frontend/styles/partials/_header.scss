@@ -1,0 +1,25 @@
+header {
+    height: 85px;
+    top: 0;
+    z-index: 1;
+    background: aliceblue;
+    &.logged-in {
+        margin: 0 auto;
+        position: relative;
+        .header-content {
+            max-width: $max-width;
+            margin: 0 auto;
+        }
+        .map-switch {
+            float: right;
+            margin-top: 25px;
+
+        }
+        h1 {
+            float: left;
+        }
+    }
+    &.public {
+        text-align: center;
+    }
+}
