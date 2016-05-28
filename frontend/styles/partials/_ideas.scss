@@ -12,9 +12,10 @@
 		vertical-align: top;
 		margin-right: $margin-value;
 
-		input[type=text], .tags-container {
+		input[type=text], .tags-container, select {
 			border: 1px solid $grey;
 		}
+
 		.tags-container {
 			width: 20em;
 			display: block;
@@ -131,5 +132,4 @@ section {
 	p {
 		display: inline-block;
 	}
-
 }

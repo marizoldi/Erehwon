@@ -6,7 +6,11 @@ form {
   padding-bottom: 0;
 }
 
-input {
+select {
+  height: 3em;
+}
+
+input, select {
   display: block;
   width: 100%;
   padding: $form-padding-value 0;
