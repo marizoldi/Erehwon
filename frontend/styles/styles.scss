@@ -8,6 +8,7 @@
 @import "partials/footer";
 @import "partials/header";
 @import "partials/user-space-menu";
+@import "partials/forms";
 @import "partials/dashboard";
 @import "partials/switch";
 
@@ -18,7 +19,8 @@ body {
    padding:0;
    height:100%;
    background-color: $background-pale-color;
-   font-family: Verdana,Geneva,sans-serif
+   font-family: Verdana,Geneva,sans-serif;
+   font-size: $base-font-size;
 }
 
 .content {
@@ -80,9 +82,17 @@ header, footer{
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
 }
+
 .button:hover {
     background-color: #008CBA; /* Green */
     color: white;
+    cursor: pointer;
+}
+
+button {
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 .separator {

@@ -1,6 +1,8 @@
 .user-space_menu {
+	padding: $margin-value 0;
 	ul {
 		list-style: none;
+		padding: 0;
 	}
 	li {
 		padding: $padding-value 0;

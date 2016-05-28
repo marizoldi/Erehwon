@@ -1,0 +1,37 @@
+form {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 30em;
+  padding: $padding-value;
+  padding-bottom: 0;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: $form-padding-value 0;
+  margin: $form-padding-value auto $form-padding-value auto;
+  border: none;
+  color: $text-dark-color;
+  font-weight: 100;
+  margin: $margin-value 0;
+  max-width: 100%;
+  &::-webkit-input-placeholder {
+    padding: $form-padding-value
+  }
+
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: $form-padding-value 0;
+  margin: 0 auto $form-padding-value auto;
+  border: none;
+  color: $text-dark-color;
+  font-weight: 100;
+  &::-webkit-input-placeholder {
+    padding: $form-padding-value
+  }
+
+}
