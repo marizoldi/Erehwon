@@ -1,73 +1,84 @@
 <!DOCTYPE html>
-<html lang="en-gb">
-    <head>
-        <title>Ideas | Erehwon</title>
-        <meta charset="UTF-8">
-        <meta name=viewport content="width=device-width, initial-scale=1">
-        <meta name="created" content='27th May 2016' />
-        <meta name="description" content="Erehwon" />
-        <meta name="author" content="Erehwon" />
-        <meta name="copyright" content="All text content and images copyright Erehwon" />
-        <meta name="company" content="Erehwon" />
-        <!-- Latest compiled and minified CSS -->   
-        <link href="../styles/css/styles.css" rel="stylesheet">
-        <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
-    </head>
-    <body>
-        <header class="logged-in">
-            <div class="header-content">
-                <h1>Username</h1>
-                <label class="switch map-switch">
-                    <input type="checkbox">
-                    <div class="slider round"></div>
-                </label>
-            </div>
-        </header>
-        <div class="content">
-            <nav>
-                <ul class="dashboard-menu">
-                    <li>
-                        <a href="#">
-                            <div class="dashboard-item">
-                                <span class="item-image"></span>
-                                <span class="item-title">My Projects</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="dashboard-item">
-                                <span class="item-image"></span>
-                                <span class="item-title">My Ideas</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="dashboard-item">
-                                <span class="item-image"></span>
-                                <span class="item-title">My Contacts</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="dashboard-item">
-                                <span class="item-image"></span>
-                                <span class="item-title">Actions</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="dashboard-item">
-                                <span class="item-image"></span>
-                                <span class="item-title">Inbox</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+<html lang="en-gb" ng-app="erehwonApp">
+
+<head>
+    <title>Projects | Erehwon</title>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="created" content='27th May 2016' />
+    <meta name="description" content="Erehwon" />
+    <meta name="author" content="Erehwon" />
+    <meta name="copyright" content="All text content and images copyright Erehwon" />
+    <meta name="company" content="Erehwon" />
+    <!-- Latest compiled and minified CSS -->
+    <link href="../styles/css/styles.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="../app/app.js"></script>
+</head>
+
+<body ng-controller="DashboardController">
+    <header class="logged-in">
+        <div class="header-content">
+            <h1>Username</h1>
+            <label class="switch map-switch">
+                <input id="switch-input" type="checkbox" ng-model="mapSwitch">
+                <div class="slider round"></div>
+            </label>
+        </div>
+    </header>
+    <div class="overlay" ng-show="mapSwitch">
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <p>Overlay content in here.</p>
+        </div>
+    </div>
+    <div class="content">
+        <nav>
+            <ul class="dashboard-menu">
+                <li>
+                    <a href="#">
+                        <div class="dashboard-item">
+                            <span class="item-image"></span>
+                            <span class="item-title">My Projects</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="dashboard-item">
+                            <span class="item-image"></span>
+                            <span class="item-title">My Ideas</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="dashboard-item">
+                            <span class="item-image"></span>
+                            <span class="item-title">My Contacts</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="dashboard-item">
+                            <span class="item-image"></span>
+                            <span class="item-title">Actions</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="dashboard-item">
+                            <span class="item-image"></span>
+                            <span class="item-title">Inbox</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
             <section class="idea">
                 <div class="add-idea">
                     <button href="#" class="button add-idea_button">  <span class="idea-icon__add">+</span> Add a project
@@ -125,7 +136,16 @@
                 </ul>
             </section>
         </div>
-
+        <footer>
+            <nav>
+                <ul class="footer-links">
+                    <li><a href="">About</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Credits</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </nav>
+        </footer>
         <script src="../scripts/scripts.js" async></script>
     </body>
 </html>
