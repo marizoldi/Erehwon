@@ -1,0 +1,27 @@
+footer {
+	height: $footer-height;
+	padding: $padding-value*2;
+	border-top: 1px solid $grey;
+	background-color: $background-pale-color;
+	nav {
+		margin-top: 5em;
+
+	}
+	ul {
+		width: $footer-width;
+		padding:0;
+		margin: 0 auto;
+		list-style: none;
+		display: flex;
+		li {
+			flex: 1;
+			display: inline-block;
+			text-align: center;
+
+		}
+	}
+	a {
+		color: $grey;
+		text-decoration: none;
+	}
+}
