@@ -1,45 +1,135 @@
 .idea {
-	max-width: $smaller-width;
+	max-width: $max-width;
 	margin: 0 auto;
 
-	.idea-icon__add {
-		display: inline;
-		font-size: 1.3em;
-	}
-
-	.idea__add {
-
-		h1 {
-			display: inline;
-			padding: 0;
-			margin: 0;
-			flex: 1;
-			padding: $padding-value;
-		}
-
-		button {
-			background: $background-pale-color;
-			border-style: none;
-			background: $grey;
-			margin: $margin-value;
-
-			&:hover {
-				cursor: pointer;
-			}
-		}
-
+	.button {
+		margin-bottom: 0;
+		vertical-align: bottom;
 	}
 
 	form {
-		input {
-			margin: $margin-value;
-			display: block;
-			padding: $padding-value;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: $margin-value;
+
+		input[type=text], .tags-container {
+			border: 1px solid $grey;
 		}
-		.tag-input {
-			border: none;
+		.tags-container {
+			width: 20em;
+			display: block;
+			width: 100%;
+			padding: $form-padding-value 0;
+			margin: $form-padding-value auto $form-padding-value auto;
+			color: $text-dark-color;
+			font-weight: 100;
+			margin: $margin-value 0;
+		}
+		textarea {
+			border: 1px solid $grey;
+
+		}
+		input[type=text] {
+			width: 10em;
 		}
 
+		.tag-input {
+			border: none;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			width: auto;
+		}
+
+	}
+
+}
+
+section {
+	margin: $margin-value 0;
+}
+
+.idea-icon__add {
+	display: inline;
+	font-size: 1.3em;
+}
+
+.idea__add {
+
+	h1 {
+		display: inline;
+		padding: 0;
+		margin: 0;
+		flex: 1;
+		padding: $padding-value;
+	}
+
+}
+.img-circle {
+	display: inline-block;
+	margin-right: $margin-value;
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+    vertical-align: top;
+	background: url("https://static-secure.guim.co.uk/sys-images/Guardian/Pix/pictures/2012/8/16/1345113241935/A-very-cute-kitten-008.jpg") center center no-repeat;
+}
+
+.add-idea_button {
+	display: block;
+	p {
+		margin: 0;
+	}
+}
+.add-idea_wrap {
+	display: block;
+	padding: $margin-value 0;
+
+}
+.idea-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	li {
+		background-color: $grey;
+		display: block;
+		margin: 1px;
+		vertical-align: middle;
+		display: flex;
+		align-items: center;
+  		justify-content: center;
+  		a {
+  			text-decoration: none;
+  		}
+  		&>a {
+			text-align: center;
+		}
+
+	}
+}
+
+.idea-list-col {
+	display: inline-block;
+	padding: $padding-value*2;
+	flex: auto;
+
+	h2 {
+		margin: 0;
+	}
+	ul {
+		display: inline-block;
+		padding: 0;
+		display: inline-flex;
+		li {
+			display: inline-block;
+			background-color: $accent-color;
+			padding: $padding-value;
+			flex:1;
+		}
+	}
+	p {
+		display: inline-block;
 	}
 
 }

@@ -4,17 +4,6 @@
   /* display: block; without flexbox */
   display: flex;
   flex-flow: row wrap;
-  margin: 0 0 15px;
-  width: 100%;
-  min-height: 32px;
-  padding: 4px 6px 2px 6px;
-  font-size: 14px;
-  color: #555;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 1px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
   word-wrap: break-word;
 }
 .tags-container:before, .tags-container:after {
@@ -30,6 +19,7 @@ input.tag-input {
 }
 .tag {
   position: relative;
+  display: inline-block;
   /* float: left;  without flexbox*/
   margin: 2px 6px 3px 0;
   padding: 4px 8px 4px 8px;
