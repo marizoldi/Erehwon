@@ -6,8 +6,10 @@
 @import "partials/tags";
 @import "partials/user-space-menu";
 @import "partials/footer";
+@import "partials/header";
 @import "partials/user-space-menu";
 @import "partials/dashboard";
+@import "partials/switch";
 
 
 html,
@@ -16,6 +18,7 @@ body {
    padding:0;
    height:100%;
    background-color: $background-pale-color;
+   font-family: Verdana,Geneva,sans-serif
 }
 
 .content {
@@ -31,12 +34,6 @@ header, footer{
 	left: 0;
 }
 
-header {
-	text-align: center;
-	height: 100px;
-	top: 0;
-	z-index: 1;
-}
 
 #content {
 	overflow:hidden;
@@ -56,25 +53,7 @@ header {
 	}
 }
 
-footer {
-	height: 60px;
-	bottom: 0;
-	background: aliceblue;
-	padding: 20px;
-	nav {
-		text-align: center;
-		
-		vertical-align: text-bottom;
-	}
-	.footer-links {
-		list-style-type: none;
-		margin:0;
-		padding:0;
-		li {
-			display: inline;
-		}
-	}
-}
+
 
 #signup,#signin {
 	z-index: 1;

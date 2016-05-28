@@ -1,16 +1,18 @@
 .dashboard-menu {
 	text-align: center;
-	max-width: $smaller-width;
-	margin: 0 auto;
 	height: 100px;
 	padding: 20px 0;
+	list-style-type: none;
 }
 
 .dashboard-item {
-	width:100px;
+	width:110px;
 	float: left;
 	text-align: center;
-	margin:0 50px;
+	margin: 5px 20px;
+	border: 1px black solid;
+	padding: 10px;
+	border-radius: 5px;
 	.item-image {
 		height: 80px;
 		width: 80px;
