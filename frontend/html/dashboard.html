@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-gb">
+<html lang="en-gb" ng-app="erehwonApp">
 
 <head>
     <title>Dashboard | Erehwon</title>
@@ -13,18 +13,27 @@
     <!-- Latest compiled and minified CSS -->
     <link href="../styles/css/styles.css" rel="stylesheet">
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="../app/app.js"></script>
 </head>
 
-<body>
+<body ng-controller="DashboardController">
     <header class="logged-in">
         <div class="header-content">
             <h1>Username</h1>
             <label class="switch map-switch">
-                <input type="checkbox">
+                <input id="switch-input" type="checkbox" ng-model="mapSwitch">
                 <div class="slider round"></div>
             </label>
         </div>
     </header>
+    <div class="overlay" ng-show="mapSwitch">
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <p>Overlay content in here.</p>
+        </div>
+    </div>
     <div class="content">
         <nav>
             <ul class="dashboard-menu">
