@@ -17,12 +17,14 @@ footer {
 		}
 	}
 }
-
-.homepage-footer {
-	position: absolute;
-	left: 0;
+.singup-footer {
+	position: fixed;
+	z-index: 0;
+	width: 100%;
 	bottom: 0;
-	
+	nav {
+		margin-top: 5em;
+	}	
 }
 
 .footer {

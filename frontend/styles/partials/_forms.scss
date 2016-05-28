@@ -20,6 +20,7 @@ input, select {
   font-weight: 100;
   margin: $margin-value 0;
   max-width: 100%;
+  border: 1px solid $grey;
   &::-webkit-input-placeholder {
     padding: $form-padding-value
   }
