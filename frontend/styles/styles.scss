@@ -1,4 +1,26 @@
-header, footer {
+@import "partials/variables";
+@import "partials/signup";
+@import "partials/logo";
+@import "partials/footer";
+@import "partials/map";
+
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+   background-color: $background-pale-color;
+
+}
+
+.content {
+	max-width: $max-width;
+	margin: 0 auto;
+	min-height:100%;
+    position:relative;
+}
+
+header, footer{
 	position:absolute;
 	right: 0;
 	left: 0;
