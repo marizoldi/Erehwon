@@ -7,6 +7,8 @@
 @import "partials/user-space-menu";
 @import "partials/footer";
 @import "partials/forms";
+@import "partials/dashboard";
+
 
 html,
 body {
@@ -34,6 +36,7 @@ header {
 	text-align: center;
 	height: 100px;
 	top: 0;
+	z-index: 1;
 }
 
 #content {
@@ -103,6 +106,7 @@ footer {
 .button:hover {
     background-color: #008CBA; /* Green */
     color: white;
+<<<<<<< HEAD
     cursor: pointer;
 }
 
@@ -110,4 +114,12 @@ button {
 	&:hover {
 		cursor: pointer;
 	}
+=======
+}
+
+.separator {
+	border-bottom: 1px #000000 solid;
+	height: 0px;
+	width: 100%;
+>>>>>>> master
 }
