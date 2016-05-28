@@ -1,8 +1,13 @@
 @import "partials/variables";
 @import "partials/signup";
 @import "partials/logo";
-@import "partials/footer";
 @import "partials/map";
+@import "partials/ideas";
+@import "partials/tags";
+@import "partials/user-space-menu";
+@import "partials/footer";
+@import "partials/user-space-menu";
+
 
 html,
 body {
@@ -10,7 +15,6 @@ body {
    padding:0;
    height:100%;
    background-color: $background-pale-color;
-
 }
 
 .content {
@@ -20,7 +24,7 @@ body {
     position:relative;
 }
 
-header, footer, #content {
+header, footer{
 	position:absolute;
 	right: 0;
 	left: 0;
@@ -33,13 +37,25 @@ header {
 }
 
 #content {
-	top: 0;
-	bottom: 100px;
 	overflow:hidden;
+	vertical-align: text-bottom;
+	position: relative;
+	height: 100%;
+	#explore {
+		width: 100%;
+		position: absolute;
+		bottom: 150px;
+		
+		.explore-text {
+			padding: 30px;
+			margin: 0 30px;
+			background: beige;
+		}
+	}
 }
 
 footer {
-	height: 100px;
+	height: 60px;
 	bottom: 0;
 	background: aliceblue;
 	padding: 20px;
@@ -56,4 +72,34 @@ footer {
 			display: inline;
 		}
 	}
+}
+
+#signup,#signin {
+	z-index: 1;
+	position: absolute;
+	bottom: 70px;
+}
+#signup {
+	right: 20px;
+}
+#signin {
+	right: 160px;
+}
+
+.button {
+    background-color: #ffffff;
+    border: 2px #008CBA solid;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.button:hover {
+    background-color: #008CBA; /* Green */
+    color: white;
 }
