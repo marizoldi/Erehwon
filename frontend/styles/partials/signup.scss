@@ -1,0 +1,10 @@
+$background-pale-color: #fcfcfc;
+$max-width: 60em;
+
+body {
+	background-color: $background-pale-color;
+}
+
+.main_container {
+	max-width: $max-width;
+}
