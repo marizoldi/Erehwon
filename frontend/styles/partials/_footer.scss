@@ -1,3 +1,23 @@
+footer {
+	height: 60px;
+	bottom: 0;
+	background: aliceblue;
+	padding: 20px;
+	nav {
+		text-align: center;
+		
+		vertical-align: text-bottom;
+	}
+	.footer-links {
+		list-style-type: none;
+		margin:0;
+		padding:0;
+		li {
+			display: inline;
+		}
+	}
+}
+
 .footer {
 	position: initial;
 	height: auto;
