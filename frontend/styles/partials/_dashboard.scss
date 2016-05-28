@@ -1,0 +1,30 @@
+.dashboard-menu {
+	text-align: center;
+	max-width: $smaller-width;
+	margin: 0 auto;
+	height: 100px;
+	padding: 20px 0;
+}
+
+.dashboard-item {
+	width:100px;
+	float: left;
+	text-align: center;
+	margin:0 50px;
+	.item-image {
+		height: 80px;
+		width: 80px;
+		border-radius: 80px;
+		background-color: lightblue;
+		display:inline-block;
+		border: 2px lightblue solid;
+
+	}
+	.item-title {
+		font-size: 15px;
+		font-weight: bold;
+	}
+	.item-image:hover {
+		background-color: white;
+	}
+}
