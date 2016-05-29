@@ -13,8 +13,6 @@ select {
 input, select {
   display: block;
   width: 100%;
-  padding: $form-padding-value 0;
-  margin: $form-padding-value auto $form-padding-value auto;
   border: none;
   color: $text-dark-color;
   font-weight: 100;
@@ -30,7 +28,7 @@ input, select {
 textarea {
   display: block;
   width: 100%;
-  padding: $form-padding-value 0;
+  padding: $form-padding-value;
   margin: 0 auto $form-padding-value auto;
   border: none;
   color: $text-dark-color;
