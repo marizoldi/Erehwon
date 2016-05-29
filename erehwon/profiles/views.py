@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 
-from profiles.models import Project
+from profiles.models import Project, Idea
 
 # Create your views here.
 class LoginView(TemplateView):
@@ -27,7 +27,13 @@ def project_list(request):
 
 	return render(request, 'profiles/my-projects.html', context)
 
+def idea_list(request):
 
+	ideas = Idea.objects.all()
+	context = {'ideas': ideas}
+
+
+	return render(request, 'profiles/ideas.html', context)
 
 
 class DashboardView(TemplateView):
@@ -37,12 +43,6 @@ class DashboardView(TemplateView):
 
     template_name = "profiles/dashboard-logged-in.html"
 
-class IdeasView(TemplateView):
-    """
-    The Dashboard view to add ideas.
-    """
-
-    template_name = "profiles/ideas.html"
 
 class CallForActionView(TemplateView):
     """

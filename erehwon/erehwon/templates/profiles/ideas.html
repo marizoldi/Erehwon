@@ -34,55 +34,24 @@
 <section >
     <h1> My Ideas </h1>
     <ul class="idea-list"> 
+        {% for idea in ideas %}
+
         <li>
             <div class="idea-info idea-list-col">
-                <a href="#"><h2>Idea 1</h2></a>
+                <a href="#"><h2>{{ idea.title }}</h2></a>
                 <div>
                     <p>Contributers</p>
                     <p> / </p>
                     <ul>
-                        <li>label 1</li>
-                        <li>label 1</li>
-                        <li>label 1</li>
+                        <li>{{ project.label }}</li>
                     </ul>
                 </div>
             </div>
             <button class="idea-list-col edit-button"> Edit</button>
             <a href="#" class="idea-list-col">Go to Sketchbook</a>
         </li>
-        <li>
-            <div class="idea-info idea-list-col">
-                <a href="#"><h2>Idea 2</h2></a>
-                <div>
-                    <p>Contributers</p>
-                    <p> / </p>
-                    <ul>
-                        <li>label 1</li>
-                        <li>label 1</li>
-                        <li>label 1</li>
-                    </ul>
-                </div>
-            </div>
-            <button class="idea-list-col edit-button"> Edit</button>
-            <a href="#" class="idea-list-col">Go to Sketchbook </a>
-        </li>
-        <li>
-            <div class="idea-info idea-list-col">
-                <a href="#"><h2>Idea 3</h2></a>
-                <div>
-                    <p>Contributers</p>
-                    <p> / </p>
-                    <ul>
-                        <li>label 1</li>
-                        <li>label 1</li>
-                        <li>label 1</li>
-                    </ul>
-                </div>
-            </div>
-            <button class="idea-list-col edit-button"> Edit</button>
-            <a href="#" class="idea-list-col">Go to Sketchbook</a>
-        </li>
-        
+        {% endfor %}
+
     </ul>
 </section>
 {% endblock %}
