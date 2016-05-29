@@ -22,7 +22,36 @@ We continue its development on a voluntarily basis and seeking new collaboration
 ![Wireframe](http://www.osso.pt/wp-content/uploads/2016/02/heroimage-02.jpg)
 
 # Setup
+## Setup
 
-1. Clone the repo `git@github.com:marizoldi/Erehwon.git`
-2. Go inside frontend folder `cd frontend`
-3. Install all the dependencies `npm install`
+1. Install [virtualenv](https://virtualenv.pypa.io/en/stable/): 
+
+	```sudo pip install virtualenv```
+
+2. Install [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html):
+
+	 ```pip install virtualenvwrapper```
+3. Create a new env for the project:
+ 
+	 ```mkvirtualenv erehwon```
+4. Clone the repo 
+
+	```git@github.com:marizoldi/Erehwon.git```
+5. Go inside the newly added **erehwon** directory:
+	
+	```cd erehwon```
+	
+6. Activate the virtual enviroment:
+ 
+	 ```workon erehwon``` 
+	 
+	 This will now ensure anything you install is within this enviroment.
+7. Install the requirements:
+
+	 ```pip install -r requirements.txt``` 
+5. Go inside frontend folder: 
+	
+	```cd frontend```
+6. Install all the dependencies:
+
+	 ```npm install```
