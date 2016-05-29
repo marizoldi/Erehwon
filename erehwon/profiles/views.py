@@ -16,3 +16,10 @@ class RegistrationView(TemplateView):
     """
 
     template_name = "profiles/register.html"
+
+class DashboardView(TemplateView):
+    """
+    The Dashboard view as soon as user logs in.
+    """
+
+    template_name = "profiles/dashboard-logged-in.html"
