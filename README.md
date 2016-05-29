@@ -21,7 +21,7 @@ We continue its development on a voluntarily basis and seeking new collaboration
 
 ![Wireframe](http://www.osso.pt/wp-content/uploads/2016/02/heroimage-02.jpg)
 
-# Setup
+## Development Setup
 
 1. Install [virtualenv](https://virtualenv.pypa.io/en/stable/): 
 
@@ -49,9 +49,42 @@ We continue its development on a voluntarily basis and seeking new collaboration
 7. Install the requirements:
 
 	 ```pip install -r requirements.txt``` 
-5. Go inside frontend folder: 
+8. You will need to have [Postgres installed](https://www.postgresql.org/download/) and up and running:
+	
+	```brew install postgresql``
+9. Create a database locally for the project to run:
+	
+	```createdb erehwon``
+
+10. Go inside frontend folder: 
 	
 	```cd frontend```
-6. Install all the dependencies:
+11. Install all the dependencies:
 
 	 ```npm install```
+
+
+## Running the project locally
+1. Go inside the django app directory: 
+
+	```cd erehwon```
+2. Run django server:
+	
+	```python manage.py runserver```
+	
+3. The project is now running on `http://127.0.0.1:8000/`, go to that address in your browser. 
+
+## Front End changes
+1. Make css and javascript changes in the ```frontend``` folder
+2. Make any HTML changes in the Django templates located in `erehwon/templates`
+3. Use `grunt default` in the frontend folder to build, watch and copy all the required files automatically into the Django static folder.
+
+## Deploying to Heroku
+1. Create a Heroku Account
+2. Get added to the app in the Heroku Dashboard
+3. In the terminal `heroku login`
+4. Within you project directory `heroku git:remote -a erehwon`
+5. Once you are ready to deploy, from master branch you can run `git push heroku master` make sure you have commited all the changes before running this and the `git status` is clean.
+6. Go to http://erehwon.herokuapp.com/ to view the live site.
+
+
