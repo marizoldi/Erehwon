@@ -16,3 +16,10 @@ class RegistrationView(TemplateView):
     """
 
     template_name = "profiles/register.html"
+
+class ProjectsView(TemplateView):
+    """
+    The Dashboard project view.
+    """
+
+    template_name = "profiles/projects.html"

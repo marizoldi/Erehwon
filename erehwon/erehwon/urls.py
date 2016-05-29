@@ -24,4 +24,6 @@ urlpatterns = [
     url(r'^$', HomepageView.as_view(), name="index"),
     url(r'^login', LoginView.as_view(), name="login"),
     url(r'^register', RegistrationView.as_view(), name="register"),
+    url(r'^projects', ProjectsView.as_view(), name="projects"),
+
 ]
