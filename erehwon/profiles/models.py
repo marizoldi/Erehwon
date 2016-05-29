@@ -18,7 +18,8 @@ class Project(models.Model):
    synopsis = models.TextField(max_length=300)
    material = models.URLField(max_length=300, blank=True)
    # contributors = models.CharField(max_length=20)
-   # active_status = models.BooleanField(default=1)
+   active_status = models.BooleanField(default=1)
+   is_added_to_map = models.BooleanField(default=0)
    label = models.CharField(max_length=30,
        choices=LABEL_OPTIONS,
        default='A')
