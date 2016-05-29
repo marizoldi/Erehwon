@@ -36,19 +36,13 @@ def idea_list(request):
 
 	return render(request, 'profiles/ideas.html', context)
 
+def message_list(request):
 
-class DashboardView(TemplateView):
-    """
-    The Dashboard view as soon as user logs in.
-    """
-    def get_daily_message(self):
-        """Returns message list from DB"""
-    	all_messages = Message.objects.all()
-        random_msg = random.sample(items, 1)
-        return random_msg
+	messages = Message.objects.all().order_by('?')
+	context = {'messages': messages}
 
-    template_name = "profiles/dashboard-logged-in.html"
 
+	return render(request, 'profiles/dashboard-logged-in.html', context)
 
 class CallForActionView(TemplateView):
     """
