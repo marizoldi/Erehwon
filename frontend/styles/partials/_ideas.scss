@@ -12,16 +12,10 @@
 		vertical-align: top;
 		margin-right: $margin-value;
 
-		input[type=text], .tags-container, select {
-			border: 1px solid $grey;
-		}
-
 		.tags-container {
 			width: 20em;
 			display: block;
 			width: 100%;
-			padding: $form-padding-value 0;
-			margin: $form-padding-value auto $form-padding-value auto;
 			color: $text-dark-color;
 			font-weight: 100;
 			margin: $margin-value 0;
@@ -88,6 +82,21 @@ section {
 	padding: $margin-value 0;
 
 }
+
+.project-list {
+	.row {
+		background-color: $main-color;
+		color: $color-white;
+		padding: 20px;
+		margin-bottom: 20px;
+		.project-title {
+			color: $color-white;
+			font-size: 28px;
+			font-weight: bold;
+		}
+	}
+}
+
 .idea-list {
 	list-style: none;
 	padding: 0;
