@@ -12,7 +12,7 @@ grunt.initConfig({
 	cssmin: {
 		combine: {
 		  files: {
-		    '../erehwon/static/styles/styles.css': ['styles/css/styles.css']
+		    '../erehwon/static/styles/styles.css': ['css/styles.css']
 		  }
 		}
 	},
@@ -33,7 +33,7 @@ grunt.initConfig({
 	},
 	jspaths: {
         src: {
-                js: 'scripts/**/**.js'
+               js: ['app/**.js']
             },
             dest: {
                 jsMin: '../erehwon/static/scripts/erehwon.min.js'
