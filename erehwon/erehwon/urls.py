@@ -17,14 +17,14 @@ from django.conf.urls import url
 from django.contrib import admin
 
 from core.views import HomepageView
-from profiles.views import LoginView, RegistrationView, DashboardView, ProjectsView, IdeasView, CallForActionView
+from profiles.views import LoginView, RegistrationView, DashboardView, project_list, IdeasView, CallForActionView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', HomepageView.as_view(), name="index"),
     url(r'^login', LoginView.as_view(), name="login"),
     url(r'^register', RegistrationView.as_view(), name="register"),
-    url(r'^projects', ProjectsView.as_view(), name="projects"),
+    url(r'^projects', project_list, name="project_list"),
     url(r'^dashboard', DashboardView.as_view(), name="dashboard"),
     url(r'^ideas', IdeasView.as_view(), name="ideas"),
     url(r'^callforaction', CallForActionView.as_view(), name="callforaction"),

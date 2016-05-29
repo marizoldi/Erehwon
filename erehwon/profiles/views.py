@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 
+from profiles.models import Project
 
 # Create your views here.
 class LoginView(TemplateView):
@@ -17,12 +18,17 @@ class RegistrationView(TemplateView):
 
     template_name = "profiles/register.html"
 
-class ProjectsView(TemplateView):
-    """
-    The Dashboard project view.
-    """
 
-    template_name = "profiles/my-projects.html"
+def project_list(request):
+
+	projects = Project.objects.all()
+	context = {'projects': projects}
+
+
+	return render(request, 'profiles/my-projects.html', context)
+
+
+
 
 class DashboardView(TemplateView):
     """

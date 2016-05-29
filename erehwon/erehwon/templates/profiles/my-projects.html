@@ -9,7 +9,7 @@
         </button>
         <div class="add-idea_wrap">
             <div class="img-circle"></div>
-            <form class="new_idea__form">
+            <form class="new_idea__form" method="POST">
                 <input type="text" placeholder="Title">
                 <textarea placeholder="Synopsis" maxlength="100" rows="3"></textarea>
                 <select name="select">
@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="button-wrap">
-                    <submit class="button">Save</submit>
+                    <submit class="button" type="Submit">Save</submit>
                     <button class="button">Share</button>
                     <button class="button">Cancel</button>
                 </div>
@@ -47,9 +47,11 @@
 <section >
     <h1> My Projects </h1>
     <ul class="idea-list"> 
+        {% for project in projects %}
+
         <li>
             <div class="idea-info idea-list-col">
-                <a href="#"><h2>Mile End Gardens</h2></a>
+                <a href="#"><h2>{{ project.title }}</h2></a>
                 <div>
                     <p>Contributers: 20</p>
                 </div>
@@ -57,6 +59,8 @@
             <a href="#" class="idea-list-col">Add to map</a>
             <a href="#" class="idea-list-col">Remove from map</a>
         </li>
+
+        {% endfor %}
     </ul>
 </section>
 {% endblock %}
