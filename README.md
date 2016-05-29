@@ -22,7 +22,6 @@ We continue its development on a voluntarily basis and seeking new collaboration
 ![Wireframe](http://www.osso.pt/wp-content/uploads/2016/02/heroimage-02.jpg)
 
 # Setup
-## Setup
 
 1. Install [virtualenv](https://virtualenv.pypa.io/en/stable/): 
 
@@ -34,9 +33,10 @@ We continue its development on a voluntarily basis and seeking new collaboration
 3. Create a new env for the project:
  
 	 ```mkvirtualenv erehwon```
-4. Clone the repo 
+4. Clone the repo:
 
-	```git@github.com:marizoldi/Erehwon.git```
+	`git@github.com:marizoldi/Erehwon.git`
+	
 5. Go inside the newly added **erehwon** directory:
 	
 	```cd erehwon```
