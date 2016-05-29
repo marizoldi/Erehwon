@@ -1161,7 +1161,8 @@ header {
       header.logged-in h1 .hello {
         display: inline; } }
   header.public {
-    text-align: center; }
+    text-align: center;
+    background: none; }
 
 form {
   margin: 0 auto;
