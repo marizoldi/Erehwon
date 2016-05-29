@@ -2,10 +2,11 @@ header {
     height: 85px;
     top: 0;
     z-index: 1;
-    background: aliceblue;
+    background: $main-color;
     &.logged-in {
         margin: 0 auto;
         position: relative;
+        color: $color-white;
         .header-content {
             max-width: $max-width;
             margin: 0 auto;

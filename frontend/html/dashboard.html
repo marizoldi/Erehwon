@@ -11,7 +11,7 @@
     <meta name="copyright" content="All text content and images copyright Erehwon" />
     <meta name="company" content="Erehwon" />
     <!-- Latest compiled and minified CSS -->
-    <link href="../styles/css/styles.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="../app/app.js"></script>
@@ -20,7 +20,7 @@
 <body ng-controller="DashboardController">
     <header class="logged-in">
         <div class="header-content">
-            <h1>Username</h1>
+            <h1>hello, username</h1>
             <label class="switch map-switch">
                 <input id="switch-input" type="checkbox" ng-model="mapSwitch">
                 <div class="slider round"></div>
@@ -35,52 +35,24 @@
         </div>
     </div>
     <div class="content">
-        <nav>
-            <ul class="dashboard-menu">
-                <li>
-                    <a href="#">
-                        <div class="dashboard-item">
-                            <span class="item-image"></span>
-                            <span class="item-title">My Projects</span>
-                            <span class="notification-counter">1</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="dashboard-item">
-                            <span class="item-image"></span>
-                            <span class="item-title">My Ideas</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="dashboard-item">
-                            <span class="item-image"></span>
-                            <span class="item-title">My Contacts</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="dashboard-item">
-                            <span class="item-image"></span>
-                            <span class="item-title">Actions</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="dashboard-item">
-                            <span class="item-image"></span>
-                            <span class="item-title">Inbox</span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <section class="dashboard-menu">
+        <div class="section group dashboard-navigation">
+            <div class="col span_1_of_5 dashboard-link -projects">
+                <span class="notification-counter">1</span>
+            </div>
+            <div class="col span_1_of_5 dashboard-link -ideas">
+            </div>
+            <div class="col span_1_of_5 dashboard-link -contacts">
+            </div>
+            <div class="col span_1_of_5 dashboard-link -actions">
+            </div>
+            <div class="col span_1_of_5 dashboard-link -inbox">
+            </div>
+
+        </div>
+        
+        <section class="motd">
+        <h2>Message of the day</h2>
+        <p>This is the message of the day.</p>
         </section>
     </div>
     <footer>
