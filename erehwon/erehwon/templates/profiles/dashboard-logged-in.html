@@ -3,10 +3,10 @@
 {% load static %}
 
 
-    {% block main %} 
+    {% block main %}
     <section class="motd">
         <h2>Message of the day</h2>
-        <p>This is the message of the day.</p>
+        <p>{{ get_daily_message() }}</p>
     </section>
 
     {% endblock %}
