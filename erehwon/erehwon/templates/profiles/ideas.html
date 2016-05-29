@@ -5,16 +5,16 @@
 {% block main %} 
 <section class="idea">
     <div class="add-idea">
-        <button href="#" class="button add-idea_button">  <span class="idea-icon__add">+</span> Add a project
+        <button href="#" class="button add-idea_button">  <span class="idea-icon__add">+</span> Add an idea
         </button>
         <div class="add-idea_wrap">
             <div class="img-circle"></div>
-            <form class="new_idea__form" method="POST">
+            <form class="new_idea__form">
                 <input type="text" placeholder="Title">
                 <textarea placeholder="Synopsis" maxlength="100" rows="3"></textarea>
                 <select name="select">
                     <option value="" disabled selected>Select a label</option>
-                    <option value="value1" selected>Digital Activism</option> 
+                    <option value="value1">Digital Activism</option> 
                     <option value="value2">Activism</option>
                     <option value="value3">Community Development</option>
                     <option value="value3">Urban Planning</option>
@@ -24,42 +24,34 @@
                     <option value="value3">Artistic Interventions</option>
                 </select>
                 <input type="text" class="tagged" name="tag-1" data-removeBtn="true" placeholder="create a tag">
-                <input type="text" placeholder="Add Multimedia">
-                <input type="text" placeholder="Add Contributers">
-                <input type="text" placeholder="Add Articles">
-                <div class="project-active-wrap">
-                    <span>Is the project Active now?</span>
-                    <label class="switch map-switch">
-                        <input type="checkbox">
-                        <div class="slider round"></div>
-                    </label>
-                </div>
-
-                <div class="button-wrap">
-                    <submit class="button" type="Submit">Save</submit>
-                    <button class="button">Share</button>
-                    <button class="button">Cancel</button>
-                </div>
+                <input type="text" placeholder="Invite People">
+                <input type="text" placeholder="Attach to Project">
             </form>
+            <button class="button" disabled>Start Sketching</button>
         </div>
     </div>
 </sectin>
 <section >
-    <h1> My Projects </h1>
+    <h1> My Ideas </h1>
     <ul class="idea-list"> 
-        {% for project in projects %}
+        {% for idea in ideas %}
+
         <li>
             <div class="idea-info idea-list-col">
-                <a href="#"><h2>{{ project.title }}</h2></a>
+                <a href="#"><h2>{{ idea.title }}</h2></a>
                 <div>
-                    <p>Contributers: 20</p>
+                    <p>Contributers</p>
+                    <p> / </p>
+                    <ul>
+                        <li>{{ idea.get_label_display }}</li>
+                    </ul>
                 </div>
             </div>
-            <a href="#" class="idea-list-col">Add to map</a>
-            <a href="#" class="idea-list-col">Remove from map</a>
+            <button class="idea-list-col edit-button"> Edit</button>
+            <a href="#" class="idea-list-col">Go to Sketchbook</a>
         </li>
-
         {% endfor %}
+
     </ul>
 </section>
 {% endblock %}

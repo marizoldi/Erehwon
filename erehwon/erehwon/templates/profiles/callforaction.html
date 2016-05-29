@@ -1,0 +1,33 @@
+{% extends "dashboard-layout.html" %}
+
+{% load static %}
+
+{% block main %} 
+<section class="idea">
+    <div class="add-idea">
+        <button href="#" class="button add-idea_button">  <span class="idea-icon__add">+</span> Add new call for action
+        </button>
+        <div class="add-idea_wrap">
+            <form class="new_idea__form">
+                <input type="text" placeholder="Title">
+                <textarea placeholder="Synopsis" maxlength="100" rows="3"></textarea>
+                <select name="select">
+                    <option value="" disabled selected>Select a label</option>
+                    <option value="value1">Digital Activism</option> 
+                    <option value="value2">Activism</option>
+                    <option value="value3">Community Development</option>
+                    <option value="value3">Urban Planning</option>
+                    <option value="value3">New Ecologies</option>
+                    <option value="value3">Alternative Economies</option>
+                    <option value="value3">Citizen Movements</option>
+                    <option value="value3">Artistic Interventions</option>
+                </select>
+                <input type="text" class="tagged" name="tag-1" data-removeBtn="true" placeholder="create a tag">
+                <input type="text" placeholder="Location">
+                <input type="text" placeholder="Time">
+            </form>
+            <button class="button">Add</button>
+        </div>
+    </div>
+</sectin>
+{% endblock %}
