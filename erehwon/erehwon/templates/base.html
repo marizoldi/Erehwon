@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en-gb">
+<html lang="en-gb" ng-app="erehwonApp">
     <head>
         <title>{% block title %} {% endblock %}| Erehwon</title>
         <!--Meta Data-->
@@ -12,17 +12,19 @@
         <meta name="author" content="Beatriz Cantinho and Mariza Dima, and has been developed with the support of Osso Cultural Association, Queen Mary University of London, and Stress.fm." />
         <meta name="copyright" content="All text content and images copyright Erehwon" />
         <meta name="company" content="Erehwon" />
-        
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
         <!-- Latest compiled and minified CSS -->   
         <link href="{% static "styles/styles.css" %}" rel="stylesheet">
         <link rel="shortcut icon" href="{% static "img/favicon.png" %}" type="image/x-icon">
     </head>
-    <body>
+    <body ng-controller="DashboardController">
    
         {% block layout %} {% endblock %}
         
+        
         <!-- Latest compiled and minified JavaScript -->
 
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
         <script src="{% static "scripts/erehwon.min.js" %}"></script>
 
         {% if not debug and not request.user.is_staff %}

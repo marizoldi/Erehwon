@@ -1,0 +1,14 @@
+{% extends "dashboard-layout.html" %}
+
+{% load static %}
+
+
+    {% block main %}
+    <section class="motd">
+        <h2>Message of the day</h2>
+        {% for message in messages %}
+        	<p>{{ message.message }}</p>
+        {% endfor %}
+    </section>
+
+    {% endblock %}

@@ -17,11 +17,16 @@ from django.conf.urls import url
 from django.contrib import admin
 
 from core.views import HomepageView
-from profiles.views import LoginView, RegistrationView
+from profiles.views import LoginView, RegistrationView, message_list, project_list, idea_list, CallForActionView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', HomepageView.as_view(), name="index"),
     url(r'^login', LoginView.as_view(), name="login"),
     url(r'^register', RegistrationView.as_view(), name="register"),
+    url(r'^projects', project_list, name="project_list"),
+    url(r'^dashboard', message_list, name="dashboard"),
+    url(r'^ideas', idea_list, name="idea_list"),
+    url(r'^callforaction', CallForActionView.as_view(), name="callforaction"),
+
 ]

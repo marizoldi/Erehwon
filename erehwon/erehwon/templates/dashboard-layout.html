@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block layout %}
+    <header class="logged-in">
+        <div class="header-content">
+            <h1>hello, username</h1>
+            <label class="switch map-switch">
+                <input id="switch-input" type="checkbox" ng-model="mapSwitch">
+                <div class="slider round"></div>
+            </label>
+        </div>
+    </header>
+    <div class="overlay" ng-show="mapSwitch">
+
+        <div class="overlay-content">
+            <p>Overlay content in here.</p>
+        </div>
+    </div>
+    <div class="content">
+        <div class="section group dashboard-navigation">
+            <a href="/projects" class="col span_1_of_5 dashboard-link -projects">
+                <span class="notification-counter">1</span>
+            </a>
+            <a href="ideas" class="col span_1_of_5 dashboard-link -ideas">
+            </a>
+            <a href="contacts" class="col span_1_of_5 dashboard-link -contacts">
+            </a>
+            <a href="callforaction" class="col span_1_of_5 dashboard-link -actions">
+            </a>
+            <a href="inbox" class="col span_1_of_5 dashboard-link -inbox">
+            </a>
+        </div>        
+        {% block main %}
+        {% endblock %}
+    </div>
+
+    <footer>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="/about">About</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/credits">Credits</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+
+{% endblock %}
+

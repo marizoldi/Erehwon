@@ -34,9 +34,9 @@ class Idea(models.Model):
     title = models.CharField(max_length=30)
     synopsis = models.TextField(max_length=300)
     # contributors = models.CharField(max_length=20)
-    # label = models.CharField(max_length=30,
-    #     choices=LABEL_OPTIONS,
-    #     default='A')
+    label = models.CharField(max_length=30,
+        choices=LABEL_OPTIONS,
+        default='A')
 
     def __str__(self):
         return self.title
