@@ -4,4 +4,5 @@ frontend/.sass-cache/
 frontend/node_modules
 frontend/styles/css/styles.css
 frontend/styles/css/styles.css.map
+**.pyc
 *.cache
