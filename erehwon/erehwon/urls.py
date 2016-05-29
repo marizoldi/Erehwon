@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 
 from core.views import HomepageView
-from profiles.views import LoginView, RegistrationView
+from profiles.views import LoginView, RegistrationView, DashboardView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -25,5 +25,5 @@ urlpatterns = [
     url(r'^login', LoginView.as_view(), name="login"),
     url(r'^register', RegistrationView.as_view(), name="register"),
     url(r'^projects', ProjectsView.as_view(), name="projects"),
-
+    url(r'^dashboard', DashboardView.as_view(), name="dashboard"),
 ]
