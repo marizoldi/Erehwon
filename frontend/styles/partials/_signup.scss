@@ -1,24 +1,15 @@
-.form {
+.singup-form {
 	max-width: $form-width;
 	margin: 0 auto;
 	padding: $padding-value*2;
 	border: 1px solid $grey;
 	background-color: $background-pale-color;
-	margin-bottom: -5em;
+	position: fixed;
+	bottom: 0;
+	margin-bottom: 4em;
+	z-index: 1;
+	left: 40%;
 
-	input {
-		display: block;
-		margin: $margin-value auto;
-		padding: $padding-value;
-	}
-	.button {
-		margin: $margin-value;
-		padding: $padding-value;
-		border-radius: 0;
-		border-width: 0;
-	    border-style: none;
-	    background-color: $grey;
-	}
 }
 
 .main_container {
