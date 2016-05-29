@@ -3,7 +3,7 @@ header {
     top: 0;
     z-index: 1;
     &.logged-in {
-    background: $main-color;
+        background: $main-color;
         margin: 0 auto;
         position: relative;
         color: $color-white;
@@ -29,5 +29,6 @@ header {
     }
     &.public {
         text-align: center;
+        background: none;
     }
 }
