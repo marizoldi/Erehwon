@@ -1,0 +1,45 @@
+#about,
+#signup,
+#signin {
+    width: 100%
+}
+
+.map-footer {
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	width: 90%;
+	left: 5%;
+}
+
+@media (min-width: 440px) {
+	.map-footer {
+		position: unset;
+	}
+    #about,
+    #signup,
+    #signin {
+        z-index: 1;
+        position: absolute;
+        bottom: -15px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        width: unset;
+    }
+    #signup {
+        right: 20px;
+    }
+    #signin {
+        right: 160px;
+    }
+    #about {
+        left: 20px;
+    }
+    #search {
+        position: absolute;
+        z-index: 1;
+        bottom: 40px;
+        width: 262px;
+        right: 20px;
+    }
+}

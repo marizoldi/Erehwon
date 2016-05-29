@@ -1,6 +1,6 @@
 .map {
-	height: 100vh;
+	height: calc(100vh - 80px);
 	width: 100%;
-	background: url("http://maproom.net/wp-content/uploads/Maproom-Central-London-major-features-5.jpg") no-repeat center center;
 	background-size: cover; 
+	background-color: $color-white;
 }

@@ -879,6 +879,47 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
+#about,
+#signup,
+#signin {
+  width: 100%; }
+
+.map-footer {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 90%;
+  left: 5%; }
+
+@media (min-width: 440px) {
+  .map-footer {
+    position: unset; }
+
+  #about,
+  #signup,
+  #signin {
+    z-index: 1;
+    position: absolute;
+    bottom: -15px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    width: unset; }
+
+  #signup {
+    right: 20px; }
+
+  #signin {
+    right: 160px; }
+
+  #about {
+    left: 20px; }
+
+  #search {
+    position: absolute;
+    z-index: 1;
+    bottom: 40px;
+    width: 262px;
+    right: 20px; } }
 .singup-form {
   max-width: 15em;
   margin: 0 auto;
@@ -904,10 +945,10 @@ there.
     margin: 0; }
 
 .map {
-  height: 100vh;
+  height: calc(100vh - 80px);
   width: 100%;
-  background: url("http://maproom.net/wp-content/uploads/Maproom-Central-London-major-features-5.jpg") no-repeat center center;
-  background-size: cover; }
+  background-size: cover;
+  background-color: #ffffff; }
 
 .idea {
   max-width: 1150px;
@@ -1123,6 +1164,8 @@ footer {
       footer .footer-links li a {
         color: white;
         text-decoration: none; }
+  footer.homepage-footer {
+    background: none; }
 
 .singup-footer {
   position: fixed;
@@ -1163,6 +1206,11 @@ header {
   header.public {
     text-align: center;
     background: none; }
+    header.public .logo {
+      width: 100%; }
+      @media (min-width: 750px) {
+        header.public .logo {
+          max-width: 800px; } }
 
 form {
   margin: 0 auto;
@@ -1381,8 +1429,7 @@ header {
 #content {
   overflow: hidden;
   vertical-align: text-bottom;
-  position: relative;
-  height: 100%; }
+  position: relative; }
   #content #explore {
     width: 100%;
     position: absolute;
@@ -1394,17 +1441,6 @@ header {
 
 section {
   padding: 2em 0; }
-
-#signup, #signin {
-  z-index: 1;
-  position: absolute;
-  bottom: 70px; }
-
-#signup {
-  right: 20px; }
-
-#signin {
-  right: 160px; }
 
 .separator {
   border-bottom: 1px #000000 solid;

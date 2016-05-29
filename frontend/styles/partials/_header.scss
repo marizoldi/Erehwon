@@ -30,5 +30,11 @@ header {
     &.public {
         text-align: center;
         background: none;
+        .logo {
+            width: 100%;
+            @media (min-width: 750px) {
+                max-width: 800px;
+            }
+        }
     }
 }
