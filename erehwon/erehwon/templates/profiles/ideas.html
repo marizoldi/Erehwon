@@ -1,0 +1,88 @@
+{% extends "dashboard-layout.html" %}
+
+{% load static %}
+
+{% block main %} 
+<section class="idea">
+    <div class="add-idea">
+        <button href="#" class="button add-idea_button">  <span class="idea-icon__add">+</span> Add an idea
+        </button>
+        <div class="add-idea_wrap">
+            <div class="img-circle"></div>
+            <form class="new_idea__form">
+                <input type="text" placeholder="Title">
+                <textarea placeholder="Synopsis" maxlength="100" rows="3"></textarea>
+                <select name="select">
+                    <option value="" disabled selected>Select a label</option>
+                    <option value="value1">Digital Activism</option> 
+                    <option value="value2">Activism</option>
+                    <option value="value3">Community Development</option>
+                    <option value="value3">Urban Planning</option>
+                    <option value="value3">New Ecologies</option>
+                    <option value="value3">Alternative Economies</option>
+                    <option value="value3">Citizen Movements</option>
+                    <option value="value3">Artistic Interventions</option>
+                </select>
+                <input type="text" class="tagged" name="tag-1" data-removeBtn="true" placeholder="create a tag">
+                <input type="text" placeholder="Invite People">
+                <input type="text" placeholder="Attach to Project">
+            </form>
+            <button class="button" disabled>Start Sketching</button>
+        </div>
+    </div>
+</sectin>
+<section >
+    <h1> My Ideas </h1>
+    <ul class="idea-list"> 
+        <li>
+            <div class="idea-info idea-list-col">
+                <a href="#"><h2>Idea 1</h2></a>
+                <div>
+                    <p>Contributers</p>
+                    <p> / </p>
+                    <ul>
+                        <li>label 1</li>
+                        <li>label 1</li>
+                        <li>label 1</li>
+                    </ul>
+                </div>
+            </div>
+            <button class="idea-list-col edit-button"> Edit</button>
+            <a href="#" class="idea-list-col">Go to Sketchbook</a>
+        </li>
+        <li>
+            <div class="idea-info idea-list-col">
+                <a href="#"><h2>Idea 2</h2></a>
+                <div>
+                    <p>Contributers</p>
+                    <p> / </p>
+                    <ul>
+                        <li>label 1</li>
+                        <li>label 1</li>
+                        <li>label 1</li>
+                    </ul>
+                </div>
+            </div>
+            <button class="idea-list-col edit-button"> Edit</button>
+            <a href="#" class="idea-list-col">Go to Sketchbook </a>
+        </li>
+        <li>
+            <div class="idea-info idea-list-col">
+                <a href="#"><h2>Idea 3</h2></a>
+                <div>
+                    <p>Contributers</p>
+                    <p> / </p>
+                    <ul>
+                        <li>label 1</li>
+                        <li>label 1</li>
+                        <li>label 1</li>
+                    </ul>
+                </div>
+            </div>
+            <button class="idea-list-col edit-button"> Edit</button>
+            <a href="#" class="idea-list-col">Go to Sketchbook</a>
+        </li>
+        
+    </ul>
+</section>
+{% endblock %}

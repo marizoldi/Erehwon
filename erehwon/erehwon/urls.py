@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 
 from core.views import HomepageView
-from profiles.views import LoginView, RegistrationView, DashboardView
+from profiles.views import LoginView, RegistrationView, DashboardView, ProjectsView, IdeasView, CallForActionView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -26,4 +26,7 @@ urlpatterns = [
     url(r'^register', RegistrationView.as_view(), name="register"),
     url(r'^projects', ProjectsView.as_view(), name="projects"),
     url(r'^dashboard', DashboardView.as_view(), name="dashboard"),
+    url(r'^ideas', IdeasView.as_view(), name="ideas"),
+    url(r'^callforaction', CallForActionView.as_view(), name="callforaction"),
+
 ]
