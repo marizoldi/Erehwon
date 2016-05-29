@@ -4,6 +4,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-ng-annotate'); 
 
 
 grunt.initConfig({
@@ -46,21 +47,30 @@ grunt.initConfig({
             sourceMap: true
         },
         target: {
-            src: '<%= jspaths.src.js %>',
+            src: 'app/min-safe-app.js',
             dest: '<%= jspaths.dest.jsMin %>'
         }
     },
     copy: {
 	  img: {
-	    files: [
-	      // includes files within path
-	      {expand: true, src: ['img/*'], dest: '../erehwon/static/', filter: 'isFile'},
+	  	files: [
+	    // includes files within path
+	    {expand: true, src: ['img/*'], dest: '../erehwon/static/', filter: 'isFile'},
 	    ],
 	  },
 	},
+	ngAnnotate: {
+	    options: {
+	        singleQuotes: true
+	    },
+	    app: {
+	        files: {
+	        	'app/min-safe-app.js':['app/app.js'],
+	       	}
+	    }
+	},
+});
 
-	});
 
-	grunt.registerTask('default', ['sass', 'cssmin', 'uglify', 'copy:img']);
-
+	grunt.registerTask('default', ['ngAnnotate', 'sass', 'cssmin', 'uglify', 'copy:img']);
 }
