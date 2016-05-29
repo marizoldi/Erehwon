@@ -2,8 +2,8 @@ header {
     height: auto;
     top: 0;
     z-index: 1;
-    background: $main-color;
     &.logged-in {
+    background: $main-color;
         margin: 0 auto;
         position: relative;
         color: $color-white;
