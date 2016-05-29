@@ -8,6 +8,7 @@ class Project(models.Model):
     material = models.URLField(max_length=300, blank=True)
     contributors = models.CharField(max_length=20)
     active_status = models.BooleanField(default=1)
+    is_added_to_map = models.BooleanField(default=0)
     # ideas =
 
     def __str__(self):
