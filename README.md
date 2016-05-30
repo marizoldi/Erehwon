@@ -8,7 +8,7 @@ The prototype tool was created over a hackathon weekend on the 28th and 29th May
 
 Developers
 Front-end:
-* [Liliana Castillo](https://github.com/lili2311)
+* [Liliana Kastilio](https://github.com/lili2311)
 * [Karen Lee](https://github.com/neraks)
 
 Graphic Designer:
