@@ -2,19 +2,13 @@
 
 {% load static %}
 
-
-    {% block main %}
-    <header class="public">
+    {% block main %} 
+    <header class="header">
         <img src="{% static "img/logo.svg" %}" class="logo" />
     </header>
     <div id="content">
         <div class="map">
 
         </div>
-        <aside id="explore">
-            <div class="explore-text">About</div>
-        </aside>
-        <div id="signup" class="button">Sign Up</div>
-        <div id="signin" class="button">Sign In</div>
     </div>
     {% endblock %}

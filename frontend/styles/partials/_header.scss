@@ -1,21 +1,18 @@
-header {
-    height: auto;
-    top: 0;
-    z-index: 1;
+.header {
+    text-align: center;
+    background: none;
+    padding: $padding-value*2;
     &.logged-in {
         background: $main-color;
         margin: 0 auto;
         position: relative;
         color: $color-white;
+        text-align: left;
         .header-content {
             max-width: $max-width;
             margin: 0 auto;
         }
-        .map-switch {
-            float: right;
-            margin-top: 25px;
 
-        }
         h1 {
             display: inline;
         }
@@ -27,14 +24,11 @@ header {
 
         }
     }
-    &.public {
-        text-align: center;
-        background: none;
-        .logo {
-            width: 100%;
-            @media (min-width: 750px) {
-                max-width: 800px;
-            }
+    .logo {
+        height: 70px;
+        @media (min-width: 750px) {
+            max-width: 800px;
         }
+        
     }
 }

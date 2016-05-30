@@ -38,8 +38,8 @@ def idea_list(request):
 
 def message_list(request):
 
-	messages = Message.objects.all().order_by('?')
-	context = {'messages': messages}
+	message = Message.objects.all().order_by('?')[0]
+	context = {'message': message}
 
 
 	return render(request, 'profiles/dashboard-logged-in.html', context)

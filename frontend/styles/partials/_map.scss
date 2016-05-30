@@ -1,6 +1,6 @@
 .map {
-	height: calc(100vh - 80px);
+	height: 30em;
 	width: 100%;
-	background-size: cover; 
-	background-color: $color-white;
+	background: url("../img/dummy-map-homepage.png") center center no-repeat;
+	background-size: contain;
 }
