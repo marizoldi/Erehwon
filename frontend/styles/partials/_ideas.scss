@@ -102,16 +102,25 @@ section {
 	padding: 0;
 	margin: 0;
 
+	h1, h2 {
+		color: $text-light-color;
+	}
+
 	li {
-		background-color: $grey;
+        background: $main-color;
+        color: $text-light-color;
 		display: block;
 		margin: 1px;
 		vertical-align: middle;
 		display: flex;
 		align-items: center;
   		justify-content: center;
+  		padding: $padding-value*2;
+
   		a {
   			text-decoration: none;
+  			color: $text-light-color;
+
   		}
   		&>a {
 			text-align: center;
@@ -129,7 +138,6 @@ section {
 }
 .idea-list-col {
 	display: inline-block;
-	padding: $padding-value*2;
 	flex: auto;
 
 	h2 {
@@ -151,5 +159,5 @@ section {
 	}
 }
 .idea-info {
-	flex: 3;
+	flex: 9;
 }

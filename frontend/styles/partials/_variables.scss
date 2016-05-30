@@ -1,8 +1,8 @@
 // Colors
-$color-white: #ffffff;
+$color-white: #fff;
 $main-color: #73bf9b;
 $main-color-hover: rgba($main-color, 0.7);
-$background-pale-color: #f2f4f6;
+$background-light-color: #f2f4f6;
 $background-main: #E0E2EE;
 $grey: #C9C9C9;
 $yellow: #FDBA33;
@@ -12,14 +12,16 @@ $dark-grey: #25262d;
 $light-grey: #b4b0b4;
 
 // Sizes
-$max-width: 1150px;
+$max-width: 60em;
 $form-width: 15em;
 $padding-value: .5em;
 $margin-value: 1em;
-$footer-height: 10em;
+$footer-height: 8em;
 $footer-width: 30em;
 $smaller-width: 40em;
 $base-font-size: 14px;
 $text-dark-color: #4e4e4e;
+$text-light-color: $color-white;
+
 $form-padding-value: 1em;
 

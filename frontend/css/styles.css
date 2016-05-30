@@ -366,7 +366,7 @@ th {
 * 12/29/2014
 */
 /* Table of contents
-ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô
+––––––––––––––––––––––––––––––––––––––––––––––––––
 - Grid
 - Base Styles
 - Typography
@@ -382,7 +382,7 @@ th {
 - Media Queries
 */
 /* Grid
-ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
   position: relative;
   width: 100%;
@@ -519,7 +519,7 @@ th {
   .offset-by-one-half.columns {
     margin-left: 52%; } }
 /* Base Styles
-ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* NOTE
 html is set to 62.5% so that all the REM measurements throughout Skeleton
 are based on 10px sizing. So basically 1.5rem = 15px :) */
@@ -535,7 +535,7 @@ body {
   color: #222; }
 
 /* Typography
-ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
@@ -594,7 +594,7 @@ p {
   margin-top: 0; }
 
 /* Links
-ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
   color: #1EAEDB; }
 
@@ -602,7 +602,7 @@ a:hover {
   color: #0FA0CE; }
 
 /* Buttons
-ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button,
 button,
 input[type="submit"],
@@ -669,8 +669,8 @@ input[type="submit"].button-secondary,
 input[type="reset"].button-secondary,
 input[type="button"].button-secondary {
   color: #333;
-  background-color: #ffffff;
-  border-color: #ffffff; }
+  background-color: #fff;
+  border-color: #fff; }
 
 .button.button-secondary:hover,
 button.button-secondary:hover,
@@ -687,7 +687,7 @@ input[type="button"].button-secondary:focus {
   border-color: #fcfcfc; }
 
 /* Forms
-ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -756,7 +756,7 @@ label > .label-body {
   font-weight: normal; }
 
 /* Lists
-ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
   list-style: circle inside; }
 
@@ -778,7 +778,7 @@ li {
   margin-bottom: 1rem; }
 
 /* Code
-ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 code {
   padding: .2rem .5rem;
   margin: 0 .2rem;
@@ -794,7 +794,7 @@ pre > code {
   white-space: pre; }
 
 /* Tables
-ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 th,
 td {
   padding: 12px 15px;
@@ -810,7 +810,7 @@ td:last-child {
   padding-right: 0; }
 
 /* Spacing
-ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
 .button {
   margin-bottom: 1rem; }
@@ -833,7 +833,7 @@ form {
   margin-bottom: 2.5rem; }
 
 /* Utilities
-ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .u-full-width {
   width: 100%;
   box-sizing: border-box; }
@@ -849,7 +849,7 @@ form {
   float: left; }
 
 /* Misc
-ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
@@ -857,7 +857,7 @@ hr {
   border-top: 1px solid #E1E1E1; }
 
 /* Clearing
-ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Self Clearing Goodness */
 .container:after,
 .row:after,
@@ -867,7 +867,7 @@ hr {
   clear: both; }
 
 /* Media Queries
-ΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇôΓÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*
 Note: The best way to structure the use of media queries is to create the queries
 near the relevant code. For example, if you wanted to change the styles for buttons
@@ -879,47 +879,32 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
-#about,
-#signup,
-#signin {
-  width: 100%; }
+.main-nav {
+  flex: 1; }
+  .main-nav ul {
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    margin: 0 1em;
+    clear: both; }
+    .main-nav ul li {
+      margin: 0; }
+    .main-nav ul a {
+      margin: 0;
+      border-bottom: 0;
+      background-color: #fff; }
+    .main-nav ul .main-menu__about {
+      flex: 9; }
 
-.map-footer {
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
-  width: 90%;
-  left: 5%; }
+.search-field {
+  max-width: 19em;
+  text-align: right;
+  margin: 1em;
+  float: right;
+  border-radius: 0; }
 
-@media (min-width: 440px) {
-  .map-footer {
-    position: unset; }
-
-  #about,
-  #signup,
-  #signin {
-    z-index: 1;
-    position: absolute;
-    bottom: -15px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    width: unset; }
-
-  #signup {
-    right: 20px; }
-
-  #signin {
-    right: 160px; }
-
-  #about {
-    left: 20px; }
-
-  #search {
-    position: absolute;
-    z-index: 1;
-    bottom: 40px;
-    width: 262px;
-    right: 20px; } }
 .singup-form {
   max-width: 15em;
   margin: 0 auto;
@@ -939,19 +924,19 @@ there.
 
 .logo {
   margin: 0 auto;
-  text-align: center;
-  padding: 0.5em; }
+  max-height: 70px;
+  max-width: 100%; }
   .logo h1 {
     margin: 0; }
 
 .map {
-  height: calc(100vh - 80px);
+  height: 30em;
   width: 100%;
-  background-size: cover;
-  background-color: #ffffff; }
+  background: url("../img/dummy-map-homepage.png") center center no-repeat;
+  background-size: contain; }
 
 .idea {
-  max-width: 1150px;
+  max-width: 60em;
   margin: 0 auto; }
   .idea .button {
     margin-bottom: 0;
@@ -1012,11 +997,11 @@ section {
 
 .project-list .row {
   background-color: #73bf9b;
-  color: #ffffff;
+  color: #fff;
   padding: 20px;
   margin-bottom: 20px; }
   .project-list .row .project-title {
-    color: #ffffff;
+    color: #fff;
     font-size: 28px;
     font-weight: bold; }
 
@@ -1024,16 +1009,21 @@ section {
   list-style: none;
   padding: 0;
   margin: 0; }
+  .idea-list h1, .idea-list h2 {
+    color: #fff; }
   .idea-list li {
-    background-color: #C9C9C9;
+    background: #73bf9b;
+    color: #fff;
     display: block;
     margin: 1px;
     vertical-align: middle;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    padding: 1em; }
     .idea-list li a {
-      text-decoration: none; }
+      text-decoration: none;
+      color: #fff; }
     .idea-list li > a {
       text-align: center; }
 
@@ -1046,7 +1036,6 @@ section {
 
 .idea-list-col {
   display: inline-block;
-  padding: 1em;
   flex: auto; }
   .idea-list-col h2 {
     margin: 0; }
@@ -1063,7 +1052,7 @@ section {
     display: inline-block; }
 
 .idea-info {
-  flex: 3; }
+  flex: 9; }
 
 /* Tags */
 .tags-container {
@@ -1144,73 +1133,61 @@ input.tag-input {
     text-decoration: none;
     color: #3c3c3c; }
 
-footer {
+.footer-wrap {
   width: 100%;
-  height: 40px;
+  width: 100%;
+  position: absolute;
   bottom: 0;
-  background: #25262d;
-  padding: 20px 0;
-  color: #ffffff; }
-  footer nav {
-    text-align: center;
-    vertical-align: text-bottom; }
-  footer .footer-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0; }
-    footer .footer-links li {
-      display: inline;
-      margin: 0 20px; }
-      footer .footer-links li a {
-        color: white;
-        text-decoration: none; }
-  footer.homepage-footer {
-    background: none; }
-
-.singup-footer {
-  position: fixed;
-  z-index: 0;
   width: 100%;
-  bottom: 0; }
-  .singup-footer nav {
-    margin-top: 5em; }
+  color: #fff;
+  min-height: 8em;
+  display: flex;
+  flex-direction: column; }
 
 .footer {
-  position: initial;
-  height: auto; }
-  .footer nav {
-    margin-top: 5em; }
+  flex: 1;
+  background: #25262d;
+  text-align: center;
+  vertical-align: text-bottom;
+  padding: 0.5em;
+  height: 4em; }
 
-header {
-  height: auto;
-  top: 0;
-  z-index: 1; }
-  header.logged-in {
+.footer-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0.5em; }
+  .footer-links li {
+    display: inline-block;
+    margin: 0 1em; }
+    .footer-links li a {
+      color: white;
+      text-decoration: none; }
+
+.header {
+  text-align: center;
+  background: none;
+  padding: 1em; }
+  .header.logged-in {
     background: #73bf9b;
     margin: 0 auto;
     position: relative;
-    color: #ffffff; }
-    header.logged-in .header-content {
-      max-width: 1150px;
+    color: #fff;
+    text-align: left; }
+    .header.logged-in .header-content {
+      max-width: 60em;
       margin: 0 auto; }
-    header.logged-in .map-switch {
-      float: right;
-      margin-top: 25px; }
-    header.logged-in h1 {
+    .header.logged-in h1 {
       display: inline; }
-    header.logged-in h1 .hello {
+    .header.logged-in h1 .hello {
       display: none; }
     @media (min-width: 550px) {
-      header.logged-in h1 .hello {
+      .header.logged-in h1 .hello {
         display: inline; } }
-  header.public {
-    text-align: center;
-    background: none; }
-    header.public .logo {
-      width: 100%; }
-      @media (min-width: 750px) {
-        header.public .logo {
-          max-width: 800px; } }
+  .header .logo {
+    height: 70px; }
+    @media (min-width: 750px) {
+      .header .logo {
+        max-width: 800px; } }
 
 form {
   margin: 0 auto;
@@ -1326,7 +1303,7 @@ textarea {
     text-align: center;
     vertical-align: middle;
     font-size: 15px;
-    color: #ffffff;
+    color: #fff;
     z-index: 1; }
 
 .dashboard-item {
@@ -1336,7 +1313,7 @@ textarea {
   width: 10%;
   height: 10%;
   position: relative;
-  background-color: #ffffff; }
+  background-color: #fff; }
   @media screen and (min-width: 1150px) {
     .dashboard-item {
       width: 198px;
@@ -1353,6 +1330,9 @@ textarea {
     text-align: center; }
 
 /* The switch - the box around the slider */
+.map-switch {
+  float: right; }
+
 .switch {
   position: relative;
   display: inline-block;
@@ -1374,7 +1354,7 @@ textarea {
   background-color: transparent;
   -webkit-transition: .4s;
   transition: .4s;
-  border: 3px #ffffff solid; }
+  border: 3px #fff solid; }
 
 .slider:before {
   position: absolute;
@@ -1388,7 +1368,7 @@ textarea {
   transition: .4s; }
 
 input:checked + .slider {
-  background-color: #ffffff; }
+  background-color: #fff; }
 
 input:focus + .slider {
   box-shadow: 0 0 1px #2196F3; }
@@ -1411,36 +1391,40 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #E0E2EE;
   font-family: Verdana,Geneva,sans-serif;
   font-size: 14px; }
 
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.6em; }
+
+.body-wrap {
+  min-height: 100%;
+  position: relative;
+  background: #f2f4f6; }
+
 .content {
-  max-width: 1150px;
-  margin: 0 auto;
-  min-height: calc(100% - 100px);
-  position: relative; }
-
-header {
-  position: absolute;
-  right: 0;
-  left: 0; }
-
-#content {
-  overflow: hidden;
-  vertical-align: text-bottom;
-  position: relative; }
-  #content #explore {
+  padding-bottom: 8em;
+  position: relative;
+  max-width: 60em;
+  margin: 0 auto; }
+  .content #explore {
     width: 100%;
     position: absolute;
     bottom: 150px; }
-    #content #explore .explore-text {
+    .content #explore .explore-text {
       padding: 30px;
-      margin: 0 30px;
-      background: beige; }
+      margin: 0 30px; }
 
 section {
   padding: 2em 0; }
+
+.button {
+  background: #f2f4f6;
+  color: #4e4e4e;
+  border-radius: 0; }
 
 .separator {
   border-bottom: 1px #000000 solid;
@@ -1448,11 +1432,8 @@ section {
   width: 100%; }
 
 .overlay {
-  position: absolute;
-  top: 85px;
-  left: 0;
   width: 100%;
-  height: calc(100% - 85px - 80px);
+  height: 100vh;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.8);
   /*dim the background*/ }

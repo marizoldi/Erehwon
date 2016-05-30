@@ -20,30 +20,30 @@ html,
 body {
    margin:0;
    padding:0;
-   height:100%;
-   background-color: $background-main;
+   height: 100%;
    font-family: Verdana,Geneva,sans-serif;
    font-size: $base-font-size;
 }
 
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.6em;
+}
+
+.body-wrap {
+	min-height:100%;
+   	position:relative;
+   	background: $background-light-color;
+}
 .content {
+	padding-bottom: $footer-height; // required to keep footer at the bottom for pages that do not have enough content
+	position: relative;
 	max-width: $max-width;
 	margin: 0 auto;
-	min-height: calc(100% - 100px);
-    position:relative;
-}
 
-header{
-	position:absolute;
-	right: 0;
-	left: 0;
-}
-
-
-#content {
-	overflow:hidden;
-	vertical-align: text-bottom;
-	position: relative;
 	#explore {
 		width: 100%;
 		position: absolute;
@@ -52,7 +52,6 @@ header{
 		.explore-text {
 			padding: 30px;
 			margin: 0 30px;
-			background: beige;
 		}
 	}
 }
@@ -61,18 +60,20 @@ section {
 	padding: 2em 0;
 }
 
-
+.button {
+	background: $background-light-color;
+	color: $text-dark-color;
+	border-radius: 0;
+}
 .separator {
 	border-bottom: 1px #000000 solid;
 	height: 0px;
 	width: 100%;
 }
+
 .overlay{
-  position: absolute;
-  top: 85px;
-  left: 0;
   width: 100%;
-  height: calc(100% - 85px - 80px);
+  height: 100vh;
   z-index: 10;
   background-color: rgba(0,0,0,0.8); /*dim the background*/
 }

@@ -5,10 +5,7 @@
 
     {% block main %}
     <section class="motd">
-        <h2>Message of the day</h2>
-        {% for message in messages %}
-        	<p>{{ message.message }}</p>
-        {% endfor %}
+        <h2>{{ message.message }}</h2>
     </section>
 
     {% endblock %}
