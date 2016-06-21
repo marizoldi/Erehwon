@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block main %} 
+{% block main %}
 <section class="idea">
     <div class="add-idea">
         <button href="#" class="button add-idea_button">  <span class="idea-icon__add">+</span> Add an idea
@@ -14,7 +14,7 @@
                 <textarea placeholder="Synopsis" maxlength="100" rows="3"></textarea>
                 <select name="select">
                     <option value="" disabled selected>Select a label</option>
-                    <option value="value1">Digital Activism</option> 
+                    <option value="value1">Digital Activism</option>
                     <option value="value2">Activism</option>
                     <option value="value3">Community Development</option>
                     <option value="value3">Urban Planning</option>
@@ -33,14 +33,14 @@
 </sectin>
 <section >
     <h1> My Ideas </h1>
-    <ul class="idea-list"> 
+    <ul class="idea-list">
         {% for idea in ideas %}
 
         <li>
             <div class="idea-info idea-list-col">
                 <a href="#"><h2>{{ idea.title }}</h2></a>
                 <div>
-                    <p>Contributers</p>
+                    <p>Contributors</p>
                     <p> / </p>
                     <ul>
                         <li>{{ idea.get_label_display }}</li>
