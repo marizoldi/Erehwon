@@ -3,11 +3,11 @@
 {% load static %}
 
 {% block main %}
-<section class="idea">
+<section class="idea" ng-controller="ManageController">
     <div class="add-idea">
-        <button href="#" class="button add-idea_button" ng-click="clickAdd()>  <span class="idea-icon__add">+</span> Add new call for action
+        <button href="#" class="button-primary add-idea_button" ng-click="clickAdd()">  <span class="idea-icon__add">+</span> Add new call for action
         </button>
-        <div class="add-idea_wrap">
+        <div class="add-idea_wrap" ng-show="showAdd">
             <form class="new_idea__form">
                 <input type="text" placeholder="Title">
                 <textarea placeholder="Synopsis" maxlength="100" rows="3"></textarea>
