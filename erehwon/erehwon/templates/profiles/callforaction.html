@@ -5,7 +5,7 @@
 {% block main %}
 <section class="idea" ng-controller="ManageController">
     <div class="add-idea">
-        <button href="#" class="button-primary add-idea_button" ng-click="clickAdd()">  <span class="idea-icon__add">+</span> Add new call for action
+        <button href="#" class="button-primary add-idea_button" ng-click="clickAdd()">  <span class="idea-icon__add">+</span> Add new Call for action
         </button>
         <div class="add-idea_wrap" ng-show="showAdd">
             <form class="new_idea__form">
@@ -25,9 +25,32 @@
                 <input type="text" class="tagged" name="tag-1" data-removeBtn="true" placeholder="create a tag">
                 <input type="text" placeholder="Location">
                 <input type="text" placeholder="Time">
+                <input type="text" placeholder="Contributors">
             </form>
             <button class="button">Add</button>
         </div>
     </div>
-</sectin>
+</section>
+<section>
+    <h1> My Calls for Action </h1>
+    <ul class="idea-list">
+        {% for call in calls %}
+        <li>
+            <div class="idea-info idea-list-col">
+                <a href="#"><h2>{{ call.title }}</h2></a>
+                <div>
+                    <p>Contributors: 2</p>
+                    <!-- <ul>
+                        <li>{{ call.get_label_display }}</li>
+                    </ul> -->
+                </div>
+            </div>
+            <button class="button idea-list-col edit-button">Edit</button>
+            <!-- <a href="#" class="idea-list-col">Add to map</a>
+            <a href="#" class="idea-list-col">Remove from map</a> -->
+        </li>
+        {% endfor %}
+
+    </ul>
+</section>
 {% endblock %}
