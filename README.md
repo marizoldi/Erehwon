@@ -23,7 +23,11 @@ We continue its development on a voluntarily basis and seeking new collaboration
 
 ## Development Setup
 
-1. Install [virtualenv](https://virtualenv.pypa.io/en/stable/): 
+Python version 2.7.9
+(for help with Windows installation of virtualenv and virtualenvwrapper, see [Tim Reilly's article](http://timmyreilly.azurewebsites.net/python-pip-virtualenv-installation-on-windows/))
+
+
+1. Install [virtualenv](https://virtualenv.pypa.io/en/stable/)
 
 	```sudo pip install virtualenv```
 
