@@ -1,0 +1,9 @@
+@shraddhag, I have had a look at your entity relationship diagram and have just a few questions.  I haven't participated in any meetings or discussions as yet and so may not have a full picture of how it will all work.  Consequently, some of my questions might be way off.  Hopefully, something useful might be in there.
+
+Questions:
+
+Are contributor and user the same?  If so, should there be a profile_pic attribute?
+Should there be a profile_pic attribute for a project?
+Should there be a 'Material' entity? If so, what attributes might it have?  I don't get this from the wireframes - is it a collection of uploaded documents, or something else?
+
+Everything else looks fine to me.  Hope this helps.
