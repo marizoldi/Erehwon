@@ -1,0 +1,15 @@
+{% extends "dashboard-layout.html" %}
+
+{% load static %}
+
+{% block main %}
+<section class="idea">
+    <h1> Add/Edit a project</h1>
+    <form method="POST" class="" action="">
+        {% csrf_token %}
+        {{ project_update_form.as_p }}
+        <input type="submit"  class="button" value="Submit" />
+    </form>
+</sectin>
+
+{% endblock %}

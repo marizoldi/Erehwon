@@ -14,7 +14,7 @@ LABEL_OPTIONS = (
 
 class Project(models.Model):
 
-   user = models.ForeignKey('auth.User')
+   #user = models.ForeignKey('auth.User')
    title = models.CharField(max_length=30)
    synopsis = models.TextField(max_length=300)
    material = models.URLField(max_length=300, blank=True)
