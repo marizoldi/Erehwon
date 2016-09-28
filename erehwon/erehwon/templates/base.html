@@ -1,7 +1,8 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en-gb" ng-app="erehwonApp">
+<!-- <html lang="en-gb" ng-app="erehwonApp"> -->
+<html>
     <head>
         <title>{% block title %} {% endblock %}| Erehwon</title>
         <!--Meta Data-->
@@ -13,14 +14,14 @@
         <meta name="copyright" content="All text content and images copyright Erehwon" />
         <meta name="company" content="Erehwon" />
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-        <!-- Latest compiled and minified CSS -->   
+        <!-- Latest compiled and minified CSS -->
         <link href="{% static "styles/styles.css" %}" rel="stylesheet">
         <link rel="shortcut icon" href="{% static "img/favicon.png" %}" type="image/x-icon">
     </head>
     <body ng-controller="DashboardController">
         <div class="body-wrap">
             {% block layout %} {% endblock %}
-        
+
         </div>
         <!-- Latest compiled and minified JavaScript -->
 
