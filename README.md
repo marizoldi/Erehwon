@@ -23,8 +23,11 @@ We continue its development on a voluntarily basis and seeking new collaboration
 
 ## Development Setup
 
-Python version 2.7.9
-(for help with Windows installation of virtualenv and virtualenvwrapper, see [Tim Reilly's article](http://timmyreilly.azurewebsites.net/python-pip-virtualenv-installation-on-windows/))
+For a new installation of the project for Windows, using Command Prompt
+(including Python 2.7.9, pip, virutalenv and virtualenvwrapper installation):
+
+see [Tim Reilly's article](http://timmyreilly.azurewebsites.net/python-pip-virtualenv-installation-on-windows/)
+which makes the whole process, UP TO Step 7 below, really simple)
 
 
 1. Install [virtualenv](https://virtualenv.pypa.io/en/stable/)
