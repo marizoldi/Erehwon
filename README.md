@@ -36,35 +36,35 @@ which makes the whole process, UP TO Step 7 below, really simple)
 
 2. Install [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html):
 
-	 ```pip install virtualenvwrapper```
+	 `pip install virtualenvwrapper``
 3. Create a new env for the project:
- 
-	 ```mkvirtualenv erehwon```
+
+	 `mkvirtualenv erehwon``
 4. Clone the repo:
 
 	`git@github.com:marizoldi/Erehwon.git`
-	
+
 5. Go inside the newly added **erehwon** directory:
-	
-	```cd erehwon```
-	
+
+	`cd erehwon``
+
 6. Activate the virtual enviroment:
- 
-	 ```workon erehwon``` 
-	 
+
+	 ``workon erehwon``
+
 	 This will now ensure anything you install is within this enviroment.
 7. Install the requirements:
 
-	 ```pip install -r requirements.txt``` 
+	 ```pip install -r requirements.txt```
 8. You will need to have [Postgres installed](https://www.postgresql.org/download/) and up and running:
-	
+
 	```brew install postgresql``
 9. Create a database locally for the project to run:
-	
+
 	```createdb erehwon``
 
-10. Go inside frontend folder: 
-	
+10. Go inside frontend folder:
+
 	```cd frontend```
 11. Install all the dependencies:
 
@@ -72,14 +72,14 @@ which makes the whole process, UP TO Step 7 below, really simple)
 
 
 ## Running the project locally
-1. Go inside the django app directory: 
+1. Go inside the django app directory:
 
 	```cd erehwon```
 2. Run django server:
-	
+
 	```python manage.py runserver```
-	
-3. The project is now running on `http://127.0.0.1:8000/`, go to that address in your browser. 
+
+3. The project is now running on `http://127.0.0.1:8000/`, go to that address in your browser.
 
 ## Front End changes
 1. Make css and javascript changes in the ```frontend``` folder
@@ -93,5 +93,3 @@ which makes the whole process, UP TO Step 7 below, really simple)
 4. Within you project directory `heroku git:remote -a erehwon`
 5. Once you are ready to deploy, from master branch you can run `git push heroku master` make sure you have commited all the changes before running this and the `git status` is clean.
 6. Go to http://erehwon.herokuapp.com/ to view the live site.
-
-
