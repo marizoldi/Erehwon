@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'profiles',
     'django_countries',
+    'custom_user',
     'erehwon'
 ]
 
@@ -143,6 +144,8 @@ STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "../static"),
 ]
+
+AUTH_USER_MODEL = 'profiles.ErehwonUser'
 
 CONTEXT_PROCESSORS = [
     "django.contrib.auth.context_processors.auth",
