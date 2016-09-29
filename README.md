@@ -68,11 +68,11 @@ which makes the whole process, UP TO Step 7 below, really simple)
 ## Running the project locally
 1. Go inside the django app directory where the manage.py sits:
 
-	`../Erehwon/erehwon``
+	``../Erehwon/erehwon``
 
 2. Run django server:
 
-	``python manage.py runserver` or `./manage.py runserver``
+	``python manage.py runserver`` or ``./manage.py runserver``
 
 3. The project is now running on ``http://127.0.0.1:8000/`` in your browser.
 
