@@ -40,7 +40,7 @@ which makes the whole process, UP TO Step 7 below, really simple)
 
 	``cd erehwon``
 
-6. Activate the virtual enviroment:
+6. Activate the virtual environment:
 
 	 ``workon erehwon``
 
@@ -54,11 +54,11 @@ which makes the whole process, UP TO Step 7 below, really simple)
 
 9. Create a database locally for the project:
 
-	`createdb erehwon`
+	``createdb erehwon``
 
 10. Go inside front-end folder:
 
-	``cd frontend``
+	 ``cd frontend``
 
 11. Install all the dependencies:
 
@@ -68,23 +68,23 @@ which makes the whole process, UP TO Step 7 below, really simple)
 ## Running the project locally
 1. Go inside the django app directory where the manage.py sits:
 
-	`../Erehwon/erehwon`
+	`../Erehwon/erehwon``
 
 2. Run django server:
 
-	`python manage.py runserver` or `./manage.py runserver`
+	``python manage.py runserver` or `./manage.py runserver``
 
-3. The project is now running on `http://127.0.0.1:8000/` in your browser.
+3. The project is now running on ``http://127.0.0.1:8000/`` in your browser.
 
 ## Front End changes
-1. Make css and javascript changes in the ```frontend``` folder
-2. Make any HTML changes in the Django templates located in `erehwon/templates`
-3. Use `grunt default` in the frontend folder to build, watch and copy all the required files automatically into the Django static folder.
+1. Make css and javascript changes in the ``frontend`` folder
+2. Make any HTML changes in the Django templates located in ``erehwon/templates``
+3. Use ``grunt default`` in the front-end folder to build, watch and copy all the required files automatically into the Django static folder.
 
 ## Deploying to Heroku
 1. Create a Heroku Account
 2. Get added to the app in the Heroku Dashboard
-3. In the terminal `heroku login`
-4. Within you project directory `heroku git:remote -a erehwon`
-5. Once you are ready to deploy, from master branch you can run `git push heroku master` make sure you have commited all the changes before running this and the `git status` is clean.
+3. In the terminal ``heroku login``
+4. Within you project directory ``heroku git:remote -a erehwon``
+5. Once you are ready to deploy, from master branch you can run ``git push heroku master`` make sure you have committed all the changes before running this and the ``git status`` is clean.
 6. Go to http://erehwon.herokuapp.com/ to view the live site.
