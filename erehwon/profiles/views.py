@@ -2,11 +2,10 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.views.generic.edit import FormView, UpdateView
 
-from registration.models import RegistrationProfile
-from registration.backends.default import views as registration_views
+from registration.backends.hmac import views as registration_views
 
 from profiles.models import Project, Idea, Message, CallForAction
-from profiles.forms import ProjectForm, ErehwonUserSignUpForm
+from profiles.forms import ProjectForm
 
 
 # Create your views here.
@@ -22,23 +21,23 @@ class UserRegistrationView(registration_views.RegistrationView):
     The Registration view.
     """
 
-    template_name = "profiles/register.html"
-    form_class = ErehwonUserSignUpForm
+    template_name = "profiles/registration/registration_form.html"
+    # form_class = ErehwonUserSignUpForm
     success_url = '/accounts/registration-complete/'
 
-class RegistrationCompleteView(TemplateView):
-    """
-    The Complete Registration view.
-    """
-
-    template_name = "profiles/registration-complete.html"
-
-class ActivationCompleteView(TemplateView):
-    """
-    The Complete Activation view.
-    """
-
-    template_name = "profiles/activation-complete.html"
+# class RegistrationCompleteView(TemplateView):
+#     """
+#     The Complete Registration view.
+#     """
+#
+#     template_name = "profiles/registration-complete.html"
+#
+# class ActivationCompleteView(TemplateView):
+#     """
+#     The Complete Activation view.
+#     """
+#
+#     template_name = "profiles/activation-complete.html"
 
 
 class CallForActionView(TemplateView):
