@@ -1,5 +1,5 @@
 from django.contrib import admin
-from custom_user.admin import EmailUserAdmin
+# from custom_user.admin import EmailUserAdmin
 
 # Register your models here.
 from .models import Project, Idea, Message, CallForAction

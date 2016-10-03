@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+
+    {% block main %}
+
+        <h1>Your account is now active</h1>
+
+        <p>Welcome to the Erehwon community!</p>
+
+        <p><a href="{% url 'django.contrib.auth.views.login' %}"
+              class="btn btn-success"
+              role="button">Sign in</a>
+
+{% endblock %}

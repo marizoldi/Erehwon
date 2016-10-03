@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from custom_user.models import AbstractEmailUser
+# from custom_user.models import AbstractEmailUser
 
 LABEL_OPTIONS = (
     ('A','Activism'),

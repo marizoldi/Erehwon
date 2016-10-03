@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'profiles',
     'django_countries',
-    'custom_user',
+    # 'custom_user',
     'erehwon'
 ]
 

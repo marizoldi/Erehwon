@@ -17,15 +17,15 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 from core.views import HomepageView
-from profiles.views import LoginView, UserRegistrationView, CallForActionView, ProjectFormView, message_list, project_list, idea_list, call_list
+from profiles.views import logout_view, UserRegistrationView, CallForActionView, ProjectFormView, message_list, project_list, idea_list, call_list
 # from profiles.forms import ErehwonUserSignUpForm
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', HomepageView.as_view(), name="index"),
-    url(r'^login', LoginView.as_view(), name="login"),
     url(r'^accounts/', include('registration.backends.hmac.urls')),
-    url(r'^accounts/register', UserRegistrationView.as_view(), name="register"),
+    url(r'^accounts/logout', logout_view, name="logout_view"),
+    # url(r'^accounts/register', UserRegistrationView.as_view(), name="register"),
     # url(r'^accounts/registration-complete/', RegistrationCompleteView.as_view(), name='registration_complete'),
     # url(r'^accounts/activate/complete/', ActivationCompleteView.as_view(), name='activation_complete'),
     url(r'^projects', ProjectFormView.as_view(), name="project_form"),

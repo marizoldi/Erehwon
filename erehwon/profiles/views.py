@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from django.views.generic.edit import FormView, UpdateView
+from django.contrib.auth import logout
+from django.http import HttpResponseRedirect
 
 from registration.backends.hmac import views as registration_views
 
@@ -9,12 +11,6 @@ from profiles.forms import ProjectForm
 
 
 # Create your views here.
-class LoginView(TemplateView):
-    """
-    The Logged-in view.
-    """
-
-    template_name = "profiles/login.html"
 
 class UserRegistrationView(registration_views.RegistrationView):
     """
@@ -30,14 +26,14 @@ class UserRegistrationView(registration_views.RegistrationView):
 #     The Complete Registration view.
 #     """
 #
-#     template_name = "profiles/registration-complete.html"
+#     template_name = "profiles/registration_complete.html"
 #
 # class ActivationCompleteView(TemplateView):
 #     """
 #     The Complete Activation view.
 #     """
 #
-#     template_name = "profiles/activation-complete.html"
+#     template_name = "profiles/activation_complete.html"
 
 
 class CallForActionView(TemplateView):
@@ -54,6 +50,11 @@ class ProjectFormView(TemplateView):
 
         template_name = "profiles/my-projects.html"
         form_class = ProjectForm
+
+def logout_view(request):
+    logout(request)
+
+    return HttpResponseRedirect("/")
 
 
 def project_list(request):
