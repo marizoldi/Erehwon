@@ -155,9 +155,3 @@ CONTEXT_PROCESSORS = [
 ]
 
 # Registration settings
-ACCOUNT_ACTIVATION_DAYS = 7
-#REGISTRATION_DEFAULT_FROM_EMAIL = "info@pimpmycause.org"
-REGISTRATION_EMAIL_HTML = True
-REGISTRATION_AUTO_LOGIN = True
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
