@@ -7,10 +7,12 @@
     <div class="add-idea">
         <button href="#" class="button-primary add-idea_button" ng-click="clickAdd()">  <span class="idea-icon__add">+</span> Add a project
         </button>
-        <div class="add-idea_wrap" ng-show="showAdd">
-            <div class="img-circle"></div>
+        <!-- <div class="add-idea_wrap" ng-show="showAdd"> -->
+            <!-- <div class="img-circle"></div> -->
             <form class="new_idea__form" method="POST">
-                <input type="text" placeholder="Title">
+              {% csrf_token %}
+              {{ form.as_p }}
+                <!-- <input type="text" placeholder="Title">
                 <textarea placeholder="Synopsis" maxlength="100" rows="3"></textarea>
                 <select name="select">
                     <option value="" disabled selected>Select a label</option>
@@ -39,10 +41,10 @@
                     <submit class="button" type="Submit"> Save </submit>
                     <button class="button">Share</button>
                     <button class="button">Cancel</button>
-                </div>
+                </div> -->
             </form>
         </div>
-    </div>
+    <!-- </div> -->
 </sectin>
 <section >
     <h1> My Projects </h1>

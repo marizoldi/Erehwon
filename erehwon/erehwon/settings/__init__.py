@@ -32,6 +32,7 @@ LOGIN_REDIRECT_URL = '/'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'registration',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django_countries',
     'erehwon'
 ]
+
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -152,3 +154,11 @@ CONTEXT_PROCESSORS = [
     "django.contrib.messages.context_processors.messages",
     "django.core.context_processors.request",
 ]
+
+# Registration settings
+ACCOUNT_ACTIVATION_DAYS = 7
+#REGISTRATION_DEFAULT_FROM_EMAIL = "info@pimpmycause.org"
+REGISTRATION_EMAIL_HTML = True
+REGISTRATION_AUTO_LOGIN = True
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+#from custom_user import AbstractEmailUser
 
 LABEL_OPTIONS = (
     ('A','Activism'),
@@ -12,9 +13,16 @@ LABEL_OPTIONS = (
     ('AI','Artistic Interventions'),
 )
 
+class ErehwonUser(models.Model):
+
+    # basic information
+    username = models.CharField(max_length=30)
+    #image (tip:s3DirectField)
+
+
 class Project(models.Model):
 
-   user = models.ForeignKey('auth.User')
+   user = models.ForeignKey('ErehwonUser')
    title = models.CharField(max_length=30)
    synopsis = models.TextField(max_length=300)
    material = models.URLField(max_length=300, blank=True)
@@ -25,12 +33,12 @@ class Project(models.Model):
        choices=LABEL_OPTIONS,
        default='A')
 
-   def __str__(self):
-       return self.title
+   # def __str__(self):
+   #     return self.title
 
 class Idea(models.Model):
 
-    user = models.ForeignKey('auth.User')
+    user = models.ForeignKey('ErehwonUser')
     project = models.ForeignKey('profiles.Project')
     title = models.CharField(max_length=30)
     synopsis = models.TextField(max_length=300)
@@ -51,7 +59,7 @@ class Message(models.Model):
 
 class CallForAction(models.Model):
 
-    user = models.ForeignKey('auth.User')
+    user = models.ForeignKey('ErehwonUser')
     title = models.CharField(max_length=30)
     synopsis = models.TextField(max_length=300, default='Synopsis')
     action_location = models.CharField(max_length=30, default='Erehwon')
