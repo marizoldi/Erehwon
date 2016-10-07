@@ -1,21 +1,23 @@
-{% extends "layout.html" %}
+{% extends "base.html" %}
 
 {% load static %}
 
 
-    {% block main %}
+    {% block layout %}
 
 
 		<div class="content-wrap">
-            <div class="row">
-                <div class="large-12 medium-12 small -12 columns">
+
+
                     <h1 class="pnl__title">Sign Up</h1>
-        				<form method="POST" class="medium-3 medium-centered columns" action="">
+        				<form method="POST" class="row" action="">
+
 				        {% csrf_token %}
 				        {{ form }}
+
 			 			<input type="submit"  class="button" value="Submit" />
 				    </form>
-                </div>
+
             </div>
         </div>
 

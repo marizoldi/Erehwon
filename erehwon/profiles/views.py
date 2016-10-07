@@ -17,24 +17,30 @@ class UserRegistrationView(registration_views.RegistrationView):
     The Registration view.
     """
 
-    template_name = "profiles/registration/registration_form.html"
+    template_name = "registration/registration_form.html"
     # form_class = ErehwonUserSignUpForm
     success_url = '/accounts/registration-complete/'
 
-# class RegistrationCompleteView(TemplateView):
-#     """
-#     The Complete Registration view.
-#     """
-#
-#     template_name = "profiles/registration_complete.html"
-#
-# class ActivationCompleteView(TemplateView):
-#     """
-#     The Complete Activation view.
-#     """
-#
-#     template_name = "profiles/activation_complete.html"
+class RegistrationCompleteView(TemplateView):
+    """
+    The Complete Registration view.
+    """
 
+    template_name = "registration/registration_complete.html"
+
+class ActivationCompleteView(registration_views.ActivationView):
+    """
+    The Complete Activation view.
+    """
+
+    template_name = "registration/activation_complete.html"
+
+class LoginView(TemplateView):
+    """
+    The Login view.
+    """
+
+    template_name = "registration/login.html"
 
 class CallForActionView(TemplateView):
     """
