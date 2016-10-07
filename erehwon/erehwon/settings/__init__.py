@@ -160,7 +160,6 @@ CONTEXT_PROCESSORS = [
 # Registration settings
 
 ACCOUNT_ACTIVATION_DAYS = 7
-
 EXPIRATION_DAYS = 5
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

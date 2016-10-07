@@ -10,7 +10,6 @@ from .models import Project, Idea, Message, CallForAction
 #     """
 #     pass
 
-
 admin.site.register(Project)
 admin.site.register(Idea)
 admin.site.register(Message)

@@ -7,7 +7,7 @@ class ProjectForm(forms.ModelForm):
 
     class Meta:
         model = Project
-        fields = ('title','synopsis')
+        fields = ('title','label')
 
 # class ErehwonUserSignUpForm(RegistrationForm):
 #

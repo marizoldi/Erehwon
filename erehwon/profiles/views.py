@@ -50,12 +50,12 @@ class CallForActionView(TemplateView):
     template_name = "profiles/callforaction.html"
 
 class ProjectFormView(TemplateView):
-        """
-        The Dashboard view for create/update Projects
-        """
+    """
+    The Dashboard view for create/update Projects
+    """
 
-        template_name = "profiles/my-projects.html"
-        form_class = ProjectForm
+    template_name = "profiles/my-projects.html"
+    form_class = ProjectForm
 
 def logout_view(request):
     logout(request)

@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 from core.views import HomepageView
+
 from profiles.views import logout_view, LoginView, UserRegistrationView, RegistrationCompleteView, ActivationCompleteView, CallForActionView, ProjectFormView, message_list, project_list, idea_list, call_list
 # from profiles.forms import ErehwonUserSignUpForm
 
@@ -32,6 +33,6 @@ urlpatterns = [
     url(r'^projects', ProjectFormView.as_view(), name="project_form"),
     # url(r'^dashboard', message_list, name="dashboard"),
     url(r'^ideas', idea_list, name="idea_list"),
-    url(r'^callforaction', call_list, name="call_list"),
+    url(r'^callforaction', call_list, name="call_list")
 
 ]
