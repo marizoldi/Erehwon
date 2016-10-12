@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+    {% block layout %}
+
+
+		<div class="content-wrap">
+
+
+                    <h1 class="pnl__title">Sign Up</h1>
+        				<form method="POST" class="row" action="">
+
+				        {% csrf_token %}
+				        {{ form }}
+
+			 			<input type="submit"  class="button" value="Submit" />
+				    </form>
+
+            </div>
+        </div>
+
+    {% endblock %}

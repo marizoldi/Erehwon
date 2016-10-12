@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'profiles',
     'django_countries',
+    # 'custom_user',
     'erehwon'
 ]
 
@@ -143,6 +144,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "../static"),
 ]
 
+# AUTH_USER_MODEL = 'profiles.ErehwonUser'
+
 CONTEXT_PROCESSORS = [
     "django.contrib.auth.context_processors.auth",
     "django.template.context_processors.debug",
@@ -155,3 +158,8 @@ CONTEXT_PROCESSORS = [
 ]
 
 # Registration settings
+
+ACCOUNT_ACTIVATION_DAYS = 7
+EXPIRATION_DAYS = 5
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

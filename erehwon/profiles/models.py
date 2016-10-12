@@ -12,6 +12,12 @@ LABEL_OPTIONS = (
     ('AI','Artistic Interventions'),
 )
 
+# class ErehwonUser(models.Model):
+# #
+# #     # basic information
+#       username = models.ForeignKey('auth.User')
+#     #   .CharField(max_length=30, null=True)
+# #     #image (tip:s3DirectField)
 
 class Project(models.Model):
 
