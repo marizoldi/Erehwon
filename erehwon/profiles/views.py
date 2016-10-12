@@ -12,36 +12,6 @@ from profiles.forms import ProjectForm
 
 # Create your views here.
 
-class UserRegistrationView(registration_views.RegistrationView):
-    """
-    The Registration view.
-    """
-
-    template_name = "registration/registration_form.html"
-    # form_class = ErehwonUserSignUpForm
-    success_url = '/accounts/registration-complete/'
-
-class RegistrationCompleteView(TemplateView):
-    """
-    The Complete Registration view.
-    """
-
-    template_name = "registration/registration_complete.html"
-
-class ActivationCompleteView(registration_views.ActivationView):
-    """
-    The Complete Activation view.
-    """
-
-    template_name = "registration/activation_complete.html"
-
-class LoginView(TemplateView):
-    """
-    The Login view.
-    """
-
-    template_name = "registration/login.html"
-
 class CallForActionView(TemplateView):
     """
     The Dashboard view to create call for actions.

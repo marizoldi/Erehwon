@@ -31,16 +31,16 @@ LOGIN_REDIRECT_URL = '/'
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'profiles',
     'django_countries',
-    # 'custom_user',
-    'erehwon'
+    'profiles',
+    'custom_user',
+    'erehwon',
+    'django.contrib.admin',  # This needs to remain at the bottom of all apps for password_reset to work with custom templates
 ]
 
 
@@ -144,7 +144,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "../static"),
 ]
 
-# AUTH_USER_MODEL = 'profiles.ErehwonUser'
+AUTH_USER_MODEL = 'profiles.ErehwonUser'
 
 CONTEXT_PROCESSORS = [
     "django.contrib.auth.context_processors.auth",
