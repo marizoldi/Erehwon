@@ -5,8 +5,10 @@
 
 {% block layout %}
 
-    <h1 class="pnl__title">Log In</h1>
-        <div class="medium-6 large-3 small-12 large-centered small-centered columns">
+    <!-- <h1 class="pnl__title">Log In</h1> -->
+    <div class="map">
+      <div class="overlay">
+        <div class="singup-form">
         <form method="POST" action="">
             <div class="row">
         	   {% csrf_token %}
@@ -21,4 +23,6 @@
             </div>
         </form>
       </div>
+    </div>
+</div>
 {% endblock %}

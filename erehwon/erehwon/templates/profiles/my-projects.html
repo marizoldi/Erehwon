@@ -3,56 +3,14 @@
 {% load static %}
 
 {% block main %}
-<section class="idea" ng-controller="ManageController">
-    <div class="add-idea">
-        <button href="#" class="button-primary add-idea_button" ng-click="clickAdd()">  <span class="idea-icon__add">+</span> Add a project
-        </button>
-        <!-- <div class="add-idea_wrap" ng-show="showAdd"> -->
-            <!-- <div class="img-circle"></div> -->
-            <form class="new_idea__form" method="POST">
-              {% csrf_token %}
-              {{ form.as_p }}
-                <!-- <input type="text" placeholder="Title">
-                <textarea placeholder="Synopsis" maxlength="100" rows="3"></textarea>
-                <select name="select">
-                    <option value="" disabled selected>Select a label</option>
-                    <option value="value1" selected>Digital Activism</option>
-                    <option value="value2">Activism</option>
-                    <option value="value3">Community Development</option>
-                    <option value="value3">Urban Planning</option>
-                    <option value="value3">New Ecologies</option>
-                    <option value="value3">Alternative Economies</option>
-                    <option value="value3">Citizen Movements</option>
-                    <option value="value3">Artistic Interventions</option>
-                </select>
-                <input type="text" class="tagged" name="tag-1" data-removeBtn="true" placeholder="create a tag">
-                <input type="text" placeholder="Add Multimedia">
-                <input type="text" placeholder="Add Contributors">
-                <input type="text" placeholder="Add Articles">
-                <div class="project-active-wrap">
-                    <span>Is the project Active now?</span>
-                    <label class="switch map-switch">
-                        <input type="checkbox">
-                        <div class="slider round"></div>
-                    </label>
-                </div>
 
-                <div class="button-wrap">
-                    <submit class="button" type="Submit"> Save </submit>
-                    <button class="button">Share</button>
-                    <button class="button">Cancel</button>
-                </div> -->
-            </form>
-        </div>
-    <!-- </div> -->
-</sectin>
 <section >
     <h1> My Projects </h1>
     <ul class="idea-list">
         {% for project in projects %}
         <li>
             <div class="idea-info idea-list-col">
-                <a href="#"><h2>{{ project.title }}</h2></a>
+                <a href=""><h2>{{ project.title }}</h2></a>
                 <div>
                     <p>Contributors: 20</p>
                 </div>

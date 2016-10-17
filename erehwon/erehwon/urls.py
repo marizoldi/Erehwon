@@ -18,7 +18,7 @@ from django.contrib import admin
 
 from core.views import HomepageView
 
-from profiles.views import logout_view, CallForActionView, ProjectFormView, message_list, project_list, idea_list, call_list
+from profiles.views import logout_view, CallForActionView, ProjectFormView, project_list, project_update, idea_list, call_list
 from profiles.forms import ErehwonUserSignUpForm
 
 from registration.backends.hmac.views import RegistrationView
@@ -29,8 +29,9 @@ urlpatterns = [
     url(r'^accounts/register/$', RegistrationView.as_view(form_class=ErehwonUserSignUpForm), name="registration_register"),
     url(r'^accounts/', include('registration.backends.hmac.urls')),  # This line includes automatically all views and urls for registration/activation/password reset
     url(r'^accounts/logout', logout_view, name="logout_view"),
-    url(r'^projects', ProjectFormView.as_view(), name="project_form"),
-    # url(r'^dashboard', message_list, name="dashboard"),
+    # url(r'^dashboard', loggedin_view, name="dashboard"),
+    url(r'^projects', project_list, name="project_list"),
+    # url(r'^project', ProjectFormView.as_view(), name="project_form"),
     url(r'^ideas', idea_list, name="idea_list"),
     url(r'^callforaction', call_list, name="call_list")
 

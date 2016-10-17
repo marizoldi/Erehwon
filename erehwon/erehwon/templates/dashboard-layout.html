@@ -4,19 +4,19 @@
 {% block layout %}
     <header class="logged-in header">
         <div class="header-content">
-            <h1>hello, username</h1>
+            <h1>hello, {{ user.username }}</h1>
             <label class="switch map-switch">
                 <input id="switch-input" type="checkbox" ng-model="mapSwitch">
                 <div class="slider round"></div>
             </label>
         </div>
     </header>
-    <div class="overlay" ng-show="mapSwitch">
+    <!-- <div class="overlay" ng-show="mapSwitch">
 
         <div class="overlay-content">
             <p>Overlay content in here.</p>
         </div>
-    </div>
+    </div> -->
     <div class="content">
         <div class="section group dashboard-navigation">
             <a href="/projects" class="col span_1_of_5 dashboard-link -projects">
