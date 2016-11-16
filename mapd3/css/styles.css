@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Verdana,Geneva,sans-serif;
+  font-size: 14px; }
+
+
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.6em; }
+
+.body-wrap {
+  min-height: 100%;
+  position: relative;
+  background: #f2f4f6; }
+
+.content {
+  padding-bottom: 8em;
+  position: relative;
+  max-width: 60em;
+  margin: 0 auto; }
+  .content #explore {
+    width: 100%;
+    position: absolute;
+    bottom: 150px; }
+    .content #explore .explore-text {
+      padding: 30px;
+      margin: 0 30px; }
+
+section {
+  padding: 2em 0; }
+
+.button {
+  background: #f2f4f6;
+  color: #4e4e4e;
+  border-radius: 0; }
+
+.separator {
+  border-bottom: 1px #000000 solid;
+  height: 0px;
+  width: 100%; }
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
+  /*dim the background*/ }
+
+/*# sourceMappingURL=styles.css.map */
