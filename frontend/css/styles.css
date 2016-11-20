@@ -879,9 +879,9 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
-.main-nav {
+.main-nav1 {
   flex: 1; }
-  .main-nav ul {
+  .main-nav1 ul {
     display: inline-block;
     display: flex;
     flex-direction: row;
@@ -889,13 +889,13 @@ there.
     display: flex;
     margin: 0 1em;
     clear: both; }
-    .main-nav ul li {
+    .main-nav1 ul li {
       margin: 0; }
-    .main-nav ul a {
+    .main-nav1 ul a {
       margin: 0;
       border-bottom: 0;
       background-color: #fff; }
-    .main-nav ul .main-menu__about {
+    .main-nav1 ul .main-menu__about {
       flex: 9; }
 
 .search-field {
@@ -1135,33 +1135,66 @@ input.tag-input {
 
 .footer-wrap {
   width: 100%;
-  width: 100%;
   position: absolute;
   bottom: 0;
-  width: 100%;
   color: #fff;
   min-height: 8em;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column; }
 
+.main-nav {
+  display: -webkit-flex;
+  display: flex; }
+  .main-nav .top-nav {
+    -webkit-flex: 9;
+    flex: 9;
+    -webkit-align-items: stretch;
+    align-items: stretch; }
+    .main-nav .top-nav .footer-ereh-name {
+      color: #4FB6AC;
+      display: inline; }
+    .main-nav .top-nav .footer-ereh-desc {
+      color: #3c3c3c;
+      display: inline; }
+  .main-nav .button-sign-in {
+    background: #fab733;
+    padding: 0.5em;
+    -webkit-flex: 1;
+    flex: 1; }
+
 .footer {
+  -webkit-flex: 1;
   flex: 1;
-  background: #25262d;
+  background: #4FB6AC;
   text-align: center;
   vertical-align: text-bottom;
   padding: 0.5em;
   height: 4em; }
-
-.footer-links {
-  list-style-type: none;
-  margin: 0;
-  padding: 0.5em; }
-  .footer-links li {
-    display: inline-block;
-    margin: 0 1em; }
-    .footer-links li a {
-      color: white;
-      text-decoration: none; }
+  .footer .footer-links {
+    list-style-type: none;
+    margin: 0;
+    right: 0;
+    position: absolute;
+    padding: 0.5em; }
+    .footer .footer-links li {
+      display: inline-block;
+      margin: 0 1em; }
+      .footer .footer-links li a {
+        color: white;
+        text-decoration: none; }
+  .footer .footer-media {
+    list-style-type: none;
+    margin: 0;
+    left: 0;
+    position: absolute; }
+    .footer .footer-media li {
+      display: inline-block;
+      margin: 0 1em; }
+      .footer .footer-media li a {
+        color: white;
+        text-decoration: none; }
 
 .header {
   text-align: center;
