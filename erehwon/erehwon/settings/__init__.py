@@ -40,8 +40,32 @@ INSTALLED_APPS = [
     'profiles',
     'custom_user',
     'erehwon',
+    'django.contrib.sites',
     'django.contrib.admin',  # This needs to remain at the bottom of all apps for password_reset to work with custom templates
+
+    'messagesApp',
+    'postman',
+    'ajax_select',
+    'notifications',
 ]
+SITE_ID = 1
+# POSTMAN_DISALLOW_ANONYMOUS = True  # default is False
+# POSTMAN_DISALLOW_MULTIRECIPIENTS = True  # default is False
+# POSTMAN_DISALLOW_COPIES_ON_REPLY = True  # default is False
+# POSTMAN_DISABLE_USER_EMAILING = True  # default is False
+POSTMAN_AUTO_MODERATE_AS = True  # default is None
+# POSTMAN_SHOW_USER_AS = 'get_full_name'  # default is None
+POSTMAN_NAME_USER_AS = 'username'   #default is None
+# POSTMAN_QUICKREPLY_QUOTE_BODY = True  # default is False
+POSTMAN_NOTIFIER_APP = "messagesApp"  # default is 'notification'
+# POSTMAN_MAILER_APP = None  # default is 'mailer'
+# POSTMAN_AUTOCOMPLETER_APP = {
+# 'name': '',  # default is 'ajax_select'
+# 'field': '',  # default is 'AutoCompleteField'
+# 'arg_name': '',  # default is 'channel'
+# 'arg_default': 'postman_friends',  # no default, mandatory to enable the feature
+# }  # default is {}
+
 
 
 MIDDLEWARE_CLASSES = [

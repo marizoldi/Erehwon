@@ -1,0 +1,42 @@
+<ul>
+    <li>
+<a href="/accounts/signup/">Signup</a>
+    </li>
+    <li>
+<a href="/accounts/login/">Login</a>
+    </li>
+    <li>
+        <form method="post" action="/accounts/logout/">{% csrf_token %} <a href="/accounts/logout/">Logout</a>
+    <input type="submit">logout</input>
+</form>
+
+    </li>
+</ul>
+
+
+<br/>
+<h4>Hello, {{ user }}! Welcome to the Notifications demo</h4>
+
+
+<br/>
+<h3>Notifications</h3>
+<a href="/inbox/notifications/">http://.../inbox/notifications</a><br/>
+<h3>Inbox</h3>
+<iframe width=100% height=200 src="/messages/inbox/"></iframe><br/>
+
+<a href="/messages/write/"><h3>Write Messages</h3> http://.../messages/write</a><br/>
+
+{% load postman_tags %}
+<hr/>
+{% postman_unread as unread_count %}
+
+{% if unread_count %}
+    You have <strong>{{ unread_count }}</strong> unread messages.
+{% endif %}
+<hr>
+{{ messages }}
+
+
+{%  verbatim %}
+{{ if user   }} (fo' angular)
+{%  endverbatim %}

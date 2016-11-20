@@ -15,13 +15,18 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.views.generic import TemplateView
 
 from core.views import HomepageView
 
 from profiles.views import logout_view, CallForActionView, ProjectFormView, project_list, project_update, idea_list, call_list
 from profiles.forms import ErehwonUserSignUpForm
 
+from messagesApp.views import MessagesProfileView, MessagesIndexView
+import notifications.urls
+
 from registration.backends.hmac.views import RegistrationView
+import postman.urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -33,6 +38,17 @@ urlpatterns = [
     url(r'^projects', project_list, name="project_list"),
     # url(r'^project', ProjectFormView.as_view(), name="project_form"),
     url(r'^ideas', idea_list, name="idea_list"),
-    url(r'^callforaction', call_list, name="call_list")
+    url(r'^callforaction', call_list, name="call_list"),
+
+    # django-postman
+    url(r'^messages/erehwon', MessagesIndexView.as_view(), name='MessagesIndex View'),
+    url(r'^messages/messageprofile', MessagesProfileView.as_view(), name='MessagesProfile View'),
+    #TODO write some custom postman views
+    #css classes here: http://django-postman.readthedocs.io/en/latest/views.html
+    #and hook them up.
+    url(r'^inbox/', TemplateView.as_view(template_name='inbox.html')),
+    url(r'^messages/', include('postman.urls', namespace='postman', app_name='postman')),
+    # django-notifications-hq
+    url('^inbox/notifications/', include(notifications.urls, namespace='notifications')),
 
 ]
