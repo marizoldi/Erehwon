@@ -7,32 +7,35 @@
         {% endblock %}
         <footer class="footer-wrap">
             <nav class="main-nav">
-                <input type="text" placeholder="Search" class="search-field"/>
-                <ul>
-                    <li class="main-menu__about">
-                        <a href="" class="button">About</a>
-                    </li>
-                    <li>
-                        <a href="/accounts/register" class="button">Sign Up</a>
-                    </li>
-                    <li>
-                        <a href="/accounts/login" class="button">Sign In</a>
-                    </li>
-                </ul>
+                <div class="top-nav">
+                  <div class="footer-ereh-name">Erehwon</div><div class="footer-ereh-desc"> is an on-line conllaborative platform for conecting people involved in socio-political interventions, building communities of interest and enabling and empowering civic engangement in socio-political activities in public spaces. The map on this page visualises the socio-political projects of the community and it can be searched to visualise specific queries. If you have an invitation by a community member please sign up . and welcome!</div>
+              </div>
+                <div class="button-sign-in">
+                    <a href="/accounts/register"><img src="{% static "img/SignIn-Up.svg" %}" /></a>
+                    <div>Sign In/Up</div>
+                </div>
             </nav>
             <nav class="footer">
+                <ul class="footer-media">
+                    <li>
+                        <a href=""><img src="{% static "img/github_tiny.svg" %}" /></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="{% static "img/twitter_tiny.svg" %}" /></a>
+                    </li>
+                </ul>
                 <ul class="footer-links">
                     <li>
-                        <a href="">Home</a>
+                        <a href="">HOME</a>
                     </li>
                     <li>
-                        <a href="">About</a>
+                        <a href="">THE MAP</a>
                     </li>
                     <li>
-                        <a href="">Privacy</a>
+                        <a href="">SUPPORT</a>
                     </li>
                     <li>
-                        <a href="">Support</a>
+                        <a href="">PRIVACY</a>
                     </li>
                 </ul>
             </nav>
