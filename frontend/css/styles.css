@@ -1148,21 +1148,39 @@ input.tag-input {
   display: -webkit-flex;
   display: flex; }
   .main-nav .top-nav {
-    -webkit-flex: 9;
-    flex: 9;
+    background: #fff;
+    -webkit-flex: 10;
+    flex: 10;
     -webkit-align-items: stretch;
-    align-items: stretch; }
+    align-items: stretch;
+    padding: 0.5em;
+    font-size: 300;
+    font-family: "Montserrat Alternates", sans-serif; }
     .main-nav .top-nav .footer-ereh-name {
       color: #4FB6AC;
       display: inline; }
     .main-nav .top-nav .footer-ereh-desc {
       color: #3c3c3c;
       display: inline; }
-  .main-nav .button-sign-in {
+  .main-nav .button-primary {
     background: #fab733;
     padding: 0.5em;
     -webkit-flex: 1;
-    flex: 1; }
+    flex: 1;
+    font-family: "Montserrat", sans-serif;
+    font-size: 700; }
+    .main-nav .button-primary a {
+      -webkit-flex: 1;
+      flex: 1;
+      text-align: center;
+      color: #fff;
+      text-decoration: none; }
+      .main-nav .button-primary a img {
+        padding: 0 33%; }
+    .main-nav .button-primary:hover {
+      background: #ff9f00; }
+    .main-nav .button-primary:active {
+      background: #ff9f00; }
 
 .footer {
   -webkit-flex: 1;
@@ -1171,7 +1189,9 @@ input.tag-input {
   text-align: center;
   vertical-align: text-bottom;
   padding: 0.5em;
-  height: 4em; }
+  height: 2.66667em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 700; }
   .footer .footer-links {
     list-style-type: none;
     margin: 0;
@@ -1180,18 +1200,17 @@ input.tag-input {
     padding: 0.5em; }
     .footer .footer-links li {
       display: inline-block;
-      margin: 0 1em; }
+      margin: 0 2em; }
       .footer .footer-links li a {
         color: white;
         text-decoration: none; }
   .footer .footer-media {
     list-style-type: none;
-    margin: 0;
-    left: 0;
+    margin-left: 0.5em;
     position: absolute; }
     .footer .footer-media li {
-      display: inline-block;
-      margin: 0 1em; }
+      display: inline-flex;
+      margin: 0.5em; }
       .footer .footer-media li a {
         color: white;
         text-decoration: none; }
@@ -1423,9 +1442,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: Verdana,Geneva,sans-serif;
-  font-size: 14px; }
+  height: 100%; }
 
 h1 {
   font-size: 2em; }

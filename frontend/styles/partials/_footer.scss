@@ -1,7 +1,7 @@
 .footer-wrap {
 	width: 100%;
   position: absolute;
-  bottom:0;
+  bottom: 0;
 	color: $color-white;
 	min-height: $footer-height;
 	display: -webkit-flex;
@@ -13,25 +13,53 @@
 .main-nav {
 	display: -webkit-flex;
 	display: flex;
+
 	.top-nav {
-		-webkit-flex: 9;
-		flex: 9;
+		background: $color-white;
+		-webkit-flex: 10;
+		flex: 10;
 		-webkit-align-items: stretch;
 		align-items: stretch;
+		padding: $padding-value;
+		font-size: $light;
+		font-family: $Montserrat-main-text;
+
 		.footer-ereh-name {
 			color: $main-blue;
 			display: inline;
 		}
+
 		.footer-ereh-desc {
 			color: $dark-text-color;
 			display: inline;
 		}
 	}
-	.button-sign-in {
+
+	.button-primary {
 		background: $button-default;
 		padding: $padding-value;
 		-webkit-flex: 1;
 		flex: 1;
+		font-family: $Montserrat;
+		font-size: $bold;
+
+		a {
+			-webkit-flex: 1;
+			flex: 1;
+			text-align: center;
+			color: $color-white;
+			text-decoration: none;
+
+			img {
+				padding: 0 33%;
+			}
+		}
+		&:hover {
+			background: $button-hover;
+		}
+		&:active {
+			background: $button-active;
+		}
 	}
 }
 
@@ -42,7 +70,10 @@
 	text-align: center;
 	vertical-align: text-bottom;
 	padding: $padding-value;
-	height: $footer-height/2;
+	height: $footer-height/3;
+	font-family: $Montserrat;
+	font-size: $bold;
+
 	.footer-links {
 		list-style-type: none;
 		margin:0;
@@ -51,21 +82,21 @@
 		padding: $padding-value;
 		li {
 			display: inline-block;
-			margin: 0 $margin-value;
+			margin: 0 $margin-value*2;
 			a {
 				color: white;
 				text-decoration: none;
 			}
 		}
 	}
+
 	.footer-media {
 		list-style-type: none;
-		margin:0;
-		left:0;
-		position: absolute;
+		margin-left: $margin-value/2;
+	  position: absolute;
 		li {
-			display: inline-block;
-			margin: 0 $margin-value;
+			display: inline-flex;
+			margin: $margin-value/2;
 			a {
 				color: white;
 				text-decoration: none;
