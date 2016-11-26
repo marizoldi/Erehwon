@@ -906,16 +906,14 @@ there.
   border-radius: 0; }
 
 .singup-form {
-  max-width: 15em;
-  margin: 0 auto;
-  padding: 1em;
+  width: 35em;
+  min-width: 17.5em;
+  margin: auto;
   border: 1px solid #C9C9C9;
   background-color: #f2f4f6;
-  position: fixed;
-  bottom: 0;
-  margin-bottom: 4em;
-  z-index: 1;
-  left: 40%; }
+  display: flex;
+  justify-content: center;
+  z-index: 1; }
 
 .main_container {
   position: fixed;
@@ -1207,6 +1205,8 @@ input.tag-input {
   .footer .footer-media {
     list-style-type: none;
     margin-left: 0.5em;
+    margin-bottom: 0;
+    left: 0;
     position: absolute; }
     .footer .footer-media li {
       display: inline-flex;

@@ -93,6 +93,8 @@
 	.footer-media {
 		list-style-type: none;
 		margin-left: $margin-value/2;
+		margin-bottom: 0;
+		left:0;
 	  position: absolute;
 		li {
 			display: inline-flex;
