@@ -21,7 +21,7 @@
 		-webkit-align-items: stretch;
 		align-items: stretch;
 		padding: $padding-value;
-		font-size: $light;
+		font-weight: $light;
 		font-family: $Montserrat-main-text;
 
 		.footer-ereh-name {
@@ -37,11 +37,12 @@
 
 	.button-primary {
 		background: $button-default;
-		padding: $padding-value;
 		-webkit-flex: 1;
 		flex: 1;
+		display: -webkit-flex;
+		display: flex;
 		font-family: $Montserrat;
-		font-size: $bold;
+		font-weight: $bold;
 
 		a {
 			-webkit-flex: 1;
@@ -51,7 +52,7 @@
 			text-decoration: none;
 
 			img {
-				padding: 0 33%;
+				padding: auto;
 			}
 		}
 		&:hover {
@@ -66,23 +67,25 @@
 .footer {
 	-webkit-flex: 1;
 	flex: 1;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: stretch;
+	align-items: stretch;
 	background: $main-blue;
 	text-align: center;
 	vertical-align: text-bottom;
 	padding: $padding-value;
-	height: $footer-height/3;
+	max-height: $footer-height/3;
 	font-family: $Montserrat;
 	font-size: $bold;
 
 	.footer-links {
 		list-style-type: none;
 		margin:0;
-		right:0;
-		position: absolute;
 		padding: $padding-value;
 		li {
 			display: inline-block;
-			margin: 0 $margin-value*2;
+			margin: 0.2em $margin-value*2;
 			a {
 				color: white;
 				text-decoration: none;
@@ -94,8 +97,15 @@
 		list-style-type: none;
 		margin-left: $margin-value/2;
 		margin-bottom: 0;
-		left:0;
-	  position: absolute;
+		-webkit-flex-grow: 1;
+		flex-grow: 1;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+		//align-items: flex-start;
+		//left:0;
+	//  position: absolute;
 		li {
 			display: inline-flex;
 			margin: $margin-value/2;

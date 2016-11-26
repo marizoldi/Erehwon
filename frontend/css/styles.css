@@ -527,7 +527,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-size: 1.5em;
+  font-size: 1.1em;
   /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
@@ -1152,7 +1152,7 @@ input.tag-input {
     -webkit-align-items: stretch;
     align-items: stretch;
     padding: 0.5em;
-    font-size: 300;
+    font-weight: 300;
     font-family: "Montserrat Alternates", sans-serif; }
     .main-nav .top-nav .footer-ereh-name {
       color: #4FB6AC;
@@ -1162,11 +1162,12 @@ input.tag-input {
       display: inline; }
   .main-nav .button-primary {
     background: #fab733;
-    padding: 0.5em;
     -webkit-flex: 1;
     flex: 1;
+    display: -webkit-flex;
+    display: flex;
     font-family: "Montserrat", sans-serif;
-    font-size: 700; }
+    font-weight: 700; }
     .main-nav .button-primary a {
       -webkit-flex: 1;
       flex: 1;
@@ -1174,7 +1175,7 @@ input.tag-input {
       color: #fff;
       text-decoration: none; }
       .main-nav .button-primary a img {
-        padding: 0 33%; }
+        padding: auto; }
     .main-nav .button-primary:hover {
       background: #ff9f00; }
     .main-nav .button-primary:active {
@@ -1183,22 +1184,24 @@ input.tag-input {
 .footer {
   -webkit-flex: 1;
   flex: 1;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: stretch;
+  align-items: stretch;
   background: #4FB6AC;
   text-align: center;
   vertical-align: text-bottom;
   padding: 0.5em;
-  height: 2.66667em;
+  max-height: 2.66667em;
   font-family: "Montserrat", sans-serif;
   font-size: 700; }
   .footer .footer-links {
     list-style-type: none;
     margin: 0;
-    right: 0;
-    position: absolute;
     padding: 0.5em; }
     .footer .footer-links li {
       display: inline-block;
-      margin: 0 2em; }
+      margin: 0.2em 2em; }
       .footer .footer-links li a {
         color: white;
         text-decoration: none; }
@@ -1206,8 +1209,12 @@ input.tag-input {
     list-style-type: none;
     margin-left: 0.5em;
     margin-bottom: 0;
-    left: 0;
-    position: absolute; }
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center; }
     .footer .footer-media li {
       display: inline-flex;
       margin: 0.5em; }
