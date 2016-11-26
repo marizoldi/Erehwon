@@ -915,7 +915,65 @@ there.
   bottom: 0;
   margin-bottom: 4em;
   z-index: 1;
-  left: 40%; }
+  left: 40%;}
+
+.form-container {
+  background: #d1d2d4;  /*tablebg e74c3c #34495e  #88565b ed7271*/
+  margin: 25px auto;
+  width: 390px;
+  height: 340px;
+  position: relative;
+  text-align: center;
+}
+
+.login-header {
+  color: #ffffff;
+  background-color: #4fb6ac;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.login-header p {
+  padding: 2px;
+}
+
+.login-form {
+  position: relative;
+  width: 80%;
+}
+
+.login-form input[type=text],
+.login-form input[type=password] {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  padding-left: 0px;
+  background: #fff;
+  border: none;
+  color: #e74c3c; 
+  outline: none;
+}
+
+.login-form input[type=submit] {
+    border: none;
+    background-color: #f7b632;
+    width: 40%;
+    color: #ffffff;
+    text-align: center;
+    text-transform: none;
+}
+.login-message {
+  padding-top: 3em;
+}
+
+.login-message a {
+  text-decoration: none;
+  color: #f7b632;
+}
 
 .main_container {
   position: fixed;
