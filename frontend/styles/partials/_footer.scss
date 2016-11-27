@@ -1,36 +1,123 @@
 .footer-wrap {
 	width: 100%;
-   	width:100%;
-   	position: absolute;
-   	bottom:0;
-   	width:100%;
+  position: absolute;
+  bottom: 0;
 	color: $color-white;
 	min-height: $footer-height;
+	display: -webkit-flex;
 	display: flex;
+	-webkit-flex-direction: column;
 	flex-direction: column;
-	
+}
+
+.main-nav {
+	display: -webkit-flex;
+	display: flex;
+
+	.top-nav {
+		background: $color-white;
+		-webkit-flex: 12;
+		flex: 12;
+		align-items: stretch;
+		padding: $padding-value;
+		font-weight: $light;
+		font-family: $Montserrat-main-text;
+
+		.footer-ereh-name {
+			color: $main-blue;
+			display: inline;
+		}
+
+		.footer-ereh-desc {
+			color: $dark-text-color;
+			display: inline;
+		}
+	}
+
+	.button-primary {
+		background: $button-default;
+		-webkit-flex: 1;
+		flex: 1;
+		display: -webkit-flex;
+		display: flex;
+		font-family: $Montserrat;
+		font-weight: $bold;
+
+		a {
+			-webkit-flex: 1;
+			flex: 1;
+			text-align: center;
+			color: $color-white;
+			text-decoration: none;
+
+			img {
+				margin: auto;
+				display: -webkit-flex;
+				display: flex;
+				padding-top: $padding-value*2;
+			}
+			div {
+				padding: 0;
+			}
+		}
+		&:hover {
+			background: $button-hover;
+		}
+		&:active {
+			background: $button-active;
+		}
+	}
 }
 
 .footer {
+	-webkit-flex: 1;
 	flex: 1;
-	background: #4FB6AC;
+	display: -webkit-flex;
+	display: flex;
+	align-items: stretch;
+	background: $main-blue;
 	text-align: center;
 	vertical-align: text-bottom;
 	padding: $padding-value;
-	height: $footer-height/2;
+	max-height: $footer-height/3;
+	font-family: $Montserrat;
+	font-size: $bold;
 
-}
+	.footer-links {
+		list-style-type: none;
+		margin:0;
+		padding: $padding-value $padding-value*2;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-basis: 28em;
+		flex-basis: 28em;
+		justify-content: space-between;
+		li {
+			display: inline-block;
+			a {
+				color: white;
+				text-decoration: none;
+			}
+		}
+	}
 
-.footer-links {
-	list-style-type: none;
-	margin:0;
-	padding: $padding-value;
-	li {
-		display: inline-block;
-		margin: 0 $margin-value;
-		a {
-			color: white;
-			text-decoration: none;
+	.footer-media {
+		list-style-type: none;
+		margin-left: $margin-value/2;
+		margin-bottom: 0;
+		-webkit-flex-grow: 1;
+		flex-grow: 1;
+		display: -webkit-flex;
+		display: flex;
+		align-items: center;
+
+		li {
+			display: inline-flex;
+			margin: $margin-value/2;
+			a {
+				color: white;
+				text-decoration: none;
+			}
 		}
 	}
 }

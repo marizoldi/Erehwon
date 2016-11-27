@@ -1,3 +1,13 @@
+//fonts
+$Montserrat: 'Montserrat', sans-serif;
+$Montserrat-main-text: 'Montserrat Alternates', sans-serif;
+
+//font weights
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
+
 // Colors
 $color-white: #fff;
 $main-color: #73bf9b;
@@ -10,10 +20,14 @@ $dark-text-color: #3c3c3c;
 $accent-color: pink;
 $dark-grey: #25262d;
 $light-grey: #b4b0b4;
+$button-default: #fab733;
+$button-hover: #ff9f00;
+$button-active: #ff9f00;
+$main-blue: #4FB6AC;
 
 // Sizes
 $max-width: 60em;
-$form-width: 15em;
+$form-width: 35em;
 $padding-value: .5em;
 $margin-value: 1em;
 $footer-height: 8em;
@@ -24,4 +38,3 @@ $text-dark-color: #4e4e4e;
 $text-light-color: $color-white;
 
 $form-padding-value: 1em;
-

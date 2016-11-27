@@ -527,7 +527,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-size: 1.5em;
+  font-size: 1.1em;
   /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
@@ -879,9 +879,9 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
-.main-nav {
+.main-nav1 {
   flex: 1; }
-  .main-nav ul {
+  .main-nav1 ul {
     display: inline-block;
     display: flex;
     flex-direction: row;
@@ -889,13 +889,13 @@ there.
     display: flex;
     margin: 0 1em;
     clear: both; }
-    .main-nav ul li {
+    .main-nav1 ul li {
       margin: 0; }
-    .main-nav ul a {
+    .main-nav1 ul a {
       margin: 0;
       border-bottom: 0;
       background-color: #fff; }
-    .main-nav ul .main-menu__about {
+    .main-nav1 ul .main-menu__about {
       flex: 9; }
 
 .search-field {
@@ -906,16 +906,14 @@ there.
   border-radius: 0; }
 
 .singup-form {
-  max-width: 15em;
-  margin: 0 auto;
-  padding: 1em;
+  width: 35em;
+  min-width: 17.5em;
+  margin: auto;
   border: 1px solid #C9C9C9;
   background-color: #f2f4f6;
-  position: fixed;
-  bottom: 0;
-  margin-bottom: 4em;
-  z-index: 1;
-  left: 40%; }
+  display: flex;
+  justify-content: center;
+  z-index: 1; }
 
 .main_container {
   position: fixed;
@@ -1135,33 +1133,100 @@ input.tag-input {
 
 .footer-wrap {
   width: 100%;
-  width: 100%;
   position: absolute;
   bottom: 0;
-  width: 100%;
   color: #fff;
   min-height: 8em;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column; }
 
+.main-nav {
+  display: -webkit-flex;
+  display: flex; }
+  .main-nav .top-nav {
+    background: #fff;
+    -webkit-flex: 12;
+    flex: 12;
+    align-items: stretch;
+    padding: 0.5em;
+    font-weight: 300;
+    font-family: "Montserrat Alternates", sans-serif; }
+    .main-nav .top-nav .footer-ereh-name {
+      color: #4FB6AC;
+      display: inline; }
+    .main-nav .top-nav .footer-ereh-desc {
+      color: #3c3c3c;
+      display: inline; }
+  .main-nav .button-primary {
+    background: #fab733;
+    -webkit-flex: 1;
+    flex: 1;
+    display: -webkit-flex;
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700; }
+    .main-nav .button-primary a {
+      -webkit-flex: 1;
+      flex: 1;
+      text-align: center;
+      color: #fff;
+      text-decoration: none; }
+      .main-nav .button-primary a img {
+        margin: auto;
+        display: -webkit-flex;
+        display: flex;
+        padding-top: 1em; }
+      .main-nav .button-primary a div {
+        padding: 0; }
+    .main-nav .button-primary:hover {
+      background: #ff9f00; }
+    .main-nav .button-primary:active {
+      background: #ff9f00; }
+
 .footer {
+  -webkit-flex: 1;
   flex: 1;
-  background: #25262d;
+  display: -webkit-flex;
+  display: flex;
+  align-items: stretch;
+  background: #4FB6AC;
   text-align: center;
   vertical-align: text-bottom;
   padding: 0.5em;
-  height: 4em; }
-
-.footer-links {
-  list-style-type: none;
-  margin: 0;
-  padding: 0.5em; }
-  .footer-links li {
-    display: inline-block;
-    margin: 0 1em; }
-    .footer-links li a {
-      color: white;
-      text-decoration: none; }
+  max-height: 2.66667em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 700; }
+  .footer .footer-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5em 1em;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-basis: 28em;
+    flex-basis: 28em;
+    justify-content: space-between; }
+    .footer .footer-links li {
+      display: inline-block; }
+      .footer .footer-links li a {
+        color: white;
+        text-decoration: none; }
+  .footer .footer-media {
+    list-style-type: none;
+    margin-left: 0.5em;
+    margin-bottom: 0;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center; }
+    .footer .footer-media li {
+      display: inline-flex;
+      margin: 0.5em; }
+      .footer .footer-media li a {
+        color: white;
+        text-decoration: none; }
 
 .header {
   text-align: center;
@@ -1390,9 +1455,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: Verdana,Geneva,sans-serif;
-  font-size: 14px; }
+  height: 100%; }
 
 h1 {
   font-size: 2em; }
