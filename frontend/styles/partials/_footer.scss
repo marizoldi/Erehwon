@@ -16,8 +16,8 @@
 
 	.top-nav {
 		background: $color-white;
-		-webkit-flex: 10;
-		flex: 10;
+		-webkit-flex: 12;
+		flex: 12;
 		-webkit-align-items: stretch;
 		align-items: stretch;
 		padding: $padding-value;
@@ -55,7 +55,7 @@
 				margin: auto;
 				display: -webkit-flex;
 				display: flex;
-				padding-top: $padding-value/2;
+				padding-top: $padding-value*2;
 			}
 			div {
 				padding: 0;
@@ -88,10 +88,12 @@
 	.footer-links {
 		list-style-type: none;
 		margin:0;
-		padding: $padding-value;
+		padding: $padding-value $padding-value*2;
+		display: flex;
+		flex-basis: 28em;
+		justify-content: space-between;
 		li {
 			display: inline-block;
-			margin: 0.2em $margin-value*2;
 			a {
 				color: white;
 				text-decoration: none;
@@ -109,9 +111,7 @@
 		display: flex;
 		-webkit-align-items: center;
 		align-items: center;
-		//align-items: flex-start;
-		//left:0;
-	//  position: absolute;
+
 		li {
 			display: inline-flex;
 			margin: $margin-value/2;

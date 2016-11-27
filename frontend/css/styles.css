@@ -1147,8 +1147,8 @@ input.tag-input {
   display: flex; }
   .main-nav .top-nav {
     background: #fff;
-    -webkit-flex: 10;
-    flex: 10;
+    -webkit-flex: 12;
+    flex: 12;
     -webkit-align-items: stretch;
     align-items: stretch;
     padding: 0.5em;
@@ -1178,7 +1178,7 @@ input.tag-input {
         margin: auto;
         display: -webkit-flex;
         display: flex;
-        padding-top: 0.25em; }
+        padding-top: 1em; }
       .main-nav .button-primary a div {
         padding: 0; }
     .main-nav .button-primary:hover {
@@ -1203,10 +1203,12 @@ input.tag-input {
   .footer .footer-links {
     list-style-type: none;
     margin: 0;
-    padding: 0.5em; }
+    padding: 0.5em 1em;
+    display: flex;
+    flex-basis: 28em;
+    justify-content: space-between; }
     .footer .footer-links li {
-      display: inline-block;
-      margin: 0.2em 2em; }
+      display: inline-block; }
       .footer .footer-links li a {
         color: white;
         text-decoration: none; }
