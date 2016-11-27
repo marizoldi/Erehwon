@@ -1149,7 +1149,6 @@ input.tag-input {
     background: #fff;
     -webkit-flex: 12;
     flex: 12;
-    -webkit-align-items: stretch;
     align-items: stretch;
     padding: 0.5em;
     font-weight: 300;
@@ -1191,7 +1190,6 @@ input.tag-input {
   flex: 1;
   display: -webkit-flex;
   display: flex;
-  -webkit-align-items: stretch;
   align-items: stretch;
   background: #4FB6AC;
   text-align: center;
@@ -1204,7 +1202,9 @@ input.tag-input {
     list-style-type: none;
     margin: 0;
     padding: 0.5em 1em;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-basis: 28em;
     flex-basis: 28em;
     justify-content: space-between; }
     .footer .footer-links li {
@@ -1220,7 +1220,6 @@ input.tag-input {
     flex-grow: 1;
     display: -webkit-flex;
     display: flex;
-    -webkit-align-items: center;
     align-items: center; }
     .footer .footer-media li {
       display: inline-flex;

@@ -18,7 +18,6 @@
 		background: $color-white;
 		-webkit-flex: 12;
 		flex: 12;
-		-webkit-align-items: stretch;
 		align-items: stretch;
 		padding: $padding-value;
 		font-weight: $light;
@@ -75,7 +74,6 @@
 	flex: 1;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-align-items: stretch;
 	align-items: stretch;
 	background: $main-blue;
 	text-align: center;
@@ -89,7 +87,9 @@
 		list-style-type: none;
 		margin:0;
 		padding: $padding-value $padding-value*2;
+		display: -webkit-flex;
 		display: flex;
+		-webkit-flex-basis: 28em;
 		flex-basis: 28em;
 		justify-content: space-between;
 		li {
@@ -109,7 +109,6 @@
 		flex-grow: 1;
 		display: -webkit-flex;
 		display: flex;
-		-webkit-align-items: center;
 		align-items: center;
 
 		li {
