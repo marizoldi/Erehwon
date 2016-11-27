@@ -1166,6 +1166,9 @@ input.tag-input {
     flex: 1;
     display: -webkit-flex;
     display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
     font-family: "Montserrat", sans-serif;
     font-weight: 700; }
     .main-nav .button-primary a {
@@ -1175,7 +1178,12 @@ input.tag-input {
       color: #fff;
       text-decoration: none; }
       .main-nav .button-primary a img {
-        padding: auto; }
+        margin: auto;
+        display: -webkit-flex;
+        display: flex;
+        padding-top: 0.25em; }
+      .main-nav .button-primary a div {
+        padding: 0; }
     .main-nav .button-primary:hover {
       background: #ff9f00; }
     .main-nav .button-primary:active {

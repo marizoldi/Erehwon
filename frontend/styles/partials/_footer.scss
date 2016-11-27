@@ -41,6 +41,9 @@
 		flex: 1;
 		display: -webkit-flex;
 		display: flex;
+		flex-direction: column;
+		align-content: center;
+		flex-wrap: wrap;
 		font-family: $Montserrat;
 		font-weight: $bold;
 
@@ -52,7 +55,13 @@
 			text-decoration: none;
 
 			img {
-				padding: auto;
+				margin: auto;
+				display: -webkit-flex;
+				display: flex;
+				padding-top: $padding-value/2;
+			}
+			div {
+				padding: 0;
 			}
 		}
 		&:hover {
