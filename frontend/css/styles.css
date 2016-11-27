@@ -1166,9 +1166,6 @@ input.tag-input {
     flex: 1;
     display: -webkit-flex;
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
     font-family: "Montserrat", sans-serif;
     font-weight: 700; }
     .main-nav .button-primary a {
