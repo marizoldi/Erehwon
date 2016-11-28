@@ -527,7 +527,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-size: 1.1em;
+  font-size: 1.2em;
   /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
@@ -1161,25 +1161,16 @@ input.tag-input {
       display: inline; }
   .main-nav .button-primary {
     background: #fab733;
-    -webkit-flex: 1;
-    flex: 1;
     display: -webkit-flex;
     display: flex;
     font-family: "Montserrat", sans-serif;
-    font-weight: 700; }
+    font-weight: 700;
+    padding: 0.75em; }
     .main-nav .button-primary a {
-      -webkit-flex: 1;
-      flex: 1;
       text-align: center;
       color: #fff;
-      text-decoration: none; }
-      .main-nav .button-primary a img {
-        margin: auto;
-        display: -webkit-flex;
-        display: flex;
-        padding-top: 1em; }
-      .main-nav .button-primary a div {
-        padding: 0; }
+      text-decoration: none;
+      margin: auto; }
     .main-nav .button-primary:hover {
       background: #ff9f00; }
     .main-nav .button-primary:active {
@@ -1201,7 +1192,7 @@ input.tag-input {
   .footer .footer-links {
     list-style-type: none;
     margin: 0;
-    padding: 0.5em 1em;
+    padding: 0.5em 0.25em;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-basis: 28em;
