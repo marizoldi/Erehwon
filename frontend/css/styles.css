@@ -918,17 +918,18 @@ there.
   left: 40%;}
 
 .form-container {
-  background: #d1d2d4;  /*tablebg e74c3c #34495e  #88565b ed7271*/
+  background-color: #F1F3F5;  /*tablebg e74c3c #34495e  #88565b ed7271*/
   margin: 25px auto;
-  width: 390px;
-  height: 340px;
+  width: 35%;
+  height: 30em;
   position: relative;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .login-header {
-  color: #ffffff;
-  background-color: #4fb6ac;
+  color: #FFFFFF;
+  background-color: #4FB6AC;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -938,12 +939,14 @@ there.
 }
 
 .login-header p {
-  padding: 2px;
+  padding: 0.4em;
+  font-size: 0.8em;
+  letter-spacing: 0.1rem;
 }
 
 .login-form {
   position: relative;
-  width: 80%;
+  width: 70%;
 }
 
 .login-form input[type=text],
@@ -951,28 +954,41 @@ there.
   width: 100%;
   height: 40px;
   margin-bottom: 10px;
-  padding-left: 0px;
+  padding-left: 0;
+  font-size: 0.8em;
   background: #fff;
   border: none;
-  color: #e74c3c; 
+  color: #e74c3c;
   outline: none;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
 }
 
 .login-form input[type=submit] {
+    padding: 0;
+    margin-top: 3em;
     border: none;
-    background-color: #f7b632;
-    width: 40%;
-    color: #ffffff;
+    background-color: #FAB733;
     text-align: center;
+    width: 50%;
+    height: 30px;
+    color: #ffffff;
     text-transform: none;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    line-height: 0;
 }
 .login-message {
-  padding-top: 3em;
+  padding-top: 0.8em;
+  margin-bottom: 10em;
+  font-size: 0.7em;
 }
 
 .login-message a {
   text-decoration: none;
-  color: #f7b632;
+  color: #FAB733;
 }
 
 .main_container {
