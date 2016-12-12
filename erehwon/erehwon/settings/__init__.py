@@ -181,7 +181,7 @@ CONTEXT_PROCESSORS = [
     "django.core.context_processors.request",
 ]
 
-# Registration settings
+# Registration settings using Gmail
 
 ACCOUNT_ACTIVATION_DAYS = 7
 EXPIRATION_DAYS = 5
