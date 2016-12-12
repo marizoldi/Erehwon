@@ -186,13 +186,14 @@ CONTEXT_PROCESSORS = [
 ACCOUNT_ACTIVATION_DAYS = 7
 EXPIRATION_DAYS = 5
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-# EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST ='smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = os.environ["GMAIL_UN"]
-# DEFAULT_FROM_EMAIL = 'projecterehwon@gmail.com'
-# EMAIL_HOST_PASSWORD = os.environ["GMAIL_PW"]
-# EMAIL_USE_TLS = True
+EMAIL_USE_TLS = True
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST ='smtp.gmail.com'
+EMAIL_HOST_USER = os.environ["GMAIL_UN"]
+EMAIL_HOST_PASSWORD = os.environ["GMAIL_PW"]
+EMAIL_PORT = 587
+DEFAULT_FROM_EMAIL = 'projecterehwon@gmail.com'
+#
+#
