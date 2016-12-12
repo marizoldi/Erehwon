@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-ng-annotate'); 
+    grunt.loadNpmTasks('grunt-ng-annotate');
 
 
 grunt.initConfig({
@@ -34,7 +34,7 @@ grunt.initConfig({
 	},
 	jspaths: {
         src: {
-               js: ['app/**.js']
+               js: ['scripts/**/**.js']
             },
             dest: {
                 jsMin: '../erehwon/static/scripts/erehwon.min.js'
@@ -47,7 +47,7 @@ grunt.initConfig({
             sourceMap: true
         },
         target: {
-            src: 'app/min-safe-app.js',
+            src: '<%= jspaths.src.js %>',
             dest: '<%= jspaths.dest.jsMin %>'
         }
     },
