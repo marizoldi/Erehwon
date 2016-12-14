@@ -1,7 +1,7 @@
 .footer-wrap {
 	width: 100%;
-  position: relative;
-  bottom: 0;
+  position: absolute;
+  //bottom: 0;
 	color: $color-white;
 	min-height: $footer-height;
   display: -webkit-flex;
@@ -159,4 +159,14 @@
     position: fixed;
     top: 0;
     width: 100%;
+}
+
+.not-showing {
+		visibility: hidden;
+}
+
+
+#the-map, #support, #privacy {
+		margin-top: 8em;
+
 }
