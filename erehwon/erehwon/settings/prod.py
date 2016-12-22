@@ -10,7 +10,7 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
 SECRET_KEY = os.environ["SECRET_KEY"]
-ALLOWED_HOSTS = ['erehwon-prod.herokuapp.com']
+ALLOWED_HOSTS = ['erehwon-dev.herokuapp.com']
 
 LOGGING = {
     'version': 1,
