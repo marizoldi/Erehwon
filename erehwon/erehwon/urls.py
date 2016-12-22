@@ -27,6 +27,7 @@ import notifications.urls
 
 from registration.backends.hmac.views import RegistrationView
 import postman.urls
+from messagesApp.views import api_send_message,api_get_conversation
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -50,5 +51,6 @@ urlpatterns = [
     url(r'^messages/', include('postman.urls', namespace='postman', app_name='postman')),
     # django-notifications-hq
     url('^inbox/notifications/', include(notifications.urls, namespace='notifications')),
-
+    url(r'^api/sendmessage/', api_send_message, name='Api Send Message View'),
+    url(r'^api/messages/', api_get_conversation, name='API Get Messages'),
 ]

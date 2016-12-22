@@ -1,13 +1,13 @@
 .footer-wrap {
 	width: 100%;
   position: absolute;
-  bottom: 0;
+  //bottom: 0;
 	color: $color-white;
 	min-height: $footer-height;
-	display: -webkit-flex;
-	display: flex;
+  display: -webkit-flex;
+  display: flex;
 	-webkit-flex-direction: column;
-	flex-direction: column;
+  flex-direction: column;
 }
 
 .main-nav {
@@ -117,4 +117,56 @@
 			}
 		}
 	}
+}
+
+.is-sticky {
+	top: 0;
+	position: relative;
+	width: 100%;
+	color: $color-white;
+	min-height: $footer-height;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	background-color: red;
+	overflow: scroll;
+}
+
+.content-wrap {
+	display: -webkit-flex;
+	display: flex;
+	flex: 1 0 0;
+	padding: $padding-value;
+	justify-content: space-between;
+	font-family: $Montserrat-main-text;
+	.sidebar {
+		padding: $padding-value*2;
+		box-sizing: border-box;
+		flex-basis: 45%;
+	}
+}
+
+#sticky {
+//    background: #000000;
+    color: #ffffff;
+  //  font-size: 30px;
+  //  text-align: center;
+  //  width: 100vw;
+}
+
+#sticky.stick {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.not-showing {
+		visibility: hidden;
+}
+
+
+#the-map, #support, #privacy {
+		margin-top: 8em;
+
 }
