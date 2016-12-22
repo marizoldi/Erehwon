@@ -23,7 +23,7 @@ class ErehwonUserAdmin(EmailUserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email', 'password1', 'password2')}
+            'fields': ('email', 'password1', 'password2', 'username')}
         ),
     )
     add_form = ErehwonUserSignUpForm
