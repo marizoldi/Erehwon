@@ -181,19 +181,22 @@ CONTEXT_PROCESSORS = [
     "django.core.context_processors.request",
 ]
 
-# Registration settings using Gmail
+# Registration settings using sendgrid
 
 ACCOUNT_ACTIVATION_DAYS = 7
 EXPIRATION_DAYS = 5
+REGISTRATION_DEFAULT_FROM_EMAIL = "info@erehwon.com"
+REGISTRATION_EMAIL_HTML = True
+REGISTRATION_AUTO_LOGIN = True
 
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-EMAIL_USE_TLS = True
-EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST ='smtp.gmail.com'
-EMAIL_HOST_USER = os.environ["GMAIL_UN"]
-EMAIL_HOST_PASSWORD = os.environ["GMAIL_PW"]
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = os.environ["SENDGRID_USERNAME"]
+EMAIL_HOST_PASSWORD = os.environ["SENDGRID_PASSWORD"]
 EMAIL_PORT = 587
-DEFAULT_FROM_EMAIL = 'projecterehwon@gmail.com'
+EMAIL_USE_TLS = True
 #
 #
