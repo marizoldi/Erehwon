@@ -42,16 +42,9 @@ LOGGING = {
             'handlers': ['console'],
             'level': 'ERROR',
         },
-        'fashrevwall': {
+        'erehwon': {
             'handlers': ['console'],
             'level': 'INFO',
         }
     }
 }
-
-# Registration settings
-
-ACCOUNT_ACTIVATION_DAYS = 7
-EXPIRATION_DAYS = 5
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

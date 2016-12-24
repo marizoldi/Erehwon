@@ -42,7 +42,8 @@ LOGGING = {
             'handlers': ['console'],
             'level': 'ERROR',
         },
-        'fashrevwall': {
+
+        'erehwon': {
             'handlers': ['console'],
             'level': 'INFO',
         }
