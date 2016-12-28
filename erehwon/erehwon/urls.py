@@ -19,7 +19,7 @@ from django.views.generic import TemplateView
 
 from core.views import HomepageView
 
-from profiles.views import logout_view, CallForActionView, ProjectFormView, project_list, project_update, idea_list, call_list
+from profiles.views import logout_view, CallForActionView, ProjectFormView, project_add, project_list, project_update, idea_list, call_list
 from profiles.forms import ErehwonUserSignUpForm
 
 from messagesApp.views import MessagesProfileView, MessagesIndexView
@@ -36,8 +36,9 @@ urlpatterns = [
     url(r'^accounts/', include('registration.backends.hmac.urls')),  # This line includes automatically all views and urls for registration/activation/password reset
     url(r'^accounts/logout', logout_view, name="logout_view"),
     # url(r'^dashboard', loggedin_view, name="dashboard"),
+    url(r'^project/add', project_add, name="project_add"),
+    url(r'^project/(?P<project_id>[0-9]+)/$', project_update, name="project_update"),
     url(r'^projects', project_list, name="project_list"),
-    # url(r'^project', ProjectFormView.as_view(), name="project_form"),
     url(r'^ideas', idea_list, name="idea_list"),
     url(r'^callforaction', call_list, name="call_list"),
 

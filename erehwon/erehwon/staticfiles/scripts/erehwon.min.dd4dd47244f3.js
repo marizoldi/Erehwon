@@ -1,0 +1,2 @@
+var erehwonApp=angular.module("erehwonApp",[]);erehwonApp.controller("DashboardController",["$scope",function(a){}]),erehwonApp.controller("ManageController",["$scope",function(a){a.showAdd=!1,a.clickAdd=function(){a.showAdd=!a.showAdd},a.addForm={}}]);
+//# sourceMappingURL=erehwon.min.js.map

@@ -42,6 +42,10 @@ LOGGING = {
             'handlers': ['console'],
             'level': 'ERROR',
         },
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
         'erehwon': {
             'handlers': ['console'],
             'level': 'INFO',

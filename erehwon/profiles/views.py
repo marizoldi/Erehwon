@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponse, HttpResponseForbidden
 from django.views.generic import TemplateView
 from django.views.generic.edit import FormView, UpdateView
 from django.contrib.auth import logout
@@ -33,45 +34,72 @@ def logout_view(request):
 
     return HttpResponseRedirect("/")
 
+
 @login_required
 def project_list(request):
 
-	projects = Project.objects.all()
+	projects = Project.objects.filter(user=request.user)
 	context = {'projects': projects}
-
 
 	return render(request, 'profiles/my-projects.html', context)
 
+
 @login_required
-def project_update(request):
+def project_update(request, project_id):
+
+    project = get_object_or_404(Project, pk=project_id)
+    # if project.user != request.user:
+    #     return HttpResponseForbidden()
+
+    project_update_form = ProjectForm(instance=project)
+
     if request.method == 'POST':
-        project_update_form = ProjectForm(request.POST)
+        project_update_form = ProjectForm(request.POST, instance=project)
+
+        # initial={'title': instance.title, 'synopsis': instance.synopsis, 'label': instance.label})
+        # instance=Project.objects.get(pk=project_id))
         if project_update_form.is_valid():
             project_details = project_update_form.save(commit=False)
             project_details.save(update_fields=['title', 'label', 'synopsis', 'material', 'is_added_to_map'])
-            return redirect('project_update')
+            project_update_form.save_m2m()
+            return redirect('/projects')
     else:
         project_update_form = ProjectForm()
 
     context = {'project_update_form': project_update_form}
 
-    return render(request, 'profiles/my-projects.html', context)
+    return render(request, 'profiles/project.html', context)
+
+
+@login_required
+def project_add(request):
+    project_form = ProjectForm(request.POST, instance=request.user)
+
+    if request.method == 'POST':
+        if project_form.is_valid():
+            new_project_details = ProjectForm(request.POST, instance=request.user)
+            new_project_details.save()
+            return redirect('/projects')
+    else:
+        project_update_form = ProjectForm()
+
+    context = {'project_form': project_form}
+
+    return render(request, 'profiles/project.html', context)
 
 
 @login_required
 def idea_list(request):
 
-	ideas = Idea.objects.all()
+	ideas = Idea.objects.filter(user=request.user)
 	context = {'ideas': ideas}
-
 
 	return render(request, 'profiles/ideas.html', context)
 
 @login_required
 def call_list(request):
 
-    calls = CallForAction.objects.all()
+    calls = CallForAction.filter(user=request.user)
     context = {'calls': calls}
-
 
     return render(request, 'profiles/callforaction.html', context)
