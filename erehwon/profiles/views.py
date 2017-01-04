@@ -51,13 +51,10 @@ def project_update(request, project_id):
     # if project.user != request.user:
     #     return HttpResponseForbidden()
 
-    project_update_form = ProjectForm(instance=project)
+    project_update_form = ProjectForm(initial={'title':project.title, 'label':project.label, 'synopsis':project.synopsis})
 
     if request.method == 'POST':
-        project_update_form = ProjectForm(request.POST, instance=project)
-
-        # initial={'title': instance.title, 'synopsis': instance.synopsis, 'label': instance.label})
-        # instance=Project.objects.get(pk=project_id))
+        project_update_form = ProjectForm(request.POST, instance=request.project)
         if project_update_form.is_valid():
             project_details = project_update_form.save(commit=False)
             project_details.save(update_fields=['title', 'label', 'synopsis', 'material', 'is_added_to_map'])
@@ -73,17 +70,16 @@ def project_update(request, project_id):
 
 @login_required
 def project_add(request):
-    project_form = ProjectForm(request.POST, instance=request.user)
 
     if request.method == 'POST':
-        if project_form.is_valid():
-            new_project_details = ProjectForm(request.POST, instance=request.user)
-            new_project_details.save()
+        new_project_form = ProjectForm(request.POST, instance=request.user)
+        if new_project_form.is_valid():
+            new_project_form.save()
             return redirect('/projects')
     else:
-        project_update_form = ProjectForm()
+        new_project_form = ProjectForm()
 
-    context = {'project_form': project_form}
+    context = {'new_project_form': new_project_form}
 
     return render(request, 'profiles/project.html', context)
 
