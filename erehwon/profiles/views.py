@@ -74,6 +74,8 @@ def project_add(request):
     if request.method == 'POST':
         new_project_form = ProjectForm(request.POST, instance=request.user)
         if new_project_form.is_valid():
+            new_project_form.save(commit=False)
+            new_project_form.user = request.user
             new_project_form.save()
             return redirect('/projects')
     else:
