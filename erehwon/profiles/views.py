@@ -5,11 +5,14 @@ from django.views.generic.edit import FormView, UpdateView
 from django.contrib.auth import logout
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+import logging
 
 from registration.backends.hmac import views as registration_views
 
 from profiles.models import Project, Idea, Message, CallForAction
 from profiles.forms import ProjectForm
+
+log = logging.getLogger("erehwon")
 
 
 # Create your views here.
@@ -73,10 +76,12 @@ def project_add(request):
 
     if request.method == 'POST':
         new_project_form = ProjectForm(request.POST, instance=request.user)
+        log.info('Form saved')
         if new_project_form.is_valid():
             new_project_form.save(commit=False)
             new_project_form.user = request.user
             new_project_form.save()
+
             return redirect('/projects')
     else:
         new_project_form = ProjectForm()
