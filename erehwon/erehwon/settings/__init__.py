@@ -20,15 +20,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 SECRET_KEY = os.environ["SECRET_KEY"]
 
+DEBUG = True
+ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['*']
-
-LOGIN_REDIRECT_URL = '/'
+# LOGIN_REDIRECT_URL = '/'
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.admin',  # This needs to remain at the bottom of all apps for password_reset to work with custom templates
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -43,7 +44,6 @@ INSTALLED_APPS = [
     'postman',
     'ajax_select',
     'notifications',
-    'django.contrib.admin',  # This needs to remain at the bottom of all apps for password_reset to work with custom templates
 ]
 
 SITE_ID = 1
@@ -187,14 +187,4 @@ REGISTRATION_DEFAULT_FROM_EMAIL = "projecterehwon@gmail.com"
 REGISTRATION_EMAIL_HTML = True
 REGISTRATION_AUTO_LOGIN = True
 
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = os.environ["SENDGRID_USERNAME"]
-EMAIL_HOST_PASSWORD = os.environ["SENDGRID_PASSWORD"]
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-#
-#
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
