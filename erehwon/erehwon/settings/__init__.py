@@ -20,15 +20,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 SECRET_KEY = os.environ["SECRET_KEY"]
 
+DEBUG = True
+ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['*']
-
-LOGIN_REDIRECT_URL = '/'
+# LOGIN_REDIRECT_URL = '/'
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.admin',  # This needs to remain at the bottom of all apps for password_reset to work with custom templates
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -43,7 +44,6 @@ INSTALLED_APPS = [
     'postman',
     'ajax_select',
     'notifications',
-    'django.contrib.admin',  # This needs to remain at the bottom of all apps for password_reset to work with custom templates
 ]
 
 SITE_ID = 1
