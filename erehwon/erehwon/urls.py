@@ -35,7 +35,7 @@ urlpatterns = [
     #css classes here: http://django-postman.readthedocs.io/en/latest/views.html
     #and hook them up.
     url(r'^inbox/$', TemplateView.as_view(template_name='inbox.html')),
-    url(r'^messages/$', include('postman.urls', namespace='postman', app_name='postman')),
+    url(r'^messages/', include('postman.urls', namespace='postman', app_name='postman')),
     # django-notifications-hq
     url(r'^inbox/notifications/', include(notifications.urls, namespace='notifications')),
     url(r'^api/sendmessage/$', api_send_message, name='Api Send Message View'),

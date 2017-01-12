@@ -38,6 +38,7 @@ LOGGING = {
             'handlers': ['console'],
             'level': 'ERROR',
         },
+
         'erehwon': {
             'handlers': ['console'],
             'level': 'INFO',
