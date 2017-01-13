@@ -29,17 +29,17 @@ LOGIN_REDIRECT_URL = '/'
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',  # This needs to remain at the bottom of all apps for password_reset to work with custom templates
+    'django.contrib.sites',
     'django.contrib.auth',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_countries',
     'profiles',
-    'custom_user',
     'erehwon',
-    'django.contrib.sites',
+    'custom_user',
     'messagesApp',
     'postman',
     'ajax_select',

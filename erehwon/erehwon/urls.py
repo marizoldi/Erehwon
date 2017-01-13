@@ -10,17 +10,17 @@ from profiles.forms import ErehwonUserSignUpForm
 from messagesApp.views import MessagesProfileView, MessagesIndexView
 import notifications.urls
 
-from registration.backends.hmac.views import RegistrationView
+from registration.backends.hmac.views import *
 import postman.urls
 from messagesApp.views import api_send_message,api_get_conversation
 
 urlpatterns = [
+    url('^', include('django.contrib.auth.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^$', HomepageView.as_view(), name="index"),
-    url(r'^accounts/register/$', RegistrationView.as_view(form_class=ErehwonUserSignUpForm), name="registration_register"),
-    # This line includes automatically all views and urls for registration/activation/password reset
     url(r'^accounts/', include('registration.backends.hmac.urls')),
-    url(r'^accounts/logout/$', logout_view, name="logout_view"),
+    #This line includes automatically all views and urls for registration/activation/password reset
+    #url(r'^accounts/logout/$', logout_view, name="logout_view"),
     # url(r'^dashboard', loggedin_view, name="dashboard"),
     url(r'^projects/$', project_list, name="project_list"),
     # url(r'^project', ProjectFormView.as_view(), name="project_form"),
