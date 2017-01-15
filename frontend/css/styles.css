@@ -905,20 +905,81 @@ there.
   float: right;
   border-radius: 0; }
 
-.singup-form {
-  width: 35em;
-  min-width: 17.5em;
-  margin: auto;
-  border: 1px solid #C9C9C9;
+.pnl__title {
+  background-color: #4FB6AC;
+  color: #fff;
+  text-align: center;
+  padding: 0.5em;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif; }
+
+form {
   background-color: #f2f4f6;
   display: flex;
-  justify-content: center;
-  z-index: 1; }
-
-.main_container {
-  position: fixed;
-  width: 100%;
-  bottom: 0; }
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30em;
+  max-width: 35em;
+  margin: 0 auto;
+  height: 380px; }
+  form .email,
+  form .password1,
+  form .password2,
+  form .username {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    line-height: 1; }
+    form .email label,
+    form .password1 label,
+    form .password2 label,
+    form .username label {
+      color: #b4b0b4;
+      margin: 0;
+      padding: 0;
+      font-family: "Montserrat Alternates", sans-serif;
+      font-size: 0.85em; }
+      form .email label .small-text,
+      form .password1 label .small-text,
+      form .password2 label .small-text,
+      form .username label .small-text {
+        font-size: 0.8em;
+        display: inline-block; }
+    form .email input[name="email"],
+    form .email input[name="password1"],
+    form .email input[name="password2"],
+    form .email input[name="username"],
+    form .password1 input[name="email"],
+    form .password1 input[name="password1"],
+    form .password1 input[name="password2"],
+    form .password1 input[name="username"],
+    form .password2 input[name="email"],
+    form .password2 input[name="password1"],
+    form .password2 input[name="password2"],
+    form .password2 input[name="username"],
+    form .username input[name="email"],
+    form .username input[name="password1"],
+    form .username input[name="password2"],
+    form .username input[name="username"] {
+      height: 45px;
+      border-radius: 0; }
+  form .button {
+    margin: auto auto 2em;
+    background: #fab733;
+    color: #fff;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    width: 30%;
+    text-transform: none;
+    line-height: 32px;
+    height: 3em; }
+    form .button:hover {
+      background: #ff9f00; }
+    form .button:active {
+      background: #ff9f00; }
 
 .logo {
   margin: 0 auto;
@@ -1130,7 +1191,8 @@ input.tag-input {
 
 .footer-wrap {
   width: 100%;
-  position: absolute;
+  position: fixed;
+  bottom: 0;
   color: #fff;
   min-height: 8em;
   display: -webkit-flex;
@@ -1279,39 +1341,6 @@ input.tag-input {
     @media (min-width: 750px) {
       .header .logo {
         max-width: 800px; } }
-
-form {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 30em;
-  padding: 0.5em;
-  padding-bottom: 0; }
-
-select {
-  height: 3em; }
-
-input, select {
-  display: block;
-  width: 100%;
-  border: none;
-  color: #4e4e4e;
-  font-weight: 100;
-  margin: 1em 0;
-  max-width: 100%;
-  border: 1px solid #C9C9C9; }
-  input::-webkit-input-placeholder, select::-webkit-input-placeholder {
-    padding: 1em; }
-
-textarea {
-  display: block;
-  width: 100%;
-  padding: 1em;
-  margin: 0 auto 1em auto;
-  border: none;
-  color: #4e4e4e;
-  font-weight: 100; }
-  textarea::-webkit-input-placeholder {
-    padding: 1em; }
 
 .dashboard-navigation {
   clear: both;
