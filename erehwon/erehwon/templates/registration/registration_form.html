@@ -1,24 +1,38 @@
-{% extends "base.html" %}
+{% extends "layout.html" %}
+
+{% block title %} Register {% endblock %}
 
 {% load static %}
 
-
-    {% block layout %}
-
-
-		<div class="content-wrap">
-
-
-                    <h1 class="pnl__title">Sign Up</h1>
-        				<form method="POST" class="row" action="">
-
-				        {% csrf_token %}
-				        {{ form }}
-
-			 			<input type="submit"  class="button" value="Submit" />
-				    </form>
-
-            </div>
-        </div>
-
-    {% endblock %}
+{% block main %}
+  <div class="map">
+    <div class="overlay">
+      <form method="POST" action="" class="signup-form">
+          {% csrf_token %}
+          {{ form.non_field_errors }}
+          <h1 class="pnl__title">Welcome</h1>
+          <div class="email">
+              <label for="email">Email address</label>
+              {{ form.email.errors }}
+              <input type="email" name="email" required>
+          </div>
+          <div class="password1">
+              <label for="password">Password <div class="small-text">(at least 8 charachers,numbers and letters)</div></label>
+              {{ form.password1.errors }}
+              {{ form.password1 }}
+          </div>
+          <div class="password2">
+              <label for="password">Confirm Password</label>
+              {{ form.password2.errors }}
+              {{ form.password2 }}
+          </div>
+          <div class="username">
+              <label for="username">Username <div class="small-text">(at least 3 letters)</div></label>
+              {{ form.name.errors }}
+              <input type="text" name="username" required>
+          </div>
+			 		<input type="submit"  class="button" value="Sign Up" />
+			</form>
+    </div>
+  </div>
+{% endblock %}
