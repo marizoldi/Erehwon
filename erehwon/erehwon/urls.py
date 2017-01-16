@@ -10,7 +10,7 @@ from profiles.forms import ErehwonUserSignUpForm
 from messagesApp.views import MessagesProfileView, MessagesIndexView
 import notifications.urls
 
-from registration.backends.hmac.views import *
+from registration.backends.hmac.views import * as registration_view
 import postman.urls
 from messagesApp.views import api_send_message,api_get_conversation
 
