@@ -977,9 +977,11 @@ form {
     line-height: 32px;
     height: 3em; }
     form .button:hover {
-      background: #ff9f00; }
+      background: #ff9f00;
+      color: #fff; }
     form .button:active {
-      background: #ff9f00; }
+      background: #ff9f00;
+      color: #fff; }
 
 .logo {
   margin: 0 auto;

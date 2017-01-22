@@ -7,7 +7,7 @@
 {% block main %}
   <div class="map">
     <div class="overlay">
-      <form method="POST" action="" class="signup-form">
+      <form method="POST" action="" class="signup-form" id="signupform">
           {% csrf_token %}
           {{ form.non_field_errors }}
           <h1 class="pnl__title">Welcome</h1>
