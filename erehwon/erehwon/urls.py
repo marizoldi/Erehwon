@@ -19,6 +19,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', HomepageView.as_view(), name="index"),
     url(r'^accounts/', include('registration.backends.hmac.urls')),
+    url(r'^accounts/register/$', RegistrationView.as_view(form_class=ErehwonUserSignUpForm), name="registration_register"),
     #This line includes automatically all views and urls for registration/activation/password reset
     #url(r'^accounts/logout/$', logout_view, name="logout_view"),
     # url(r'^dashboard', loggedin_view, name="dashboard"),
