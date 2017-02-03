@@ -1,7 +1,8 @@
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.generic import TemplateView
-import registration.auth_urls
+ 
+from core.views import HomepageView
 
 from profiles.views import logout_view, CallForActionView, ProjectFormView, project_add, project_list, project_update, idea_list, call_list
 from profiles.forms import ErehwonUserSignUpForm
@@ -15,6 +16,8 @@ from messagesApp.views import api_send_message,api_get_conversation
 urlpatterns = [
     url('^', include('registration.auth_urls')),
     url(r'^admin/', admin.site.urls),
+     url(r'^$', HomepageView.as_view(), name="index"),
+			    # This line includes automatically all views and urls for registration/activation/password reset
     url(r'^accounts/', include('registration.backends.hmac.urls')),
     #This line includes automatically all views and urls for registration/activation/password reset
     #url(r'^accounts/logout/$', logout_view, name="logout_view"),

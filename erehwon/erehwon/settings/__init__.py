@@ -30,8 +30,8 @@ LOGIN_REDIRECT_URL = '/'
 
 INSTALLED_APPS = [
     'django.contrib.sites',
-    'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.admin',
     'custom_user',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
