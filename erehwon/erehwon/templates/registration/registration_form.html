@@ -5,8 +5,10 @@
 {% load static %}
 
 {% block main %}
-  <div class="map">
-    <div class="overlay">
+<header class="header">
+    <img src="{% static "img/logo.svg" %}" class="logo" />
+</header>
+
       <form method="POST" action="" class="signup-form" id="signupform">
           {% csrf_token %}
           {{ form.non_field_errors }}
@@ -33,6 +35,5 @@
           </div>
 			 		<input type="submit"  class="button" value="Sign Up" />
 			</form>
-    </div>
-  </div>
+
 {% endblock %}
