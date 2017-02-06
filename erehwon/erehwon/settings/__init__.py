@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.auth',
     'django.contrib.admin',
+    'custom_user',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -39,7 +40,6 @@ INSTALLED_APPS = [
     'django_countries',
     'profiles',
     'erehwon',
-    'custom_user',
     'messagesApp',
     'postman',
     'ajax_select',
@@ -85,7 +85,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': (
-            os.path.join(BASE_DIR, 'erehwon/templates'),
+            os.path.join(BASE_DIR, 'templates'),
         ),
         'APP_DIRS': True,
         'OPTIONS': {
