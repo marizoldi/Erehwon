@@ -1,15 +1,20 @@
-.pnl__title {
+.pnl-title {
 		background-color: $main-blue;
 		color: $color-white;
 		text-align: center;
-		padding: $padding-value;
+		padding: 0 $padding-value $padding-value 0;
 		font-size: 1em;
 		letter-spacing: 1px;
 		font-family: $Montserrat;
 }
 
+.title {
+		@extend .pnl-title ;
+		text-align: left;
+}
+
 form {
-		background-color: $background-light-color;
+		background-color: $color-white;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
@@ -27,7 +32,7 @@ form {
 				flex-direction: column;
 				line-height: 1;
             label {
-								color: $light-grey;
+								color: $dark-text-color;
 								margin: 0;
 								padding: 0;
 								font-family: $Montserrat-main-text;
@@ -41,8 +46,10 @@ form {
 						input[name="password1"],
 						input[name="password2"],
             input[name="username"] {
-                    height: 45px;
+                    height: 40px;
 										border-radius: 0;
+										background-color: $background-light-color;
+										color: $dark-grey;
             }
         }
 				.button {

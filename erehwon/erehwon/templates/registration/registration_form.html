@@ -6,13 +6,16 @@
 
 {% block main %}
 <header class="header">
-    <img src="{% static "img/logo.svg" %}" class="logo" />
+    <div class="title">
+      <   back to Erehwon
+    </div>
 </header>
 
       <form method="POST" action="" class="signup-form" id="signupform">
           {% csrf_token %}
           {{ form.non_field_errors }}
-          <h1 class="pnl__title">Welcome</h1>
+          <img src="{% static "img/Erehwon_Logo_finGREEN.svg" %}" class="logo-templates" />
+          <h1 class="pnl-title">SIGN UP</h1>
           <div class="email">
               <label for="email">Email address</label>
               {{ form.email.errors }}

@@ -905,17 +905,20 @@ there.
   float: right;
   border-radius: 0; }
 
-.pnl__title {
+.pnl-title, .title {
   background-color: #4FB6AC;
   color: #fff;
   text-align: center;
-  padding: 0.5em;
+  padding: 0 0.5em 0.5em 0;
   font-size: 1em;
   letter-spacing: 1px;
   font-family: "Montserrat", sans-serif; }
 
+.title {
+  text-align: left; }
+
 form {
-  background-color: #f2f4f6;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -936,7 +939,7 @@ form {
     form .password1 label,
     form .password2 label,
     form .username label {
-      color: #b4b0b4;
+      color: #3c3c3c;
       margin: 0;
       padding: 0;
       font-family: "Montserrat Alternates", sans-serif;
@@ -963,8 +966,10 @@ form {
     form .username input[name="password1"],
     form .username input[name="password2"],
     form .username input[name="username"] {
-      height: 45px;
-      border-radius: 0; }
+      height: 40px;
+      border-radius: 0;
+      background-color: #f2f4f6;
+      color: #25262d; }
   form .button {
     margin: auto auto 2em;
     background: #fab733;
@@ -983,12 +988,12 @@ form {
       background: #ff9f00;
       color: #fff; }
 
-.logo {
-  margin: 0 auto;
-  max-height: 70px;
-  max-width: 100%; }
-  .logo h1 {
-    margin: 0; }
+.logo-templates {
+  margin: 0;
+  max-height: 25px;
+  max-width: 100%;
+  background-color: #4FB6AC;
+  padding: 0.5em; }
 
 .map {
   height: 30em;
