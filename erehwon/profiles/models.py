@@ -20,6 +20,9 @@ class ErehwonUser(AbstractEmailUser):
       username = models.CharField(max_length=30, blank=True)
 #     #image (tip:s3DirectField)
 
+def __str__(self):
+        return self.username
+
 class Project(models.Model):
 
    user = models.ForeignKey(ErehwonUser)
