@@ -1,28 +1,34 @@
-{% extends "base.html" %}
+{% extends "layout.html" %}
+
+{% block title %} Login {% endblock %}
 
 {% load static %}
 
-
-{% block layout %}
-
-    <!-- <h1 class="pnl__title">Log In</h1> -->
-    <div class="map">
-      <div class="overlay">
-        <div class="singup-form">
-        <form method="POST" action="">
-            <div class="row">
-        	   {% csrf_token %}
-        	   {{ form.as_p }}
-            </div>
-            <div class="row">
-                <a href="/accounts/password/reset">Forgot Password</a>
-            </div>
-            <div class="row">
-                <input class="button round right" type="submit" value="Sign in">
-                <a href="/accounts/register" class="underline txt-right">Not Registered? Start here</a>
-            </div>
-        </form>
-      </div>
+{% block main %}
+  <div class="map">
+    <div class="overlay">
+      <form method="POST" action="" class="signup-form">
+          {% csrf_token %}
+          {{ form.non_field_errors }}
+          <h1 class="pnl__title">Welcome</h1>
+          <div class="email">
+              <label for="email">E-mail</label>
+              {{ form.email.errors }}
+              <input type="email" name="email" required>
+          </div>
+          <div class="password1">
+              <label for="password">Password</label>
+              {{ form.password.errors }}
+              {{ form.password }}
+          </div>
+			 		<input type="submit" class="button" value="Sign In" />
+          <div class="row">
+              <a href="/accounts/password/reset">Forgot Password?</a>
+          </div>
+          <div class="row">
+              <a href="/accounts/register" class="underline txt-right">Invited to join us? Sign Up</a>
+          </div>
+			</form>
     </div>
-</div>
+  </div>
 {% endblock %}
