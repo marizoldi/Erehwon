@@ -10,7 +10,7 @@
         {% for project in projects %}
         <li>
             <div class="idea-info idea-list-col">
-                <a href=""><h2>{{ project.title }}</h2></a>
+                <a href="/project/{{project.id}}"><h2>{{ project.title }}</h2></a>
                 <div>
                     <p>Contributors: 20</p>
                 </div>
@@ -18,7 +18,6 @@
             <a href="#" class="idea-list-col">Add to map</a>
             <a href="#" class="idea-list-col">Remove from map</a>
         </li>
-
         {% endfor %}
     </ul>
 </section>

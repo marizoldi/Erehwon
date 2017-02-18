@@ -29,7 +29,9 @@ LOGIN_REDIRECT_URL = '/'
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.sites',
     'django.contrib.auth',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -38,12 +40,10 @@ INSTALLED_APPS = [
     'profiles',
     'custom_user',
     'erehwon',
-    'django.contrib.sites',
     'messagesApp',
     'postman',
     'ajax_select',
     'notifications',
-    'django.contrib.admin',  # This needs to remain at the bottom of all apps for password_reset to work with custom templates
 ]
 
 SITE_ID = 1
@@ -85,7 +85,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': (
-            os.path.join(BASE_DIR, 'erehwon/templates'),
+            os.path.join(BASE_DIR, 'templates'),
         ),
         'APP_DIRS': True,
         'OPTIONS': {
