@@ -3,14 +3,19 @@
 	//width: 100%;
 	max-width: 100%;
 	background-size: contain;
-	margin-left: 15%;
+	margin-left: 20%;
 	margin-top: 3%;
 	@media (min-width: 900px) {
 		height: 45em;
 	}
 	@media screen and (max-height: 700px) {
 		//background-color: red; jusr for testing
-		height: 39em;
+		height: 41em;
 		margin-top: 2%;
+	}
+	@media screen and (max-width: 300px) {
+		//background-color: red; jusr for testing
+		height: 15em;
+		margin-top: 1%;
 	}
 }
