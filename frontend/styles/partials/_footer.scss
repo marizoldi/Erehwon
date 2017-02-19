@@ -13,12 +13,13 @@
 		background: $main-blue;
 		text-align: center;
 		vertical-align: text-bottom;
-		padding: $padding-value;
+		padding: 1.2em;
 		max-height: $footer-height/3;
 		font-family: $Montserrat;
 		font-size: $bold;
 
 		.footer-links {
+			font-size: 1.1em;
 			list-style-type: none;
 			margin:0;
 			padding: $padding-value $padding-value/2;

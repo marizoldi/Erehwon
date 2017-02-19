@@ -1029,19 +1029,22 @@ form {
   height: 37em;
   max-width: 100%;
   background-size: contain;
-  margin-left: 20%;
-  margin-top: 3%; }
-  @media (min-width: 900px) {
+  margin-left: 10%;
+  margin-top: 6%; }
+  @media (min-width: 1100px) {
     .map {
-      height: 45em; } }
-  @media screen and (max-height: 700px) {
-    .map {
-      height: 41em;
-      margin-top: 2%; } }
-  @media screen and (max-width: 300px) {
+      height: 45em;
+      margin-top: 3%; } }
+  @media (max-width: 500px) {
     .map {
       height: 15em;
-      margin-top: 1%; } }
+      margin-top: 1%;
+      margin-left: 5%; } }
+  @media screen and (max-height: 550px) {
+    .map {
+      height: 41em;
+      margin-top: 2%;
+      margin-left: 5%; } }
 
 .idea {
   max-width: 60em;
@@ -1252,11 +1255,12 @@ input.tag-input {
     background: #4FB6AC;
     text-align: center;
     vertical-align: text-bottom;
-    padding: 0.5em;
+    padding: 1.2em;
     max-height: 2.66667em;
     font-family: "Montserrat", sans-serif;
     font-size: 700; }
     .footer-wrap .footer .footer-links {
+      font-size: 1.1em;
       list-style-type: none;
       margin: 0;
       padding: 0.5em 0.25em;
