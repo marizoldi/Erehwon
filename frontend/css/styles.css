@@ -995,11 +995,28 @@ form {
   background-color: #4FB6AC;
   padding: 0.5em; }
 
+.logo {
+  height: 70px;
+  top: 0;
+  right: 2%;
+  position: absolute; }
+  @media (min-width: 750px) {
+    .logo {
+      max-width: 800px; } }
+
 .map {
-  height: 30em;
-  width: 100%;
-  background: url("../img/dummy-map-homepage.png") center center no-repeat;
-  background-size: contain; }
+  height: 37em;
+  max-width: 100%;
+  background-size: contain;
+  margin-left: 15%;
+  margin-top: 3%; }
+  @media (min-width: 900px) {
+    .map {
+      height: 45em; } }
+  @media screen and (max-height: 700px) {
+    .map {
+      height: 39em;
+      margin-top: 2%; } }
 
 .idea {
   max-width: 60em;
@@ -1343,11 +1360,6 @@ input.tag-input {
     @media (min-width: 550px) {
       .header.logged-in h1 .hello {
         display: inline; } }
-  .header .logo {
-    height: 70px; }
-    @media (min-width: 750px) {
-      .header .logo {
-        max-width: 800px; } }
 
 .dashboard-navigation {
   clear: both;

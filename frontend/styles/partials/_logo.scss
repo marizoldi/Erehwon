@@ -1,7 +1,20 @@
+//logo class for login,reset password, register etc templates
 .logo-templates {
 		margin: 0;
 		max-height: 25px;
     max-width: 100%;
 		background-color: $main-blue;
 		padding: $padding-value;
+}
+
+
+//logo class for landing page
+.logo {
+	height: 70px;
+	top: 0;
+	right: 2%;
+	position: absolute;
+	@media (min-width: 750px) {
+	max-width: 800px;
+	}
 }
