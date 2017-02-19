@@ -20,17 +20,17 @@
 }
 
 .button-primary {
-	width: 12%;
+	//width: 12%;
 	right: 2%;
 	top: 10px;
 	position: absolute;
 
 	background: $button-default;
-	display: -webkit-flex;
-	display: flex;
+	//display: -webkit-flex;
+	//display: flex;
 	font-family: $Montserrat;
 	font-weight: $bold;
-	padding: 0.75em;
+	padding: $padding-value $padding-value*5;
 	a {
 		text-align: center;
 		color: $color-white;

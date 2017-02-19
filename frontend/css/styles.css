@@ -1005,16 +1005,13 @@ form {
       max-width: 800px; } }
 
 .button-primary {
-  width: 12%;
   right: 2%;
   top: 10px;
   position: absolute;
   background: #fab733;
-  display: -webkit-flex;
-  display: flex;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  padding: 0.75em; }
+  padding: 0.5em 2.5em; }
   .button-primary a {
     text-align: center;
     color: #fff;
@@ -1263,7 +1260,7 @@ input.tag-input {
       font-size: 1.1em;
       list-style-type: none;
       margin: 0;
-      padding: 0.5em 0.25em;
+      padding: 0.5em 1.5em;
       display: -webkit-flex;
       display: flex;
       -webkit-flex-basis: 28em;
@@ -1289,6 +1286,8 @@ input.tag-input {
         .footer-wrap .footer .footer-media li a {
           color: white;
           text-decoration: none; }
+          .footer-wrap .footer .footer-media li a img {
+            height: 3em; }
 
 .is-sticky {
   top: 0;

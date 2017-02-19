@@ -22,7 +22,7 @@
 			font-size: 1.1em;
 			list-style-type: none;
 			margin:0;
-			padding: $padding-value $padding-value/2;
+			padding: $padding-value $padding-value*3;
 			display: -webkit-flex;
 			display: flex;
 			-webkit-flex-basis: 28em;
@@ -53,6 +53,9 @@
 				a {
 					color: white;
 					text-decoration: none;
+					img {
+						height: 3em;
+					}
 				}
 			}
 		}
