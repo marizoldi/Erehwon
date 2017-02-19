@@ -6,6 +6,7 @@
 
 	.footer {
 		-webkit-flex: 1;
+		-ms-flex: 1;
 		flex: 1;
 		display: -webkit-flex;
 		display: flex;
@@ -31,7 +32,7 @@
 			li {
 				display: inline-block;
 				a {
-					color: white;
+					color: $dark-text-color;
 					text-decoration: none;
 				}
 			}
@@ -51,7 +52,7 @@
 				display: inline-flex;
 				margin: $margin-value/2;
 				a {
-					color: white;
+					color: $dark-text-color;
 					text-decoration: none;
 					img {
 						height: 3em;

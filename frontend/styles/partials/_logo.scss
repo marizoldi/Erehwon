@@ -11,46 +11,5 @@
 //logo class for landing page
 .logo {
 	height: 70px;
-	top: 0;
-	left: 2%;
-	position: absolute;
-	@media (min-width: 750px) {
-	max-width: 800px;
-	}
-}
-
-.button-primary {
-	//width: 12%;
-	right: 2%;
-	top: 10px;
-	position: absolute;
-
-	background: $button-default;
-	//display: -webkit-flex;
-	//display: flex;
-	font-family: $Montserrat;
-	font-weight: $bold;
-	padding: $padding-value $padding-value*5;
-	a {
-		text-align: center;
-		color: $color-white;
-		text-decoration: none;
-		margin: auto;
-
-		img {
-		//	margin: auto;
-		//	display: -webkit-flex;
-		//	display: flex;
-	//		padding-top: $padding-value*2;
-		}
-		div {
-			//padding: 0;
-		}
-	}
-	&:hover {
-		background: $button-hover;
-	}
-	&:active {
-		background: $button-active;
-	}
+	margin: 0 $padding-value*2;
 }
