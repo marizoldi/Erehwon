@@ -5,9 +5,26 @@
     {% block main %}
     <header class="header">
         <img src="{% static "img/EW-logo-landingpage-01.svg" %}" class="logo" />
+        <div class="button-primary" id="register-login">
+            <a href="/accounts/login"><img class="signin-up-image" src="{% static "img/SignIn_Up.svg" %}" />
+              <div>Sign In/Up</div>
+            </a>
+        </div>
     </header>
     <div id="content">
         <img src="{% static "img/dummybackgd.png" %}" class="map" />
-        <div id="content-anchor"></div>
+        <!--<div id="content-anchor"></div> -->
+        <div class="filter-options">
+          <div class="filter-one"><div>Filter 1</div>
+            <label class="parameter"><input type="checkbox" name="parameter1" value="parameter1">parameter 1</label>
+            <label class="parameter"><input type="checkbox" name="parameter2" value="parameter2">parameter 2</label>
+            <label class="parameter"><input type="checkbox" name="parameter3" value="parameter3">parameter 3</label><br>
+          </div>
+          <div class="filter-one"><div>Filter 2</div>
+            <label class="parameter"><input type="checkbox" name="parameter4" value="parameter4">parameter 1</label>
+            <label class="parameter"><input type="checkbox" name="parameter5" value="parameter5">parameter 2</label>
+            <label class="parameter"><input type="checkbox" name="parameter6" value="parameter6">parameter 3</label>
+          </div>
+        </div>
     </div>
     {% endblock %}
