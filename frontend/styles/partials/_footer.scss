@@ -1,10 +1,6 @@
-.footer-wrap {
-	width: 100%;
-  position: fixed;
-  bottom: 0;
-	color: $color-white;
 
-	.footer {
+
+	.main-nav {
 		-webkit-flex: 1;
 		-ms-flex: 1;
 		flex: 1;
@@ -14,10 +10,13 @@
 		background: $main-blue;
 		text-align: center;
 		vertical-align: text-bottom;
-		padding: 1.2em;
+		padding: 1.2em 0;
 		max-height: $footer-height/3;
 		font-family: $Montserrat;
 		font-size: $bold;
+		bottom: 0;
+		position: absolute;
+		width: 100%;
 
 		.footer-links {
 			font-size: 1.1em;
@@ -55,26 +54,12 @@
 					color: $dark-text-color;
 					text-decoration: none;
 					img {
-						height: 3em;
+						height: 2em;
 					}
 				}
 			}
 		}
 	}
-}
-.is-sticky {
-	top: 0;
-	position: relative;
-	width: 100%;
-	color: $color-white;
-	min-height: $footer-height;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: column;
-	flex-direction: column;
-	background-color: red;
-	overflow: scroll;
-}
 
 .content-wrap {
 	display: -webkit-flex;
@@ -90,26 +75,44 @@
 	}
 }
 
-#sticky {
-//    background: #000000;
-    color: #ffffff;
-  //  font-size: 30px;
-  //  text-align: center;
-  //  width: 100vw;
-}
-
-#sticky.stick {
-    position: fixed;
-    top: 0;
-    width: 100%;
+#the-map, #support, #privacy {
+		margin-top: 8em;
 }
 
 .not-showing {
-		visibility: hidden;
+	visibility: hidden;
 }
 
+//sticky nav styling
 
-#the-map, #support, #privacy {
-		margin-top: 8em;
+.container {
+	 display: inline;
+	 margin:0 auto;
+}
 
+nav.main-nav.stickytop {
+	 position:fixed;
+	 top:0;
+	 width: 100%;
+}
+
+.content {
+	 color:#222;
+	 padding:50px;
+	 -webkit-column-count:3;
+/* Chrome, Safari, Opera */
+	 -moz-column-count:3;
+/* Firefox */
+	 column-count:3;
+	 -webkit-column-gap:40;
+	 column-gap:40px;
+}
+
+.content h2 {
+	 margin:0;
+}
+
+.pnl-title {
+	padding: 0;
+	margin: 0;
 }

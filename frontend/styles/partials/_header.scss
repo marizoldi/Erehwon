@@ -21,6 +21,9 @@
   		color: $dark-text-color;
   		text-decoration: none;
   		margin: auto;
+      img {
+        height: 2em;
+      }
   	}
   	&:hover {
   		background: $button-hover;
