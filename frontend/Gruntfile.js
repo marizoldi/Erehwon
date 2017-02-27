@@ -13,7 +13,7 @@ grunt.initConfig({
 	cssmin: {
 		combine: {
 		  files: {
-		    '../erehwon/static/styles/styles.css': ['css/styles.css']
+		    '../erehwon/erehwon/static/styles/styles.css': ['css/styles.css']
 		  }
 		}
 	},
@@ -37,7 +37,7 @@ grunt.initConfig({
                js: ['scripts/**/**.js']
             },
             dest: {
-                jsMin: '../erehwon/static/scripts/erehwon.min.js'
+                jsMin: '../erehwon/erehwon/static/scripts/erehwon.min.js'
             }
     },
     uglify: {
@@ -55,7 +55,7 @@ grunt.initConfig({
 	  img: {
 	  	files: [
 	    // includes files within path
-	    {expand: true, src: ['img/*'], dest: '../erehwon/static/', filter: 'isFile'},
+	    {expand: true, src: ['img/*'], dest: '../erehwon/erehwon/static/', filter: 'isFile'},
 	    ],
 	  },
 	},
