@@ -1,3 +1,11 @@
+.logged-in-header {
+	background-color: $main-blue;
+	padding: 0;
+	margin: 0;
+	height: 4em;
+
+}
+
 .dashboard-navigation {
 	clear: both;
 	padding: 0;
@@ -6,8 +14,8 @@
 
 .col {
 	display: block;
-	float: left;
-	margin: 1% 0 1% 2%;
+	float: right;
+	margin: 3%;
 }
 
 .col:first-child { margin-left: 0;}
@@ -37,9 +45,9 @@
 	width: 38.8%;
 }
 .span_1_of_5 {
-	width: 18.4%;
-	height: 0;
-	padding-bottom: 17%;
+	width: 3em;
+	height: 50%;
+	padding-bottom: 5em;
 }
 
 .dashboard-menu {
@@ -98,7 +106,7 @@
 		color: $color-white;
 		z-index: 1;
 	}
-	
+
 }
 
 
@@ -113,9 +121,9 @@
 	@media screen and (min-width: 1150px) {
 		width:198px;
 		height: 198px;
-	
+
 	}
-	
+
 }
 
 .motd {
