@@ -10,7 +10,7 @@
                 <div class="slider round"></div>
             </label>-->
             <div class="section group dashboard-navigation">
-              <a href="/projects" class="col span_1_of_5 dashboard-link -projects"></a>
+              <a href="/profiles/project.html" class="col span_1_of_5 dashboard-link -projects"></a>
                 <a href="ideas" class="col span_1_of_5 dashboard-link -ideas"></a>
                 <a href="callforaction" class="col span_1_of_5 dashboard-link -actions"></a>
             </div>
@@ -21,23 +21,23 @@
             <p>Overlay content in here.</p>
         </div>
     </div> -->
-    <div class="content">
-
-        {% block main %}
-        {% endblock %}
+    <div class="content-loggedin">
+          <img src="{% static "img/dummybackgd.png" %}" class="map-loggedin" />
     </div>
 
-        <footer class="footer-wrap">
-              <div class="filter-options">
-                <div class="filter-one"><div>Filter 1</div>
-                  <label class="parameter"><input type="checkbox" name="parameter1" value="parameter1">parameter 1</label>
-                  <label class="parameter"><input type="checkbox" name="parameter2" value="parameter2">parameter 2</label>
-                  <label class="parameter"><input type="checkbox" name="parameter3" value="parameter3">parameter 3</label><br>
+        <footer class="footer-loggedin">
+              <div class="filter-options-loggedin">
+                <div class="filter-one-loggedin">Filter 1</div>
+                <div class="filter-one-loggedin">
+                  <label class="parameter-loggedin"><input type="checkbox" name="parameter1" value="parameter1">parameter 1</label>
+                  <label class="parameter-loggedin"><input type="checkbox" name="parameter2" value="parameter2">parameter 2</label>
+                  <label class="parameter-loggedin"><input type="checkbox" name="parameter3" value="parameter3">parameter 3</label><br>
                 </div>
-                <div class="filter-one"><div>Filter 2</div>
-                  <label class="parameter"><input type="checkbox" name="parameter4" value="parameter4">parameter 1</label>
-                  <label class="parameter"><input type="checkbox" name="parameter5" value="parameter5">parameter 2</label>
-                  <label class="parameter"><input type="checkbox" name="parameter6" value="parameter6">parameter 3</label>
+                <div class="filter-one-loggedin">Filter 2</div>
+                <div class="filter-one-loggedin">
+                  <label class="parameter-loggedin-loggedin"><input type="checkbox" name="parameter4" value="parameter4">parameter 1</label>
+                  <label class="parameter-loggedin"><input type="checkbox" name="parameter5" value="parameter5">parameter 2</label>
+                  <label class="parameter-loggedin"><input type="checkbox" name="parameter6" value="parameter6">parameter 3</label>
                 </div>
               </div>
         </footer>
