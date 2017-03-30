@@ -3,24 +3,26 @@
 
 {% block layout %}
     <header class="logged-in-header">
-
           <!--   <h1>hello, {{ user.username }}</h1>
            <label class="switch map-switch">
                 <input id="switch-input" type="checkbox" ng-model="mapSwitch">
                 <div class="slider round"></div>
             </label>-->
-            <div class="section group dashboard-navigation">
-              <a href="/profiles/project.html" class="col span_1_of_5 dashboard-link -projects"></a>
+            <div class="dashboard-navigation">
+                <a href="/profiles/project.html" class="col span_1_of_5 dashboard-link -projects"></a>
                 <a href="ideas" class="col span_1_of_5 dashboard-link -ideas"></a>
                 <a href="callforaction" class="col span_1_of_5 dashboard-link -actions"></a>
             </div>
+            <div class="navigation-menu">
+                <a href="" class="col span_1_of_5 dashboard-menu">
+                  <img src="{% static "img/News.svg" %}" class="menu-image" /></a>
+                <a href="" class="col span_1_of_5 dashboard-menu">
+                  <img src="{% static "img/Messages.svg" %}" class="menu-image" /></a>
+                <a href="" class="col span_1_of_5 dashboard-menu">
+                  <img src="{% static "img/My_Profile.svg" %}" class="menu-image" /></a>
+            </div>
     </header>
-    <!-- <div class="overlay" ng-show="mapSwitch">
 
-        <div class="overlay-content">
-            <p>Overlay content in here.</p>
-        </div>
-    </div> -->
     <div class="content-loggedin">
           <img src="{% static "img/dummybackgd.png" %}" class="map-loggedin" />
     </div>
@@ -35,11 +37,15 @@
                 </div>
                 <div class="filter-one-loggedin">Filter 2</div>
                 <div class="filter-one-loggedin">
-                  <label class="parameter-loggedin-loggedin"><input type="checkbox" name="parameter4" value="parameter4">parameter 1</label>
+                  <label class="parameter-loggedin"><input type="checkbox" name="parameter4" value="parameter4">parameter 1</label>
                   <label class="parameter-loggedin"><input type="checkbox" name="parameter5" value="parameter5">parameter 2</label>
                   <label class="parameter-loggedin"><input type="checkbox" name="parameter6" value="parameter6">parameter 3</label>
                 </div>
               </div>
+              <div class="search-loggedin">
+                <div>search form</div>
+              </div>
+
         </footer>
 
 {% endblock %}
