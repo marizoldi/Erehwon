@@ -1390,7 +1390,7 @@ nav.main-nav.stickytop {
 
 .navigation-menu {
   position: absolute;
-  right: 0;
+  right: 1.5em;
   top: 1.5em; }
   .navigation-menu .dashboard-menu {
     text-align: center;
