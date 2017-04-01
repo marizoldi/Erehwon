@@ -2,15 +2,13 @@
 {% load static %}
 
 {% block layout %}
-    <header class="logged-in-header">
+    <header class="header-loggedin">
           <!--   <h1>hello, {{ user.username }}</h1>
            <label class="switch map-switch">
                 <input id="switch-input" type="checkbox" ng-model="mapSwitch">
                 <div class="slider round"></div>
             </label>-->
-            <div class="logo-loggedin">
-                  <img src="{% static "img/Erehwon_Logo_finGreen.svg" %}" />
-            </div>
+            <img src="{% static "img/EW-logo.svg" %}" class="logo-loggedin" />
 
             <div class="dashboard-navigation">
                 <a href="/profiles/project.html" class="col span_1_of_5 dashboard-link -projects"></a>

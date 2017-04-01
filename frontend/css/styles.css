@@ -1357,11 +1357,16 @@ nav.main-nav.stickytop {
     .header .button-primary:active {
       background: #ff9f00; }
 
-.logged-in-header {
+.header-loggedin {
   background-color: #4FB6AC;
   padding: 0;
   margin: 0;
   height: 4em; }
+  .header-loggedin .logo-loggedin {
+    margin: 0;
+    max-height: 35px;
+    width: 150px;
+    padding: 0.5em 1.7em; }
 
 .dashboard-navigation {
   width: 12em;
@@ -1400,7 +1405,8 @@ nav.main-nav.stickytop {
   background-size: 100%;
   background-repeat: no-repeat;
   position: relative;
-  margin: 2em 0.2em 2em; }
+  margin: 0 0.2em;
+  top: -1.5em; }
   .dashboard-link.-projects {
     background-image: url("../img/CreateNewProject.svg"); }
     .dashboard-link.-projects.-active {
