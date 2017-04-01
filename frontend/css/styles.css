@@ -1369,8 +1369,7 @@ nav.main-nav.stickytop {
     padding: 0.5em 1.7em; }
 
 .dashboard-navigation {
-  width: 12em;
-  margin-left: 75%; }
+  margin-right: 15em; }
 
 .col {
   display: block;
@@ -1503,7 +1502,8 @@ nav.main-nav.stickytop {
         background-color: #fff;
         color: #4FB6AC; }
         .footer-loggedin .filter-options-loggedin .filter-one-loggedin .parameter-loggedin input {
-          background-color: #4FB6AC; }
+          background-color: #4FB6AC;
+          margin-right: 0.25em; }
   .footer-loggedin .search-loggedin {
     flex-basis: 60%; }
 

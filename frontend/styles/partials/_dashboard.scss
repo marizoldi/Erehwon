@@ -12,8 +12,7 @@
 }
 
 .dashboard-navigation {
-	width: 12em;
-	margin-left: 75%;
+	margin-right: 15em;
 }
 
 .col {
@@ -177,6 +176,7 @@
 				color: $main-blue;
 				input {
 					background-color: $main-blue;
+					margin-right: 0.25em;
 				}
 			}
 		}
