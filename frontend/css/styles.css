@@ -1357,29 +1357,23 @@ nav.main-nav.stickytop {
     .header .button-primary:active {
       background: #ff9f00; }
 
-.dashboard-navigation {
-  clear: both;
+.header-loggedin {
+  background-color: #4FB6AC;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  height: 4em; }
+  .header-loggedin .logo-loggedin {
+    margin: 0;
+    max-height: 35px;
+    width: 150px;
+    padding: 0.5em 1.7em; }
+
+.dashboard-navigation {
+  margin-right: 15em; }
 
 .col {
   display: block;
-  float: left;
-  margin: 1% 0 1% 2%; }
-
-.col:first-child {
-  margin-left: 0; }
-
-.group:before,
-.group:after {
-  content: "";
-  display: table; }
-
-.group:after {
-  clear: both; }
-
-.group {
-  zoom: 1; }
+  float: right; }
 
 .span_5_of_5 {
   width: 100%; }
@@ -1394,34 +1388,39 @@ nav.main-nav.stickytop {
   width: 38.8%; }
 
 .span_1_of_5 {
-  width: 18.4%;
-  height: 0;
-  padding-bottom: 17%; }
+  width: 3em;
+  height: 50%;
+  padding-bottom: 5em; }
 
-.dashboard-menu {
-  text-align: center;
-  height: 100px;
-  list-style-type: none; }
+.navigation-menu {
+  position: absolute;
+  right: 1.5em;
+  top: 1.5em; }
+  .navigation-menu .dashboard-menu {
+    text-align: center;
+    list-style-type: none; }
 
 .dashboard-link {
   background-size: 100%;
   background-repeat: no-repeat;
-  position: relative; }
+  position: relative;
+  margin: 0 0.2em;
+  top: -1.5em; }
   .dashboard-link.-projects {
-    background-image: url("../img/projects_unselected.png"); }
+    background-image: url("../img/CreateNewProject.svg"); }
     .dashboard-link.-projects.-active {
-      background-image: url("../img/projects_selected.png"); }
+      background-image: url("../img/CreateNewProject.svg"); }
   .dashboard-link.-ideas {
-    background-image: url("../img/ideas_unselected.png"); }
+    background-image: url("../img/CreateNewIdea.svg"); }
     .dashboard-link.-ideas.-active {
-      background-image: url("../img/ideas_selected.png"); }
-  .dashboard-link.-contacts {
-    background-image: url("../img/contacts_unselected.png"); }
-    .dashboard-link.-contacts.-active {
-      background-image: url("../img/contacts_selected.png"); }
+      background-image: url("../img/CreateNewIdea.svg"); }
   .dashboard-link.-actions {
-    background-image: url("../img/actions_unselected.png"); }
+    background-image: url("../img/CreateNewCall.svg"); }
     .dashboard-link.-actions.-active {
+      background-image: url("../img/CreateNewCall.svg"); }
+  .dashboard-link.-contacts {
+    background-image: url("../img/actions_unselected.png"); }
+    .dashboard-link.-contacts.-active {
       background-image: url("../img/actions_selected.png"); }
   .dashboard-link.-inbox {
     background-image: url("../img/inbox_unselected.png"); }
@@ -1463,6 +1462,74 @@ nav.main-nav.stickytop {
   margin-top: 50px; }
   .motd h2 {
     text-align: center; }
+
+.footer-loggedin {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-flex;
+  display: flex;
+  align-items: stretch;
+  text-align: center;
+  vertical-align: text-bottom;
+  padding: 5em 0;
+  max-height: 4em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 700;
+  bottom: 0;
+  position: absolute;
+  width: 100%; }
+  .footer-loggedin .filter-options-loggedin {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-basis: 20em;
+    flex-basis: 20em;
+    justify-content: space-between; }
+    .footer-loggedin .filter-options-loggedin .filter-one-loggedin {
+      background-color: #4FB6AC;
+      padding: 0;
+      margin: 0;
+      height: 2em;
+      width: 7em;
+      color: #fff; }
+      .footer-loggedin .filter-options-loggedin .filter-one-loggedin .parameter-loggedin {
+        line-height: 0;
+        margin-bottom: 0;
+        font-size: x-small;
+        background-color: #fff;
+        color: #4FB6AC; }
+        .footer-loggedin .filter-options-loggedin .filter-one-loggedin .parameter-loggedin input {
+          background-color: #4FB6AC;
+          margin-right: 0.25em; }
+  .footer-loggedin .search-loggedin {
+    flex-basis: 60%; }
+
+.content-loggedin {
+  background-color: #F1F3F5; }
+  .content-loggedin .map-loggedin {
+    height: auto;
+    max-width: 100%;
+    background-size: contain; }
+    @media (min-width: 1100px) {
+      .content-loggedin .map-loggedin {
+        height: 44em;
+        margin-top: 2%; } }
+    @media (max-width: 500px) {
+      .content-loggedin .map-loggedin {
+        height: 15em;
+        margin-top: 1%;
+        margin-left: 5%; } }
+    @media screen and (max-height: 650px) {
+      .content-loggedin .map-loggedin {
+        height: 40em;
+        margin-top: 1%;
+        margin-left: 1%; } }
+
+.menu-image {
+  height: 1.5em; }
 
 /* The switch - the box around the slider */
 .map-switch {
