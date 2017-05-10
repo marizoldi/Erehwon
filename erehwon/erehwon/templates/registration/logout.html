@@ -8,4 +8,12 @@
   <p class="lead">You are now logged out.</p>
   <p><a href="{% url 'index' %}">Erehwon</a></p>
 </div>
+
+<script>
+    function redirect(){
+                   window.location.href = "/";
+                       }
+
+    setTimeout(redirect, 2000); //2000 is equivalent to 2 seconds
+</script>
 {% endblock %}

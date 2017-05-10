@@ -35,7 +35,8 @@ class ProjectFormView(TemplateView):
 def logout_view(request):
     logout(request)
 
-    return HttpResponseRedirect("/")
+    return redirect('/', permanent=True)
+    #return HttpResponseRedirect("/")
 
 
 @login_required
