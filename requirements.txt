@@ -1,7 +1,7 @@
 dj-database-url==0.4.1
-Django==1.10.6
+Django
 django-ajax-selects==1.5.2
-django-countries==3.4.1
+django-countries
 django-custom-user==0.6
 django-model-utils==2.6
 django-notifications-hq==1.2
@@ -10,7 +10,7 @@ django-registration==2.1.2
 gunicorn==19.5.0
 jsonfield==1.0.3
 pep8==1.7.0
-Pillow==3.2.0
-psycopg2==2.6.1
+Pillow
+psycopg2
 pytz==2016.7
 whitenoise==3.1
