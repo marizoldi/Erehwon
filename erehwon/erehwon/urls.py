@@ -1,5 +1,6 @@
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 from django.views.generic import TemplateView
 
 from core.views import HomepageView
@@ -18,8 +19,10 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/register/$', RegistrationView.as_view(form_class=ErehwonUserSignUpForm), name="registration_register"),
     url(r'^accounts/', include('registration.backends.hmac.urls')), # This line includes automatically all views and urls for registration/activation/password reset
+    url(r'^accounts/login$', auth_views.login, name='login'), 
     url(r'^$', HomepageView.as_view(), name="index"),
     #url(r'^accounts/logout/$', logout_view, name="logout_view"),
+    url(r'^accounts/logout/$', logout_view, name="logout"), # {'next_page': 'homepage'}, name="logout"),
     # url(r'^dashboard', loggedin_view, name="dashboard"),
     url(r'^projects/$', project_list, name="project_list"),
     # url(r'^project', ProjectFormView.as_view(), name="project_form"),
