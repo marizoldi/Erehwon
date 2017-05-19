@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, HttpResponseForbidden
+from django.core.urlresolvers import reverse
 from django.views.generic import TemplateView
 from django.views.generic.edit import FormView, UpdateView
 from django.contrib.auth import logout
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 import logging
+from registration.signals import user_registered
 
 from registration.backends.hmac import views as registration_views
 
@@ -29,7 +31,7 @@ class ProjectFormView(TemplateView):
     The Dashboard view for create/update Projects
     """
 
-    template_name = "profiles/my-projects.html"
+    template_name = "profiles/project.html"
     form_class = ProjectForm
 
 def logout_view(request):
@@ -40,12 +42,9 @@ def logout_view(request):
 
 
 @login_required
-def project_list(request):
+def user_page(request):
 
-	projects = Project.objects.filter(user=request.user)
-	context = {'projects': projects}
-
-	return render(request, 'profiles/my-projects.html', context)
+    return HttpResponseRedirect(reverse('registration.signals.user_registered.user', args=[request.user.username]))
 
 
 @login_required
@@ -83,7 +82,7 @@ def project_add(request):
             new_project_form.user = request.user
             new_project_form.save()
 
-            return redirect('/projects')
+            return redirect('/project')
     else:
         new_project_form = ProjectForm()
 
