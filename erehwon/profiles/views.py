@@ -11,40 +11,21 @@ from registration.signals import user_registered
 
 from registration.backends.hmac import views as registration_views
 
-from profiles.models import Project, Idea, Message, CallForAction
+from profiles.models import Project, Idea, CallForAction
 from profiles.forms import ProjectForm
 
 log = logging.getLogger("erehwon")
 
 
-# Create your views here.
-
-class CallForActionView(TemplateView):
-    """
-    The Dashboard view to create call for actions.
-    """
-
-    template_name = "profiles/callforaction.html"
-
-class ProjectFormView(TemplateView):
-    """
-    The Dashboard view for create/update Projects
-    """
-
-    template_name = "profiles/project.html"
-    form_class = ProjectForm
 
 def logout_view(request):
     logout(request)
 
     return redirect('/', permanent=True)
-    #return HttpResponseRedirect("/")
 
 
 @login_required
 def user_page(request):
-
-    # context = {'projects': projects}
 
     return render(request, 'profiles/my-projects.html')
 
@@ -62,7 +43,7 @@ def project_update(request, project_id):
         project_update_form = ProjectForm(request.POST, instance=request.project)
         if project_update_form.is_valid():
             project_details = project_update_form.save(commit=False)
-            project_details.save(update_fields=['title', 'label', 'synopsis', 'material', 'is_added_to_map'])
+            project_details.save(update_fields=['title', 'label', 'synopsis', 'is_added_to_map'])
             project_update_form.save_m2m()
             return redirect('/projects')
     else:
@@ -77,14 +58,12 @@ def project_update(request, project_id):
 def project_add(request):
 
     if request.method == 'POST':
-        new_project_form = ProjectForm(request.POST, instance=request.user)
-        log.info('Form saved')
+        new_project_form = ProjectForm(request.POST)
         if new_project_form.is_valid():
-            new_project_form.save(commit=False)
-            new_project_form.user = request.user
             new_project_form.save()
+            return HttpResponseRedirect(reverse('index'))
 
-            return redirect('/project')
+            # return HttpResponseRedirect('user_page')
     else:
         new_project_form = ProjectForm()
 

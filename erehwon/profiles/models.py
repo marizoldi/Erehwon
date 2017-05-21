@@ -53,12 +53,6 @@ class Idea(models.Model):
     def __str__(self):
         return self.title
 
-class Message(models.Model):
-
-   message = models.TextField(max_length=300)
-
-   def __str__(self):
-       return self.message
 
 class CallForAction(models.Model):
 

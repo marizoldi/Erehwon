@@ -9,7 +9,7 @@ class ProjectForm(forms.ModelForm):
 
 	class Meta:
 		model = Project
-		fields = ('title', 'label', 'synopsis', 'material', 'is_added_to_map')
+		fields = ('title', 'label', 'synopsis', 'is_added_to_map')
 
 
 class ErehwonUserSignUpForm(RegistrationForm):
