@@ -61,9 +61,8 @@ def project_add(request):
         new_project_form = ProjectForm(request.POST)
         if new_project_form.is_valid():
             new_project_form.save()
-            return HttpResponseRedirect(reverse('index'))
+            return HttpResponseRedirect(reverse('home'))
 
-            # return HttpResponseRedirect('user_page')
     else:
         new_project_form = ProjectForm()
 
@@ -83,7 +82,7 @@ def idea_list(request):
 @login_required
 def call_list(request):
 
-    calls = CallForAction.filter(user=request.user)
+    calls = CallForAction.objects.filter(user=request.user)
     context = {'calls': calls}
 
     return render(request, 'profiles/callforaction.html', context)

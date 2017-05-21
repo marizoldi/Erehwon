@@ -41,14 +41,11 @@ class Project(models.Model):
 
 class Idea(models.Model):
 
-    # user = models.ForeignKey(ErehwonUser)
+    user = models.ForeignKey(ErehwonUser)
     project = models.ForeignKey('profiles.Project')
     title = models.CharField(max_length=30)
     synopsis = models.TextField(max_length=300)
     # contributors = models.CharField(max_length=20)
-    label = models.CharField(max_length=30,
-        choices=LABEL_OPTIONS,
-        default='A')
 
     def __str__(self):
         return self.title
@@ -56,15 +53,13 @@ class Idea(models.Model):
 
 class CallForAction(models.Model):
 
-    # user = models.ForeignKey(ErehwonUser)
+    user = models.ForeignKey(ErehwonUser)
     title = models.CharField(max_length=30)
     synopsis = models.TextField(max_length=300, default='Synopsis')
     action_location = models.CharField(max_length=30, default='Erehwon')
     date = models.DateTimeField(db_index=True, default=timezone.now)
     contributors = models.CharField(max_length=20, default='Erehwon')
-    call_label = models.CharField(max_length=30,
-    choices=LABEL_OPTIONS,
-    default='A')
+
 
     def __str__(self):
         return self.title

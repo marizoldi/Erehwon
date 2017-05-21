@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'^home/$', user_page, name="user_page"),
     url(r'^home/addproject/$', project_add, name="project_add"),
     url(r'^ideas/$', idea_list, name="idea_list"),
-    url(r'^callforaction/$', call_list, name="call_list"),
+    url(r'^calls/$', call_list, name="call_list"),
 
     # django-postman
     url(r'^messages/erehwon/$', MessagesIndexView.as_view(), name='MessagesIndex View'),
