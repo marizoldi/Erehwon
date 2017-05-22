@@ -7,7 +7,6 @@ class ErehwonUser(AbstractEmailUser):
 #
 #     # basic information
       username = models.CharField(max_length=30, blank=True)
-#     #image (tip:s3DirectField)
 
 def __str__(self):
         return self.username
@@ -18,7 +17,7 @@ class Project(models.Model):
    title = models.CharField(max_length=30)
    synopsis = models.TextField(max_length=300)
    material = models.URLField(max_length=300, blank=True)
-   # contributors = models.CharField(max_length=20)
+   contributors = models.CharField(max_length=20)
    active_status = models.BooleanField(default=1)
    is_added_to_map = models.BooleanField(default=0)
 
@@ -28,10 +27,10 @@ class Project(models.Model):
 class Idea(models.Model):
 
     user = models.ForeignKey(ErehwonUser)
-    # project = models.ForeignKey('profiles.Project')
+    project = models.ForeignKey('profiles.Project')
     title = models.CharField(max_length=30)
     synopsis = models.TextField(max_length=300)
-    # contributors = models.CharField(max_length=20)
+    contributors = models.CharField(max_length=20)
 
     def __str__(self):
         return self.title

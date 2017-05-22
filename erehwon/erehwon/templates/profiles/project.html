@@ -3,7 +3,6 @@
 {% load static %}
 
 {% block main %}
-<section class="idea">
 <h1> Add/Edit project </h1>
   {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
     <form action="" method="post">
@@ -11,6 +10,5 @@
       {{ new_project_form.as_p }}
       <input type="submit"  class="button" value="Submit" />
     </form>
-</section>
 
 {% endblock %}

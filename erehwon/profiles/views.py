@@ -61,7 +61,7 @@ def project_add(request):
         new_project_form = ProjectForm(request.POST)
         if new_project_form.is_valid():
             new_project_form.save()
-            return HttpResponseRedirect(reverse('home'))
+            return HttpResponseRedirect(reverse('user_page'))
 
     else:
         new_project_form = ProjectForm()
