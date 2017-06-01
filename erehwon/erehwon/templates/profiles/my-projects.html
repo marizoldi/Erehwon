@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block main %}
-
+{% comment Mariza wants to keep myproject as useful for debugging . can just render dashboard-layout-w-map when happy to discard %}
 <section >
     <h1> My Projects </h1>
     <ul class="idea-list">
@@ -21,4 +21,6 @@
         {% endfor %}
     </ul>
 </section>
+{% endcomment %}
+
 {% endblock %}
