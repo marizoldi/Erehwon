@@ -10,10 +10,11 @@ from profiles.forms import ErehwonUserSignUpForm
 from registration.backends.hmac.views import RegistrationView
 
 from messagesApp.views import MessagesProfileView, MessagesIndexView
+from messagesApp.views import TestMessagesView
 import notifications.urls
 
 import postman.urls
-from messagesApp.views import api_send_message,api_get_conversation
+from messagesApp.views import api_send_message, api_get_conversation, api_last_n_correspondents
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -40,4 +41,6 @@ urlpatterns = [
     url(r'^inbox/notifications/', include(notifications.urls, namespace='notifications')),
     url(r'^api/sendmessage/$', api_send_message, name='Api Send Message View'),
     url(r'^api/messages/$', api_get_conversation, name='API Get Messages'),
+    url(r'^api/testmessages/$', TestMessagesView, name='API Test Messages'),
+    url(r'^api/correspondents/$', api_last_n_correspondents, name='API Last N Correspondents'),
 ]
