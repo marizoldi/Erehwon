@@ -5,7 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 from custom_user.admin import EmailUserAdmin
 
 # Register your models here.
-from .models import ErehwonUser, Project, Idea, Message, CallForAction
+from .models import ErehwonUser, Project, Idea, CallForAction
 from .forms import ErehwonUserSignUpForm
 
 class ErehwonUserAdmin(EmailUserAdmin):
@@ -35,6 +35,5 @@ class ErehwonUserAdmin(EmailUserAdmin):
 
 admin.site.register(Project)
 admin.site.register(Idea)
-admin.site.register(Message)
 admin.site.register(CallForAction)
 admin.site.register(ErehwonUser, ErehwonUserAdmin)

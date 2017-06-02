@@ -25,9 +25,12 @@
             </div>
     </header>
 
-    <div class="content-loggedin">
-          <img src="{% static "img/dummybackgd.png" %}" class="map-loggedin" />
-    </div>
+    {% block main %}
+    {% endblock %} 
+
+    {% block map %}
+    {% endblock %} 
+
 
         <footer class="footer-loggedin">
               <div class="filter-options-loggedin">
