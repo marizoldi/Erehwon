@@ -1,0 +1,24 @@
+<h3>Inbox</h3>
+<iframe width=100% height=300 src="/messages/inbox/"></iframe><br/>
+
+<a href="/messages/write/"><h3>Write Messages</h3></a><br/>
+
+{% load postman_tags %}
+<hr/>
+{% postman_unread as unread_count %}
+
+{% if unread_count %}
+    You have <strong>{{ unread_count }}</strong> unread messages.
+{% endif %}
+<hr>
+
+{% for m in messages %} 
+message {{ m }}
+{% endfor %} 
+<form action=/api/sendmessage>
+        to:
+        <input type=text name=recipient> </input>
+        msg:
+        <input type=text name=message> </input>
+<button>send message</button>
+</form>

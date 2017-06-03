@@ -9,11 +9,11 @@ from profiles.views import logout_view, project_add, user_page, project_update, 
 from profiles.forms import ErehwonUserSignUpForm
 from registration.backends.hmac.views import RegistrationView
 
-from messagesApp.views import MessagesProfileView, MessagesIndexView
+from messagesApp.views import MessagesProfileView, MessagesIndexView, MessagesWidgetView
 import notifications.urls
 
 import postman.urls
-from messagesApp.views import api_send_message,api_get_conversation
+from messagesApp.views import api_send_message, api_get_conversation, api_get_correspondents
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -30,6 +30,7 @@ urlpatterns = [
     # django-postman
     url(r'^messages/erehwon/$', MessagesIndexView.as_view(), name='MessagesIndex View'),
     url(r'^messages/messageprofile/$', MessagesProfileView.as_view(), name='MessagesProfile View'),
+    url(r'^messages/widget/$', MessagesWidgetView, name='Messages Widget View'),
 
     #TODO write some custom postman views
     #css classes here: http://django-postman.readthedocs.io/en/latest/views.html
@@ -39,5 +40,7 @@ urlpatterns = [
     # django-notifications-hq
     url(r'^inbox/notifications/', include(notifications.urls, namespace='notifications')),
     url(r'^api/sendmessage/$', api_send_message, name='Api Send Message View'),
+    url(r'^api/get_conversation/$', api_get_conversation, name='Api Get Conversation View'),
     url(r'^api/messages/$', api_get_conversation, name='API Get Messages'),
+    url(r'^api/correspondents/$', api_get_correspondents, name='API Get Correspondents'),
 ]

@@ -1,0 +1,184 @@
+{% verbatim %}
+<script src=https://unpkg.com/vue@2.3.3></script>
+<script src=https://unpkg.com/axios/dist/axios.min.js></script>
+
+<style>
+
+
+    .contactlistitem {
+    	border: 1px;
+    	border-color: #000000;
+    	color: #eeeeee;
+    	margin: 2px;
+    	background-color: #33aa66;
+    	padding: 10px;
+    	
+    	font-family: Roboto, sans-serif;
+    }
+</style>
+
+<div>
+
+<div id=messaging> 
+  <div>
+  <a v-on:click=openChat(contact.name) v-for="contact in contacts" >
+     <div class=contactlistitem> {{ contact.name }} {{ contact.status }} </div>
+
+     </a>
+  </div>
+
+
+
+
+  <div v-for="username in Array.from(chat_sessions)">
+     {{ username }} chat session   <a v-on:click=closeChat(username)>[X]</a>
+     <div>
+       <span v-for="msg in messages[username]"><pre>
+	 {{msg.dt}}:    {{msg.fr}}   {{msg.msg}}</pre></span>
+
+     </div>
+     <div>
+	 <input type="text" v-model=messagesout[username] v-on:keyup.enter="send(username)"></input>
+	 <button v-on:click="send(username)"> Send </button>
+     </div>
+  </div>
+
+
+  <hr>
+  <div id=addcontact>
+      <div>
+	  <input type="text" v-model=new_contact  v-on:keyup.enter="addContact(new_contact)"></input>
+	  <button v-on:click="addContact(new_contact)">Add Contact</button>
+      </div>
+  </div>
+
+</div>
+
+<script>
+    var appContactList = new Vue({
+        el: '#messaging',
+        data: {
+            contacts: [], //{"name": "al"}
+            chat_sessions_set: new Set(),
+            chat_sessions: [],
+            messages: {"usera": ['some','messages','asdfs']},
+            messagesout: {"usera":"msg outbound"},
+            new_contact: "",
+        },
+        methods: {
+            openChat: function (user) {
+            	       var vm = this
+    	               console.log('openchat with ' + user)
+    	               vm.chat_sessions_set.add(user)
+    	               vm.chat_sessions = Array.from(vm.chat_sessions_set)
+    	               console.log(vm.chat_sessions)
+            },
+            closeChat: function(user) {
+            	       var vm = this
+            	       console.log('close chat with ' + user)
+            	       vm.chat_sessions_set.delete(user)
+            	       vm.chat_sessions = Array.from(vm.chat_sessions_set)
+            	       console.log(vm.chat_sessions)
+
+            },
+            updateMessages: function () {
+                var users = vm.contacts.map(function (c) { return c.name })
+            	//axios.all([axios.get("/api/correspondents",{withCredentials:true}), axios.post("/api/messages/",{users: users},{withCredentials:true})])
+        	//    .then(function (contactsResp, messagesResp) { console.log("axios all complete") } )
+            	axios.post('/api/messages/',{users: users},{withCredentials:true}).then(function (resp) { vm.messages = resp.data; console.log(vm.messages) })
+            
+            },
+            updateContacts: function () {
+            	axios.get('/api/correspondents',{withCredentials:true}).then(function (resp) { vm.contacts = resp.data })
+            
+            },
+            sendMessage: function(recipient, msg) {
+            	//axios.post('/api/sendmessage/', {withCredentials:true, message: msg, recipient: recipient})
+            	axios.post('/api/sendmessage/', {message: msg, recipient: recipient}, {withCredentials:true} ) 
+            			.then(function (res) {
+				        })
+				        .catch(function (err) {
+              				console.log("could not send message")
+              			})
+              			
+            
+            },
+            send: function(username) {
+            	var vm = this
+            	console.log(username)
+            	console.log(vm.messagesout[username])
+            	vm.sendMessage(username, vm.messagesout[username])
+            	vm.messagesout[username] = ""
+            },
+
+            addContact: function(new_contact) {
+                var vm = this
+                vm.sendMessage(new_contact, "  ")
+                vm.new_contact = ""
+                vm.updateContacts()
+            },
+
+            validateContact: function(e) {
+              // ADD CONTACT VALIDATION/MATCHING/AUTOCOMPLETE HERE IF DESIRED
+              if (e.keyCode === 13) {
+                vm.addContact()
+              } 
+            },
+
+
+
+
+        },
+        mounted: function () {
+        	vm = this
+        	vm.updateContacts()
+        	vm.updateMessages()
+        	function cycle() {
+        		vm.updateMessages()
+            	setTimeout(cycle, 1000)
+        	}
+        	cycle()
+
+        	function cycle2() {
+        		vm.updateContacts()
+            	setTimeout(cycle2, 6000)
+        	}
+        	cycle2()
+        	/*
+            var config = {
+			  headers: {'X-My-Custom-Header': 'Header-Value'}
+			};
+
+			axios.get('https://api.github.com/users/codeheaven-io', config);
+			axios.post('/save', { firstName: 'Marlon' }, config);
+			*/
+        },
+        
+    })
+
+</script>
+<div>
+<h3> Messages View</h3>
+Click on user bars to open chat interface. <br>
+Use text below to add new contacts.
+
+</div>
+<pre> 
+
+Todos:
+CSS layout and positioning.
+Provide Add Contact endpoint in views.py
+Clean up console logging output
+Nice to have... status. userActivity model that gets updated with last active time. status query then compares this with minus 5 minutes.
+
+Done:
+x-Refresh
+x-Send messages
+x-Go server
+x-Doing Hook up to ere
+x-security ensure api only responds to logged in user
+</pre>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+{% endverbatim %}
