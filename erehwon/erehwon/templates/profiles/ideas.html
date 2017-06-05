@@ -12,17 +12,6 @@
             <form class="new_idea__form">
                 <input type="text" placeholder="Title">
                 <textarea placeholder="Synopsis" maxlength="100" rows="3"></textarea>
-                <select name="select">
-                    <option value="" disabled selected>Select a label</option>
-                    <option value="value1">Digital Activism</option>
-                    <option value="value2">Activism</option>
-                    <option value="value3">Community Development</option>
-                    <option value="value3">Urban Planning</option>
-                    <option value="value3">New Ecologies</option>
-                    <option value="value3">Alternative Economies</option>
-                    <option value="value3">Citizen Movements</option>
-                    <option value="value3">Artistic Interventions</option>
-                </select>
                 <input type="text" class="tagged" name="tag-1" data-removeBtn="true" placeholder="create a tag">
                 <input type="text" placeholder="Invite People">
                 <input type="text" placeholder="Attach to Project">
@@ -40,10 +29,7 @@
             <div class="idea-info idea-list-col">
                 <a href="#"><h2>{{ idea.title }}</h2></a>
                 <div>
-                    <p>Contributors: 20</p>
-                    <ul>
-                        <li>{{ idea.get_label_display }}</li>
-                    </ul>
+                    <p>Contributors: {{ idea.contributors}}</p>
                 </div>
             </div>
             <button class="button idea-list-col edit-button"> Edit</button>

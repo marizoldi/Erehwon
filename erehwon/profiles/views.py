@@ -86,3 +86,19 @@ def call_list(request):
     context = {'calls': calls}
 
     return render(request, 'profiles/callforaction.html', context)
+
+def search(request):
+    q = request.GET.get("q")
+    if q:
+       # you may want to use `__istartswith' instead
+       results = Project.objects.filter(body_text__search=q)
+    elif q:
+        results = ErehwonUser.objects.filter(body_text__search=q)
+    elif q:
+        results = Idea.objects.filter(body_text__search=q)
+    else:
+       # you may want to return Customer.objects.none() instead
+        results = Project.objects.none()
+
+    context = dict(results=results, q=q)
+    return render(request, 'core/search.html', context)
