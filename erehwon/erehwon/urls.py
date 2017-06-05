@@ -5,7 +5,7 @@ from django.views.generic import TemplateView
 
 from core.views import HomepageView
 
-from profiles.views import logout_view, project_add, user_page, project_update, idea_list, call_list, search
+from profiles.views import logout_view, project_add, user_page, project_update, idea_list, call_list
 from profiles.forms import ErehwonUserSignUpForm
 from registration.backends.hmac.views import RegistrationView
 
@@ -27,7 +27,7 @@ urlpatterns = [
     url(r'^home/addproject/$', project_add, name="project_add"),
     url(r'^ideas/$', idea_list, name="idea_list"),
     url(r'^calls/$', call_list, name="call_list"),
-    
+
     # django-postman
     url(r'^messages/erehwon/$', MessagesIndexView.as_view(), name='MessagesIndex View'),
     url(r'^messages/messageprofile/$', MessagesProfileView.as_view(), name='MessagesProfile View'),
