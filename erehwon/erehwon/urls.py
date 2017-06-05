@@ -17,6 +17,7 @@ from messagesApp.views import api_send_message, api_get_conversation, api_get_co
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^search/', include( 'ajaxsearch.urls' ) ),
     url(r'^accounts/register/$', RegistrationView.as_view(form_class=ErehwonUserSignUpForm), name="registration_register"),
     url(r'^accounts/', include('registration.backends.hmac.urls')), # This line includes automatically all views and urls for registration/activation/password reset
     url(r'^accounts/login$', auth_views.login, name='login'),
@@ -26,8 +27,7 @@ urlpatterns = [
     url(r'^home/addproject/$', project_add, name="project_add"),
     url(r'^ideas/$', idea_list, name="idea_list"),
     url(r'^calls/$', call_list, name="call_list"),
-    url(r'^search/$', search, name="search"),
-
+    
     # django-postman
     url(r'^messages/erehwon/$', MessagesIndexView.as_view(), name='MessagesIndex View'),
     url(r'^messages/messageprofile/$', MessagesProfileView.as_view(), name='MessagesProfile View'),
