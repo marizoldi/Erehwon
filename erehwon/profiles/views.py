@@ -13,6 +13,7 @@ from registration.backends.hmac import views as registration_views
 
 from profiles.models import Project, Idea, CallForAction
 from profiles.forms import ProjectForm
+from profiles.forms import IdeaForm
 
 log = logging.getLogger("erehwon")
 
@@ -69,6 +70,23 @@ def project_add(request):
     context = {'new_project_form': new_project_form}
 
     return render(request, 'profiles/project.html', context)
+
+
+@login_required
+def idea_add(request):
+
+    if request.method == 'POST':
+        new_idea_form = IdeaForm(request.POST)
+        if new_idea_form.is_valid():
+            new_idea_form.save()
+            return HttpResponseRedirect(reverse('user_page'))
+
+    else:
+        new_idea_form = IdeaForm()
+
+    context = {'new_idea_form': new_idea_form}
+
+    return render(request, 'profiles/add-ideas.html', context)
 
 
 @login_required
