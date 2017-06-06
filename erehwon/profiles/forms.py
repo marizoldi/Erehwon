@@ -1,6 +1,7 @@
 from django import forms
 from profiles.models import Project
 from profiles.models import ErehwonUser
+from profiles.models import Idea
 
 from registration.forms import RegistrationForm
 
@@ -22,5 +23,5 @@ class ProjectForm(forms.ModelForm):
 class IdeaForm(forms.ModelForm):
 
 	class Meta:
-		model = Project
-		fields = ('title', 'synopsis', 'is_added_to_map')
+		model = Idea
+		fields = ('user', 'project', 'title', 'synopsis', 'contributors')
