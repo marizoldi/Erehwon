@@ -17,6 +17,7 @@ from messagesApp.views import api_send_message, api_get_conversation, api_get_co
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^search/', include( 'ajaxsearch.urls' ) ),
     url(r'^accounts/register/$', RegistrationView.as_view(form_class=ErehwonUserSignUpForm), name="registration_register"),
     url(r'^accounts/', include('registration.backends.hmac.urls')), # This line includes automatically all views and urls for registration/activation/password reset
     url(r'^accounts/login$', auth_views.login, name='login'),
