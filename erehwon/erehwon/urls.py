@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^accounts/logout/$', logout_view, name="logout"), # {'next_page': 'homepage'}, name="logout"),
     url(r'^home/$', user_page, name="user_page"),
     url(r'^home/addproject/$', project_add, name="project_add"),
+    url(r'^home/addidea/$', idea_add, name="idea_add"),
     url(r'^ideas/$', idea_list, name="idea_list"),
     url(r'^calls/$', call_list, name="call_list"),
 
