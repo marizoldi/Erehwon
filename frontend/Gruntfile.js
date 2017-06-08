@@ -29,7 +29,7 @@ grunt.initConfig({
 	watch: {
 		sass: {
 		  files: 'styles/**/*.scss',
-		  tasks: ['sass']
+		  tasks: ['sass','cssmin']
 		}
 	},
 	jspaths: {
@@ -40,6 +40,8 @@ grunt.initConfig({
                 jsMin: '../erehwon/erehwon/static/scripts/erehwon.min.js'
             }
     },
+
+		//--------- JS Minify -------//
     uglify: {
         options: {
             compress: true,
