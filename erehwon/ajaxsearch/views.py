@@ -26,6 +26,6 @@ def ajax_search( request ):
                     Q( title__contains = q ) |
                     Q( synopsis__contains = q ) )
 
-            context = {'project_results': project_results}
+        context = {'project_results': project_results}
 
-            return render( request, 'result_list.html', context )
+        return render( request, 'result_list.html', context )
