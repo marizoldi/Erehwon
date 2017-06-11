@@ -15,8 +15,8 @@ def ajax_search( request ):
     if request.is_ajax():
         q = request.GET.get( 'q' )
         u = request.GET.user
-        if q is not None:
-            if u is not None:
+        if q is not None:  
+            if request.user.is_authenticated:
                 project_results = Project.objects.filter(
                     Q( title__contains = q ) |
                     Q( synopsis__contains = q ) |
