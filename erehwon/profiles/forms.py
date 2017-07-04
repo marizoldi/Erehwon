@@ -3,6 +3,8 @@ from profiles.models import Project
 from profiles.models import ErehwonUser
 from profiles.models import Idea
 
+from django.db.models import ImageField
+
 from registration.forms import RegistrationForm
 
 
@@ -14,10 +16,10 @@ class ErehwonUserSignUpForm(RegistrationForm):
 
 
 class ProjectForm(forms.ModelForm):
-
-	class Meta:
-		model = Project
-		fields = ('user', 'title', 'synopsis')
+    file_field = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}))
+    class Meta:
+        model = Project
+        fields = ('user', 'title', 'synopsis', 'image' )
 
 
 class IdeaForm(forms.ModelForm):

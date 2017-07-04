@@ -14,6 +14,7 @@ import notifications.urls
 
 import postman.urls
 from messagesApp.views import api_send_message, api_get_conversation, api_get_correspondents
+from profiles.views import projects_list, serve_image, serve_file
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -45,4 +46,8 @@ urlpatterns = [
     url(r'^api/get_conversation/$', api_get_conversation, name='Api Get Conversation View'),
     url(r'^api/messages/$', api_get_conversation, name='API Get Messages'),
     url(r'^api/correspondents/$', api_get_correspondents, name='API Get Correspondents'),
+    url(r'^projects/$', projects_list, name='projects list'),
+    url(r'^projectimages/$', serve_image, name='serve image'),
+    url(r'^imgsrv/(?P<file_name>[\w.]{0,1256})$', serve_image, name='serve image'),
+    url(r'^files/(?P<file_name>.*)$', serve_file, name='serve files'),
 ]

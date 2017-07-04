@@ -5,9 +5,11 @@
 {% block main %}
 <h1> Add/Edit project </h1>
   {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-    <form action="" method="post">
+  <div>
+    <form action="" method="post" enctype="multipart/form-data">
       {% csrf_token %}
       {{ new_project_form.as_p }}
       <input type="submit"  class="button" value="Submit" />
     </form>
+  <div>
 {% endblock %}
