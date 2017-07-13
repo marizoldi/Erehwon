@@ -9,7 +9,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-SECRET_KEY = os.environ["SECRET_KEY"]
+SECRET_KEY = os.environ["dummyDEVkeyReplaceMeinPROD!"]
 ALLOWED_HOSTS = ['erehwon.herokuapp.com']
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
