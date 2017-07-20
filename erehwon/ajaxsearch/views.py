@@ -14,13 +14,18 @@ def ajax_search( request ):
 
     if request.is_ajax():
         q = request.GET.get( 'q' )
-        if q is not None:
+        u = request.GET.user
+        if q is not None:  
+            if request.user.is_authenticated:
+                project_results = Project.objects.filter(
+                    Q( title__contains = q ) |
+                    Q( synopsis__contains = q ) |
+                    Q( user__contains = q))
+            else:
+                project_results = Project.objects.filter(
+                    Q( title__contains = q ) |
+                    Q( synopsis__contains = q ) )
 
-            project_results = Project.objects.filter(
-                Q( title__contains = q ) |
-                Q( synopsis__contains = q ) |
-                Q( user__contains = q))
+        context = {'project_results': project_results}
 
-            context = {'project_results': project_results}
-
-            return render( request, 'result_list.html', context )
+        return render( request, 'result_list.html', context )
