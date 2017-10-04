@@ -1245,7 +1245,7 @@ input.tag-input {
   text-align: center;
   vertical-align: text-bottom;
   padding: 1.2em 0;
-  max-height: 2.6666666667em;
+  max-height: 2.66667em;
   font-family: "Montserrat", sans-serif;
   font-size: 700;
   bottom: 0;
@@ -1587,56 +1587,6 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%; }
-
-.passwordreset {
-  background: #F0F2F4;
-  position: fixed;
-  height: 100%;
-  width: 100%; }
-  .passwordreset .passwordreset-header {
-    background-color: #4FB6AC;
-    padding: 15px 0 15px 10px; }
-    .passwordreset .passwordreset-header a {
-      color: #37474F;
-      text-decoration: None; }
-  .passwordreset .passwordreset-form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff; }
-    .passwordreset .passwordreset-form .passwordreset-formhead {
-      background: #4FB6AC;
-      text-align: center; }
-      .passwordreset .passwordreset-form .passwordreset-formhead img {
-        width: auto;
-        height: 50px; }
-      .passwordreset .passwordreset-form .passwordreset-formhead p {
-        color: #37474F; }
-    .passwordreset .passwordreset-form form {
-      height: auto;
-      width: 35em; }
-      .passwordreset .passwordreset-form form label {
-        position: absolute;
-        top: 61%;
-        left: 1%;
-        visibility: hidden; }
-      .passwordreset .passwordreset-form form label:after {
-        visibility: visible;
-        content: "E-mail";
-        color: #37474F; }
-      .passwordreset .passwordreset-form form p {
-        text-align: center; }
-      .passwordreset .passwordreset-form form #id_email {
-        border-left: 0;
-        border-right: 0;
-        border-top: 0;
-        width: 80%;
-        border-width: 2px; }
-      .passwordreset .passwordreset-form form .button {
-        width: auto;
-        padding: 0px 10px 0px 10px;
-        color: #37474F; }
 
 html,
 body {
