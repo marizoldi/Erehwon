@@ -11,3 +11,4 @@ frontend/styles/css/styles.css.map
 *egg-info/
 venv
 *.cache
+.idea
