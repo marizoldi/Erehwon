@@ -44,7 +44,7 @@ def project_update(request, project_id):
         project_update_form = ProjectForm(request.POST, instance=request.project)
         if project_update_form.is_valid():
             project_details = project_update_form.save(commit=False)
-            project_details.save(update_fields=['title', 'label', 'synopsis', 'is_added_to_map'])
+            project_details.save(update_fields=['title', 'synopsis', 'is_added_to_map'])
             project_update_form.save_m2m()
             return redirect('/projects')
     else:
