@@ -6,9 +6,9 @@ from custom_user.models import AbstractEmailUser
 class ErehwonUser(AbstractEmailUser):
 #
 #     # basic information
-      username = models.CharField(max_length=30, blank=True)
+  username = models.CharField(max_length=30, blank=True)
 
-def __str__(self):
+  def __str__(self):
         return self.username
 
 class Project(models.Model):
