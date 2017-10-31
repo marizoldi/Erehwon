@@ -1593,11 +1593,11 @@ input:checked + .slider:before {
   position: fixed;
   height: 100%;
   width: 100%; }
-  .passwordreset .passwordreset-header {
+  .passwordreset header {
     background-color: #4FB6AC;
     padding: 15px 0 15px 10px; }
-    .passwordreset .passwordreset-header a {
-      color: #37474F;
+    .passwordreset header a {
+      color: #37474f;
       text-decoration: None; }
   .passwordreset .passwordreset-form {
     position: absolute;
@@ -1612,7 +1612,7 @@ input:checked + .slider:before {
         width: auto;
         height: 50px; }
       .passwordreset .passwordreset-form .passwordreset-formhead p {
-        color: #37474F; }
+        color: #37474f; }
     .passwordreset .passwordreset-form form {
       height: auto;
       width: 35em; }
@@ -1624,7 +1624,7 @@ input:checked + .slider:before {
       .passwordreset .passwordreset-form form label:after {
         visibility: visible;
         content: "E-mail";
-        color: #37474F; }
+        color: #37474f; }
       .passwordreset .passwordreset-form form p {
         text-align: center; }
       .passwordreset .passwordreset-form form #id_email {
@@ -1636,7 +1636,7 @@ input:checked + .slider:before {
       .passwordreset .passwordreset-form form .button {
         width: auto;
         padding: 0px 10px 0px 10px;
-        color: #37474F; }
+        color: #37474f; }
 
 html,
 body {
