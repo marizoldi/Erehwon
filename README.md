@@ -6,6 +6,7 @@ Erehwon is an on-line collaborative tool for connecting people involved in socio
 
 The [first prototype](https://github.com/marizoldi/Erehwon) was created over a hackathon weekend on the 28th and 29th May 2016. Developers (Front-end: [Liliana Kastilio](https://github.com/lili2311), [Karen Lee](https://github.com/neraks) |
 Graphic Designer:[Marta Monge](https://github.com/emmecomemarta) | UX Design:[Mariza Dima](https://github.com/marizoldi)
+Current volunteers developers: [Ioanna Bartzi](https://github.com/yanabar) [Anthony L](https://github.com/leungant) [Arun Kumar](https://github.com/armsarun) [Mariza Dima](https://github.com/marizoldi)
 
 ![Wireframe](http://www.osso.pt/wp-content/uploads/2016/02/heroimage-02.jpg)
 
