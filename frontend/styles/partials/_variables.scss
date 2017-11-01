@@ -13,6 +13,7 @@ $color-white: #fff;
 $main-color: #73bf9b;
 $main-color-hover: rgba($main-color, 0.7);
 $background-light-color: #f2f4f6;
+
 $background-main: #E0E2EE;
 $grey: #C9C9C9;
 $yellow: #FDBA33;
@@ -25,6 +26,10 @@ $button-hover: #ff9f00;
 $button-active: #ff9f00;
 $main-blue: #4FB6AC;
 $map-grey: #F1F3F5;
+$text-dark-color: #4e4e4e;
+$text-light-color: $color-white;
+
+
 
 // Sizes
 $max-width: 60em;
@@ -35,7 +40,7 @@ $footer-height: 8em;
 $footer-width: 30em;
 $smaller-width: 40em;
 $base-font-size: 14px;
-$text-dark-color: #4e4e4e;
-$text-light-color: $color-white;
 
 $form-padding-value: 1em;
+
+
