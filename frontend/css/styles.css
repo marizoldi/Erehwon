@@ -1589,7 +1589,7 @@ input:checked + .slider:before {
   border-radius: 50%; }
 
 .passwordreset {
-  background: #F0F2F4;
+  background: #F1F3F5;
   position: fixed;
   height: 100%;
   width: 100%; }
