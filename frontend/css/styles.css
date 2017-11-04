@@ -1639,6 +1639,8 @@ input:checked + .slider:before {
         color: #37474f; }
 
 
+/* Searchbox Copyright (c) 2017 by Isaac Chansky (https://codepen.io/isaacchansky/pen/Jqhma)
+*/
 
 .search{
   width: 30rem;
