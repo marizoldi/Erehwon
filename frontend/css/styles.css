@@ -1588,26 +1588,26 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%; }
 
-.passwordreset, .activationbackground {
+.passwordreset {
   background: #F1F3F5;
   position: fixed;
   height: 100%;
   width: 100%; }
-  .passwordreset header, .activationbackground header {
+  .passwordreset header {
     background-color: #4FB6AC;
     padding: 15px 0 15px 10px; }
-    .passwordreset header a, .activationbackground header a {
+    .passwordreset header a {
       color: #37474f;
       text-decoration: None; }
-  .passwordreset .passwordreset-formwrapper, .activationbackground .passwordreset-formwrapper {
+  .passwordreset .passwordreset-formwrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     height: calc(100% - 50px); }
-    .passwordreset .passwordreset-formwrapper .passwordreset-formwrapper-content, .activationbackground .passwordreset-formwrapper .passwordreset-formwrapper-content {
+    .passwordreset .passwordreset-formwrapper .passwordreset-formwrapper-content {
       width: 32%;
       background: #fff; }
-    .passwordreset .passwordreset-formwrapper .passwordreset-formhead, .activationbackground .passwordreset-formwrapper .passwordreset-formhead {
+    .passwordreset .passwordreset-formwrapper .passwordreset-formhead {
       background: #4FB6AC;
       display: flex;
       flex-wrap: wrap;
@@ -1615,30 +1615,31 @@ input:checked + .slider:before {
       align-items: center;
       flex-direction: column;
       -webkit-flex-direction: column; }
-      .passwordreset .passwordreset-formwrapper .passwordreset-formhead img, .activationbackground .passwordreset-formwrapper .passwordreset-formhead img {
+      .passwordreset .passwordreset-formwrapper .passwordreset-formhead img {
         width: auto;
         height: 45px; }
-      .passwordreset .passwordreset-formwrapper .passwordreset-formhead p, .activationbackground .passwordreset-formwrapper .passwordreset-formhead p {
+      .passwordreset .passwordreset-formwrapper .passwordreset-formhead p {
         margin: 0;
         color: #37474f; }
-  .passwordreset .passwordreset-formwrapper-content form, .activationbackground .passwordreset-formwrapper-content form {
+  .passwordreset .passwordreset-formwrapper-content form {
     width: 70%;
     height: 190px;
     margin-bottom: 30px; }
-    .passwordreset .passwordreset-formwrapper-content form label, .activationbackground .passwordreset-formwrapper-content form label {
+    .passwordreset .passwordreset-formwrapper-content form label {
       position: absolute;
-      visibility: hidden; }
-    .passwordreset .passwordreset-formwrapper-content form label:after, .activationbackground .passwordreset-formwrapper-content form label:after {
+      visibility: hidden;
+      width: 10%; }
+    .passwordreset .passwordreset-formwrapper-content form label:after {
       visibility: visible;
       content: "E-mail";
       top: 42px;
       position: absolute;
       left: 3px;
       color: #37474f; }
-    .passwordreset .passwordreset-formwrapper-content form p, .activationbackground .passwordreset-formwrapper-content form p {
+    .passwordreset .passwordreset-formwrapper-content form p {
       margin-top: auto;
       margin-bottom: initial; }
-    .passwordreset .passwordreset-formwrapper-content form #id_email, .activationbackground .passwordreset-formwrapper-content form #id_email {
+    .passwordreset .passwordreset-formwrapper-content form #id_email {
       border-left: 0;
       border-right: 0;
       border-top: 0;
@@ -1647,17 +1648,14 @@ input:checked + .slider:before {
       border-bottom-left-radius: 0px;
       border-bottom-right-radius: 0px;
       border-color: #9F9F9F; }
-  .passwordreset .passwordreset-formwrapper-content .button, .activationbackground .passwordreset-formwrapper-content .button {
+  .passwordreset .passwordreset-formwrapper-content .button {
     width: auto;
     padding: 0px 20px 0px 20px;
     color: #37474f; }
-
-.activationcenter {
-  height: calc(100% - 50px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #fff; }
+  @media screen and (max-width: 768px) {
+    .passwordreset .passwordreset-formwrapper-content {
+      width: 100% !important;
+      margin: 30px; } }
 
 html,
 body {
