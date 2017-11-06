@@ -1028,16 +1028,17 @@ form {
   #content .filter-options {
     margin-top: 5em; }
     #content .filter-options .filter-one {
-      margin: 0 30px 0 0; }
+      margin: 0 30px 0 0;
+      text-align: left; }
       #content .filter-options .filter-one div {
         color: #b4b0b4;
-        font-size: small;
-        text-align: end; }
+        font-size: small; }
       #content .filter-options .filter-one .parameter {
         color: #4FB6AC;
         font-size: smaller;
         padding: 0;
-        margin: 0; }
+        margin: 0;
+        white-space: nowrap; }
 
 .idea {
   max-width: 60em;
@@ -1245,7 +1246,7 @@ input.tag-input {
   text-align: center;
   vertical-align: text-bottom;
   padding: 1.2em 0;
-  max-height: 2.6666666667em;
+  max-height: 2.66667em;
   font-family: "Montserrat", sans-serif;
   font-size: 700;
   bottom: 0;
@@ -1297,7 +1298,7 @@ input.tag-input {
     flex-basis: 45%; }
 
 #the-map, #support, #privacy {
-  margin-top: 2em; }
+  margin-top: 8em; }
 
 .not-showing {
   visibility: hidden; }
@@ -1309,7 +1310,11 @@ input.tag-input {
 nav.main-nav.stickytop {
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  -webkit-transition: all 2s linear;
+  -moz-transition: all 2s linear;
+  -o-transition: all 2s linear;
+  transition: all 2s linear; }
 
 .content {
   color: #222;
@@ -1326,8 +1331,7 @@ nav.main-nav.stickytop {
   margin: 0; }
 
 .pnl__title {
-  padding-top: 3em;
-  margin: 0; }
+  padding: 0; }
 
 .header {
   display: -webkit-flex;

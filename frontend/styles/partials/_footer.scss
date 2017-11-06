@@ -76,7 +76,7 @@
 }
 
 #the-map, #support, #privacy {
-		margin-top: 2em;
+		margin-top: 8em;
 }
 
 .not-showing {
@@ -94,6 +94,10 @@ nav.main-nav.stickytop {
 	 position:fixed;
 	 top:0;
 	 width: 100%;
+	 -webkit-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -o-transition: all 2s linear;
+    transition: all 2s linear;
 }
 
 .content {
@@ -113,7 +117,5 @@ nav.main-nav.stickytop {
 }
 
 .pnl__title {
-	padding-top: 3em;
-	margin: 0;
-
+	padding: 0;
 }
