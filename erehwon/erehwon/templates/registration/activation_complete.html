@@ -1,16 +1,32 @@
-{% extends "layout.html" %}
+{% extends "base.html" %}
 
 {% load static %}
 
+{% block layout %}
 
-    {% block main %}
+    <div class="activationcomplete">
 
-        <h1>Your account is now active</h1>
+        <header>
+            <a href="/accounts/login"> &lt; back to Erehwon</a>
+        </header>
 
-        <p>Welcome to the Erehwon community!</p>
+        <div class="activationcomplete-wrapper">
+            <div class="activationcomplete-wrappercontent">
 
-        <p><a href="{% url 'login' %}"
-              class="btn btn-success"
-              role="button">Sign in</a>
+                <div class="activationcomplete-head">
+                    <img src="/static/img/EW-logo.svg"/>
+                    <p>SIGN UP</p>
+                </div>
+
+                <p>Welcome to the Erehwon community!</p>
+                <p>You will have to activate your accoun before you can login,
+                pleasr check your email for the link</p>
+
+            </div>
+        </div>
+
+    </div>
 
 {% endblock %}
+
+

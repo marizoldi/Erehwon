@@ -1,0 +1,14 @@
+.activationcomplete{
+  @extend .passwordreset;
+}
+
+.activationcomplete-wrapper{
+  @include formwrapper;
+  .activationcomplete-wrappercontent{
+    @include formwrapper-content;
+    .activationcomplete-head{
+      @include formhead;
+    }
+  }
+
+}
