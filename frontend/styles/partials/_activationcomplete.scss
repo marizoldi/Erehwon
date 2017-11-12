@@ -1,13 +1,29 @@
-.activationcomplete{
+.activationcomplete {
   @extend .passwordreset;
 }
 
-.activationcomplete-wrapper{
+.activationcomplete-wrapper {
   @include formwrapper;
-  .activationcomplete-wrappercontent{
+  .activationcomplete-wrappercontent {
     @include formwrapper-content;
-    .activationcomplete-head{
+    .activationcomplete-head {
       @include formhead;
+    }
+    .actioncomplete-content {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 100px 30px 80px 30px;
+      p.content-title {
+        font-size: 2.62em;
+        color: $main-blue;
+        margin-bottom: auto;
+      }
+      p.content-details {
+        text-align: justify;
+        font-size: 1.356em;
+        line-height: 30px;
+        color: #666;
+      }
     }
   }
 
