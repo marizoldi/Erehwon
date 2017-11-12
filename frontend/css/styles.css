@@ -1607,6 +1607,10 @@ input:checked + .slider:before {
     .passwordreset .passwordreset-formwrapper .passwordreset-formwrapper-content, .activationcomplete .passwordreset-formwrapper .passwordreset-formwrapper-content {
       width: 32%;
       background: #fff; }
+      @media screen and (max-width: 640px) {
+        .passwordreset .passwordreset-formwrapper .passwordreset-formwrapper-content, .activationcomplete .passwordreset-formwrapper .passwordreset-formwrapper-content {
+          width: auto !important;
+          margin: 20px; } }
     .passwordreset .passwordreset-formwrapper .passwordreset-formhead, .activationcomplete .passwordreset-formwrapper .passwordreset-formhead {
       background: #4FB6AC;
       display: flex;
@@ -1628,7 +1632,7 @@ input:checked + .slider:before {
     .passwordreset .passwordreset-formwrapper-content form label, .activationcomplete .passwordreset-formwrapper-content form label {
       position: absolute;
       visibility: hidden;
-      width: 10%; }
+      width: 15%; }
     .passwordreset .passwordreset-formwrapper-content form label:after, .activationcomplete .passwordreset-formwrapper-content form label:after {
       visibility: visible;
       content: "E-mail";
@@ -1650,7 +1654,7 @@ input:checked + .slider:before {
       border-color: #9F9F9F; }
   .passwordreset .passwordreset-formwrapper-content .button, .activationcomplete .passwordreset-formwrapper-content .button {
     width: auto;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 5px 0px 5px;
     color: #37474f; }
   @media screen and (max-width: 768px) {
     .passwordreset .passwordreset-formwrapper-content, .activationcomplete .passwordreset-formwrapper-content {
@@ -1665,6 +1669,10 @@ input:checked + .slider:before {
   .activationcomplete-wrapper .activationcomplete-wrappercontent {
     width: 32%;
     background: #fff; }
+    @media screen and (max-width: 640px) {
+      .activationcomplete-wrapper .activationcomplete-wrappercontent {
+        width: auto !important;
+        margin: 20px; } }
     .activationcomplete-wrapper .activationcomplete-wrappercontent .activationcomplete-head {
       background: #4FB6AC;
       display: flex;
