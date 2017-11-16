@@ -23,6 +23,7 @@ def logout_view(request):
     logout(request)
 
     return redirect('/', permanent=True)
+    #return HttpResponseRedirect("/")
 
 
 @login_required

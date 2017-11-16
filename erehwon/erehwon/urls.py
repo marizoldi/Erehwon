@@ -20,12 +20,22 @@ urlpatterns = [
     url(r'^search/', include( 'ajaxsearch.urls' ) ),
     url(r'^accounts/register/$', RegistrationView.as_view(form_class=ErehwonUserSignUpForm), name="registration_register"),
     url(r'^accounts/', include('registration.backends.hmac.urls')), # This line includes automatically all views and urls for registration/activation/password reset
+
     url(r'^accounts/login$', auth_views.login, name='login'),
     url(r'^$', HomepageView.as_view(), name="index"),
     url(r'^accounts/logout/$', logout_view, name="logout"), # {'next_page': 'homepage'}, name="logout"),
     url(r'^home/$', user_page, name="user_page"),
     url(r'^home/addproject/$', project_add, name="project_add"),
     url(r'^home/add-ideas/$', idea_add, name="idea_add"),
+
+    url(r'^accounts/login$', auth_views.login, name='login'), 
+    url(r'^$', HomepageView.as_view(), name="index"),
+    #url(r'^accounts/logout/$', logout_view, name="logout_view"),
+    url(r'^accounts/logout/$', logout_view, name="logout"), # {'next_page': 'homepage'}, name="logout"),
+    # url(r'^dashboard', loggedin_view, name="dashboard"),
+    url(r'^projects/$', project_list, name="project_list"),
+    # url(r'^project', ProjectFormView.as_view(), name="project_form"),
+
     url(r'^ideas/$', idea_list, name="idea_list"),
     url(r'^calls/$', call_list, name="call_list"),
 
