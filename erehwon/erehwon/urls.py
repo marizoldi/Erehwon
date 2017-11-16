@@ -33,7 +33,8 @@ urlpatterns = [
     #url(r'^accounts/logout/$', logout_view, name="logout_view"),
     url(r'^accounts/logout/$', logout_view, name="logout"), # {'next_page': 'homepage'}, name="logout"),
     # url(r'^dashboard', loggedin_view, name="dashboard"),
-    url(r'^projects/$', project_list, name="project_list"),
+    # url(r'^projects/$', project_list, name="project_list"),
+    url(r'^projects/$', user_page, name="user_page"),
     # url(r'^project', ProjectFormView.as_view(), name="project_form"),
 
     url(r'^ideas/$', idea_list, name="idea_list"),
