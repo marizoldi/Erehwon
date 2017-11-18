@@ -5,7 +5,7 @@ from django.views.generic import TemplateView
 
 from core.views import HomepageView
 
-from profiles.views import logout_view, project_add, user_page, idea_add, project_update, idea_list, call_list
+from profiles.views import MyActivationView, logout_view, project_add,user_page, idea_add, project_update, idea_list, call_list
 from profiles.forms import ErehwonUserSignUpForm
 from registration.backends.hmac.views import RegistrationView
 
@@ -19,8 +19,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^search/', include( 'ajaxsearch.urls' ) ),
     url(r'^accounts/register/$', RegistrationView.as_view(form_class=ErehwonUserSignUpForm), name="registration_register"),
+    url(r'^accounts/activate/$', MyActivationView.as_view, name='activation'),
     url(r'^accounts/', include('registration.backends.hmac.urls')), # This line includes automatically all views and urls for registration/activation/password reset
-    url(r'^accounts/login$', auth_views.login, name='login'),
+    url(r'^accounts/login$', auth_views.login, name='login'),   
     url(r'^$', HomepageView.as_view(), name="index"),
     url(r'^accounts/logout/$', logout_view, name="logout"), # {'next_page': 'homepage'}, name="logout"),
     url(r'^home/$', user_page, name="user_page"),
