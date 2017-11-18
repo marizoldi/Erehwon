@@ -1,16 +1,31 @@
-{% extends "layout.html" %}
+<meta http-equiv="refresh" content="2; url=/home" />
+
+{% extends "base.html" %}
 
 {% load static %}
 
+{% block layout %}
 
-    {% block main %}
+    <div class="activationcomplete">
 
-        <h1>Your account is now active</h1>
+        <div class="activationcomplete-wrapper">
+            <div class="activationcomplete-wrappercontent">
 
-        <p>Welcome to the Erehwon community!</p>
+                <div class="activationcomplete-head">
+                    <img src="/static/img/EW-logo.svg"/>
+                    <p>ACTIVATION</p>
+                </div>
+                <div class="actioncomplete-content">
+                    <p class="content-title">Congratulations!</p>
+                    <p class="content-details">Your account is now active.
+                    I am redirecting you to your dashboard.</p>
+                </div>
 
-        <p><a href="{% url 'login' %}"
-              class="btn btn-success"
-              role="button">Sign in</a>
+            </div>
+        </div>
+
+    </div>
 
 {% endblock %}
+
+

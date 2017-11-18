@@ -10,6 +10,7 @@ import logging
 from registration.signals import user_registered
 
 from registration.backends.hmac import views as registration_views
+from registration.backends.hmac.views import ActivationView
 
 from profiles.models import Project, Idea, CallForAction
 from profiles.forms import ProjectForm
@@ -17,6 +18,13 @@ from profiles.forms import IdeaForm
 
 log = logging.getLogger("erehwon")
 
+
+
+
+class MyActivationView(ActivationView):
+
+    def get_success_url(self, request, user):
+        return redirect('/home', permanent=True)
 
 
 def logout_view(request):
