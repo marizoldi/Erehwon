@@ -1,40 +1,44 @@
-{% extends "layout.html" %}
-
-{% block title %} Login {% endblock %}
+{% extends "base.html" %}
 
 {% load static %}
 
-{% block main %}
-  <div class="map">
-    <div class="overlay">
-        <form method="POST" action="" class="signup-form">
-          {% csrf_token %}
-          {{ form.non_field_errors }}
-          <h1 class="pnl__title">Welcome</h1>
-          <!--<div class="email">
-              <label for="email">E-mail</label>
-              \{ form.email.errors \}}
-              <input type="email" name="email" required>
-          </div>-->
-           <div class="username">
-              <label for="username">Email</label> <!-- because of non standard user model? or postman -->
-              {{ form.username }}
-              <!--<input type="username" name="username" required>-->
-          </div>
+{% block layout %}
 
-          <div class="password1">
-              <label for="password">Password</label>
-              {{ form.password.errors }}
-              {{ form.password }}
-          </div>
-	<input type="submit" class="button" value="Sign In">
-          <div class="row">
-              <a href="/accounts/password/reset">Forgot Password?</a>
-          </div>
-          <div class="row">
-              <a href="/accounts/register" class="underline txt-right">Invited to join us? Sign Up</a>
-          </div>
-			</form>
+    <div class="signin">
+
+        <header>
+            <a href="/"> &lt; back to Erehwon</a>
+        </header>
+
+        <div class="signin-formwrapper">
+            <div class="signin-formwrapper-content">
+                <div class="signin-formhead">
+                    <img src="/static/img/EW-logo.svg"/>
+                    <p>WELCOME</p>
+                </div>
+
+                <div class="signin-form">
+                    <form method="POST" action="">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" class="button" value="Sign in"/>
+                    </form>
+                </div>
+
+                <div>
+                  <a href="/accounts/password/reset">Forgot Password?</a>
+                </div>
+                <div>
+                  <a href="/accounts/register" class="underline txt-right">Invited to join us? Sign Up</a>
+                </div>
+              
+            </div>
+        </div>
     </div>
-  </div>
+
 {% endblock %}
+
+
+
+
+ 
