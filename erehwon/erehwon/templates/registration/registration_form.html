@@ -5,13 +5,11 @@
 {% load static %}
 
 {% block main %}
-<header class="header">
-    <div class="title">
-      <   back to Erehwon
-    </div>
-</header>
+ <header>
+    <a href="/accounts/login"> &lt; back to Erehwon</a>
+  </header>
 
-      <form method="POST" action="" class="signup-form" id="signupform">
+      <form method="POST" action="" class="form" id="signupform">
           {% csrf_token %}
           {{ form.non_field_errors }}
           <img src="{% static "img/Erehwon_Logo_finGREEN.svg" %}" class="logo-templates" />

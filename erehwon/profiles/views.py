@@ -46,7 +46,7 @@ def project_update(request, project_id):
     # if project.user != request.user:
     #     return HttpResponseForbidden()
 
-    project_update_form = ProjectForm(initial={'title':project.title, 'label':project.label, 'synopsis':project.synopsis})
+    project_update_form = ProjectForm(initial={'title':project.title, 'synopsis':project.synopsis})
 
     if request.method == 'POST':
         project_update_form = ProjectForm(request.POST, instance=request.project)
